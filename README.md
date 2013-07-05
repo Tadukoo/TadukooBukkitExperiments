@@ -6,8 +6,10 @@ for Minecraft 1.6.1, and will include various commands, and economy, permissions
 and much more. Its purpose is as a plugin for [Tadukooverse] (http://tadukooverse.wikia.com).
 
 Tadukoo Plugin is in very early stages of development, so there's not much in it yet, and there are some 
-features or commands that are just for testing at the moment. For the current version number,
-please check the plugin.yml file.
+features or commands that are just for testing at the moment. Also, Tadukoo Plugin is the working name.
+It may be changed in the future.
+
+For the current version number, please check the plugin.yml file.
 
 Features
 ----------
