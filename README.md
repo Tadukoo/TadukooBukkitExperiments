@@ -5,12 +5,17 @@ Tadukoo Plugin is a plugin currently in progress for Bukkit, it is being made
 for Minecraft 1.6.1, and will include various commands, and economy, permissions,
 and much more. Its purpose is as a plugin for [Tadukooverse] (http://tadukooverse.wikia.com).
 
-Tadukoo Plugin is in very early stages of development, so there's not much in it yet. For the current version number,
+Tadukoo Plugin is in very early stages of development, so there's not much in it yet, and there are some 
+features or commands that are just for testing at the moment. For the current version number,
 please check the plugin.yml file.
 
 Features
 ----------
-Just commands right now.
+* Mainly just commands right now.
+* Typing "heal" will heal you.
+* Typing "kill" will kill you.
+* Typing "sendme" will send the message "Send You" to you.
+* TNT and Bedrock disappear after being placed and you say "I just placed < TNT/BEDROCK >".
 
 Commands
 ----------
