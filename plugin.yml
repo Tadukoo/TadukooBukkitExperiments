@@ -1,0 +1,81 @@
+name: Tadukooplugin
+main: com.gmail.lucario77777777.tadukooplugin.tadukoopluginmain
+version: 0.0.8.6
+description: Tadukoo Plugin
+commands:
+   ping:
+      description: Sends "Pong!" back to the sender.
+      usage: /<command> [player]
+      permission: Tadukooplugin.ping
+      permission-message: You don't have <permission>
+   tport:
+      description: Teleports a player to another player.
+      usage: /<command> [player] <player>
+      permission: Tadukooplugin.tport
+      permission-message: You don't have <permission>
+   heal:
+      description: Heals a player.
+      usage: /<command> [player]
+      permission: Tadukooplugin.heal
+      permission-message: You don't have <permission>
+   kill:
+      description: Kills a player.
+      usage: /<command> <player>
+      permission: Tadukooplugin.kill
+      permission-message: You don't have <permission>
+   feed:
+      description: Restores a player's hunger.
+      usage: /<command> [player]
+      permission: Tadukooplugin.feed
+      permission-message: You don't have <permission>
+   starve:
+      description: Starves a player.
+      usage: /<command> <player>
+      permission: Tadukooplugin.starve
+      permission-message: You don't have <permission>
+   suicide:
+      description: Commit suicide.
+      usage: /<command>
+      permission: Tadukooplugin.suicide
+      permission-message: Sorry, you're not allowed to kill yourself.
+   thelp:
+      description: Shows the Tadukoo Plugin help.
+      usage: /<command>
+      permission: Tadukooplugin.thelp
+      permission-message: You don't have <permission>
+permissions:
+   Tadukooplugin.*:
+      description: Gives access to all commands
+      children:
+         Tadukooplugin.ping: true
+         Tadukooplugin.tport: true
+         Tadukooplugin.heal: true
+         Tadukooplugin.kill: true
+         Tadukooplugin.feed: true
+         Tadukooplugin.starve: true
+         Tadukooplugin.suicide: true
+         Tadukooplugin.thelp: true
+   Tadukooplugin.ping:
+      description: Gives access to /ping
+      default: true
+   Tadukooplugin.tport:
+      description: Gives access to /tport
+      default: op
+   Tadukooplugin.heal:
+      description: Gives access to /heal
+      default: op
+   Tadukooplugin.kill:
+      description: Gives access to /kill
+      default: op
+   Tadukooplugin.feed:
+      description: Gives access to /feed
+      default: op
+   Tadukooplugin.starve:
+      description: Gives access to /starve
+      default: op
+   Tadukooplugin.suicide:
+      description: Gives access to /suicide
+      default: true
+   Tadukooplugin.thelp:
+      description: gives access to /thelp
+      default: true
