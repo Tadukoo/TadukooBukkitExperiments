@@ -169,23 +169,20 @@ public class MainCommandExecutor implements CommandExecutor {
 					sender.sendMessage("Sorry, you can't make others commit suicide.");
 					return true;
 				}
-			}else if(cmd.getName().equalsIgnoreCase("gamemode") || cmd.getName().equalsIgnoreCase("gm")){
+			}else if(cmd.getName().equalsIgnoreCase("gamemode") || cmd.getName().equalsIgnoreCase("gm") || cmd.getName().equalsIgnoreCase("gmt")){
 				if(playerType != "player"){
 					sender.sendMessage(ChatColor.RED + "Silly, you don't need a gamemode!");
 					return true;
 				}else{
 					if(args.length == 1){
-						if(args[0] == "creative" || args[0] == "1"){
+						if(args[0].equalsIgnoreCase("creative") || args[0].equalsIgnoreCase("1") || args[0].equalsIgnoreCase("c")){
 							((Player) sender).setGameMode(GameMode.CREATIVE);
-							sender.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
 							return true;
-						}else if(args[0] == "survival" || args[0] == "0"){
+						}else if(args[0].equalsIgnoreCase("survival") || args[0].equalsIgnoreCase("0") || args[0].equalsIgnoreCase("s")){
 							((Player) sender).setGameMode(GameMode.SURVIVAL);
-							sender.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
 							return true;
-						}else if(args[0] == "adventure" || args[0] == "2"){
+						}else if(args[0].equalsIgnoreCase("adventure") || args[0].equalsIgnoreCase("2") || args[0].equalsIgnoreCase("a")){
 							((Player) sender).setGameMode(GameMode.ADVENTURE);
-							sender.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
 							return true;
 						}else{
 							sender.sendMessage(ChatColor.RED + "That's not a gamemode!");
@@ -194,31 +191,25 @@ public class MainCommandExecutor implements CommandExecutor {
 					}else if(args.length == 0){
 						if(((Player) sender).getGameMode() == GameMode.CREATIVE){
 							((Player) sender).setGameMode(GameMode.SURVIVAL);
-							sender.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
 							return true;
 						}else if(((Player) sender).getGameMode() == GameMode.SURVIVAL){
 							((Player) sender).setGameMode(GameMode.CREATIVE);
-							sender.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
 							return true;
 						}else if(((Player) sender).getGameMode() == GameMode.ADVENTURE){
 							((Player) sender).setGameMode(GameMode.SURVIVAL);
-							sender.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
 							return true;
 						}
 					}else if(args.length == 2){
 						if(sender.getServer().getPlayer(args[0]) != null){
 							Player targetPlayer = sender.getServer().getPlayer(args [0]);
-							if(args[1] == "creative" || args[1] == "1"){
+							if(args[1].equalsIgnoreCase("creative") || args[1].equalsIgnoreCase("1") || args[1].equalsIgnoreCase("c")){
 								targetPlayer.setGameMode(GameMode.CREATIVE);
-								targetPlayer.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
 								return true;
-							}else if(args[1] == "survival" || args[1] == "0"){
+							}else if(args[1].equalsIgnoreCase("survival") || args[1].equalsIgnoreCase("0") || args[1].equalsIgnoreCase("s")){
 								targetPlayer.setGameMode(GameMode.SURVIVAL);
-								targetPlayer.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
 								return true;
-							}else if(args[1] == "adventure" || args[1] == "2"){
+							}else if(args[1].equalsIgnoreCase("adventure") || args[1].equalsIgnoreCase("2") || args[1].equalsIgnoreCase("a")){
 								targetPlayer.setGameMode(GameMode.ADVENTURE);
-								targetPlayer.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
 								return true;
 							}else{
 								sender.sendMessage(ChatColor.RED + "That is not a gamemode!");
