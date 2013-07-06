@@ -224,6 +224,66 @@ public class MainCommandExecutor implements CommandExecutor {
 						return true;
 					}
 				}
+			}else if(cmd.getName().equalsIgnoreCase("adventure") || cmd.getName().equalsIgnoreCase("gma")){
+				if(playerType != "player"){
+					sender.sendMessage(ChatColor.RED + "Silly, you don't need a gamemode!");
+					return true;
+				}else{
+					if(args.length == 0){
+						((Player) sender).setGameMode(GameMode.ADVENTURE);
+					return true;
+					}else if(args.length == 1){
+						if(sender.getServer().getPlayer(args[0]) != null){
+							Player targetPlayer = sender.getServer().getPlayer(args [0]);
+							targetPlayer.setGameMode(GameMode.ADVENTURE);
+							sender.sendMessage(ChatColor.GREEN + "You changed " + targetPlayer + "'s gamemode to adventure.");
+							return true;
+						}else{
+							sender.sendMessage(ChatColor.RED + "Player not online!");
+							return true;
+						}
+					}
+				}
+			}else if(cmd.getName().equalsIgnoreCase("creative") || cmd.getName().equalsIgnoreCase("gmc")){
+				if(playerType != "player"){
+					sender.sendMessage(ChatColor.RED + "Silly, you don't need a gamemode!");
+					return true;
+				}else{
+					if(args.length == 0){
+						((Player) sender).setGameMode(GameMode.CREATIVE);
+					return true;
+					}else if(args.length == 1){
+						if(sender.getServer().getPlayer(args[0]) != null){
+							Player targetPlayer = sender.getServer().getPlayer(args [0]);
+							targetPlayer.setGameMode(GameMode.CREATIVE);
+							sender.sendMessage(ChatColor.GREEN + "You changed " + targetPlayer + "'s gamemode to creative.");
+							return true;
+						}else{
+							sender.sendMessage(ChatColor.RED + "Player not online!");
+							return true;
+						}
+					}
+				}
+			}else if(cmd.getName().equalsIgnoreCase("survival") || cmd.getName().equalsIgnoreCase("gms")){
+				if(playerType != "player"){
+					sender.sendMessage(ChatColor.RED + "Silly, you don't need a gamemode!");
+					return true;
+				}else{
+					if(args.length == 0){
+						((Player) sender).setGameMode(GameMode.SURVIVAL);
+					return true;
+					}else if(args.length == 1){
+						if(sender.getServer().getPlayer(args[0]) != null){
+							Player targetPlayer = sender.getServer().getPlayer(args [0]);
+							targetPlayer.setGameMode(GameMode.SURVIVAL);
+							sender.sendMessage(ChatColor.GREEN + "You changed " + targetPlayer + "'s gamemode to survival.");
+							return true;
+						}else{
+							sender.sendMessage(ChatColor.RED + "Player not online!");
+							return true;
+						}
+					}
+				}
 			}else if(cmd.getName().equalsIgnoreCase("thelp")){
 				if(args.length == 0){
 					sender.sendMessage("----" + ChatColor.GREEN + "Tadukoo Plugin Help" + ChatColor.WHITE + "----");

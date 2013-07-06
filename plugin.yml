@@ -1,6 +1,6 @@
 name: Tadukooplugin
 main: com.gmail.lucario77777777.tadukooplugin.Main
-version: 0.0.9.1
+version: 0.0.9.2
 description: Tadukoo Plugin
 commands:
    ping:
@@ -51,6 +51,36 @@ commands:
    gmt:
       description: Changes a player's gamemode.
       usage: /<command> [player] [gamemode]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
+   adventure:
+      description: Sets a player's gamemode to adventure.
+      usage: /<command> [player]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
+   gma:
+      description: Sets a player's gamemode to adventure.
+      usage: /<command> [player]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
+   creative:
+      description: Sets a player's gamemode to creative.
+      usage: /<command> [player]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
+   gmc:
+      description: Sets a player's gamemode to creative.
+      usage: /<command> [player]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
+   survival:
+      description: Sets a player's gamemode to survival.
+      usage: /<command> [player]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
+   gms:
+      description: Sets a player's gamemode to survival.
+      usage: /<command> [player]
       permission: Tadukooplugin.gamemode
       permission-message: You don't have <permission>
    thelp:

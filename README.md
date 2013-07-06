@@ -42,6 +42,12 @@ Key:
     * Commit suicide.
 * /gamemode, /gm, and /gmt [ player ] [ gamemode ]
     * Changes a player's gamemode.
+* /gma and /adventure [ player ]
+    * Sets a player to gamemode 2.
+* /gmc and /creative [ player ]
+    * Sets a player to gamemode 1.
+* /gms and /survival [ player ]
+    * Sets a player to gamemode 0.
 * /thelp
     * Shows the Tadukoo Plugin help.
 

@@ -27,6 +27,12 @@ public class Main extends JavaPlugin {
 		getCommand("gamemode").setExecutor(new MainCommandExecutor(this));
 		getCommand("gm").setExecutor(new MainCommandExecutor(this));
 		getCommand("gmt").setExecutor(new MainCommandExecutor(this));
+		getCommand("adventure").setExecutor(new MainCommandExecutor(this));
+		getCommand("gma").setExecutor(new MainCommandExecutor(this));
+		getCommand("creative").setExecutor(new MainCommandExecutor(this));
+		getCommand("gmc").setExecutor(new MainCommandExecutor(this));
+		getCommand("survival").setExecutor(new MainCommandExecutor(this));
+		getCommand("gms").setExecutor(new MainCommandExecutor(this));
 		getCommand("thelp").setExecutor(new MainCommandExecutor(this));
 		this.getServer().getPluginManager().registerEvents(new BlockListener(null), this);
 		this.getServer().getPluginManager().registerEvents(new PlayerListener(null), this);
