@@ -70,6 +70,8 @@ Recent Updates
 ----------
 In the future, the newest updates will be listed here.
 
+For a full listing of updates, check the wiki, specifically [this page] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin History).
+
 Wiki
 ----------
 Information about Tadukoo Plugin can be found on tadukooverse.wikia.com, the main page for it is [here] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin).
