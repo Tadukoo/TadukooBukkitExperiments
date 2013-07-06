@@ -47,6 +47,14 @@ Permissions
 ----------
 Will be listed later, they can be viewed in the plugin.yml file.
 
+Known Issues
+----------
+None at the moment.
+
+Planned Features
+----------
+There are so many that I'm not going to list them yet since this plugin is in such an early stage.
+
 Copyright
 ----------
 
