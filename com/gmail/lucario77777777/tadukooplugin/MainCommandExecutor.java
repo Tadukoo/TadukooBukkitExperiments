@@ -6,11 +6,11 @@ import org.bukkit.command.*;
 import org.bukkit.entity.Player;
 import org.bukkit.command.CommandExecutor;
 
-public class TadukooPluginCommandExecutor implements CommandExecutor {
+public class MainCommandExecutor implements CommandExecutor {
 
-	private tadukoopluginmain plugin;
+	private Main plugin;
 	
-	public TadukooPluginCommandExecutor(tadukoopluginmain plugin) {
+	public MainCommandExecutor(Main plugin) {
 		this.plugin = plugin;
 	}
 	

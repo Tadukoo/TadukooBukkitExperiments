@@ -7,9 +7,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChatEvent;
 
 @SuppressWarnings("deprecation")
-public class MyPlayerListener implements Listener {
-	public static tadukoopluginmain plugin;
-	public MyPlayerListener(tadukoopluginmain instance){
+public class PlayerListener implements Listener {
+	public static Main plugin;
+	public PlayerListener(Main instance){
 		plugin = instance;
 	}
 	

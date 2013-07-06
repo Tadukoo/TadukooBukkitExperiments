@@ -7,11 +7,11 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 
-public class MyBlockListener implements Listener{
-	public static tadukoopluginmain plugin;
+public class BlockListener implements Listener{
+	public static Main plugin;
 	public static Material[] blacklist = {Material.TNT, Material.BEDROCK};
 	
-	public MyBlockListener(tadukoopluginmain instance) {
+	public BlockListener(Main instance) {
 		plugin = instance;
 	}
 	
