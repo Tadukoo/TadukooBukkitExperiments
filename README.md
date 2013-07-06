@@ -48,6 +48,8 @@ Key:
     * Sets a player to gamemode 1.
 * /gms and /survival [ player ]
     * Sets a player to gamemode 0.
+* /fly [ player ]
+    * Sets flight mode to true or false for a player.
 * /thelp
     * Shows the Tadukoo Plugin help.
 

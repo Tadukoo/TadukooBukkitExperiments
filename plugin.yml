@@ -1,6 +1,6 @@
 name: Tadukooplugin
 main: com.gmail.lucario77777777.tadukooplugin.Main
-version: 0.0.9.2
+version: 0.0.9.3
 description: Tadukoo Plugin
 commands:
    ping:
@@ -83,6 +83,11 @@ commands:
       usage: /<command> [player]
       permission: Tadukooplugin.gamemode
       permission-message: You don't have <permission>
+   fly:
+      description: Sets flight to true or false for a player.
+      usage: /<command> [player]
+      permission: Tadukooplugin.fly
+      permission-message: You don't have <permission>
    thelp:
       description: Shows the Tadukoo Plugin help.
       usage: /<command>
@@ -100,6 +105,7 @@ permissions:
          Tadukooplugin.starve: true
          Tadukooplugin.suicide: true
          Tadukooplugin.gamemode: true
+         Tadukooplugin.fly: true
          Tadukooplugin.thelp: true
    Tadukooplugin.ping:
       description: Gives access to /ping
@@ -125,6 +131,9 @@ permissions:
    Tadukooplugin.gamemode:
       description: Gives access to /gamemode, /gm, and /gmt
       default: op
+   Tadukooplugin.fly:
+      description: Gives access to /fly
+      default: op
    Tadukooplugin.thelp:
-      description: gives access to /thelp
+      description: Gives access to /thelp
       default: true

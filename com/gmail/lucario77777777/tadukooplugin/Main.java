@@ -33,6 +33,7 @@ public class Main extends JavaPlugin {
 		getCommand("gmc").setExecutor(new MainCommandExecutor(this));
 		getCommand("survival").setExecutor(new MainCommandExecutor(this));
 		getCommand("gms").setExecutor(new MainCommandExecutor(this));
+		getCommand("fly").setExecutor(new MainCommandExecutor(this));
 		getCommand("thelp").setExecutor(new MainCommandExecutor(this));
 		this.getServer().getPluginManager().registerEvents(new BlockListener(null), this);
 		this.getServer().getPluginManager().registerEvents(new PlayerListener(null), this);
