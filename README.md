@@ -18,6 +18,7 @@ Features
 * Typing "kill" will kill you.
 * Typing "sendme" will send the message "Send You" to you.
 * TNT and Bedrock disappear after being placed and you say "I just placed < TNT/BEDROCK >".
+* Upon joining the player is sent the message "Hello playerName. Welcome to worldName. It is timeInWorld."
 
 Commands
 ----------
