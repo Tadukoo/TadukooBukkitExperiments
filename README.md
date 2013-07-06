@@ -2,16 +2,16 @@ Tadukoo Plugin
 ==============
 
 Tadukoo Plugin is a plugin currently in progress for Bukkit, it is being made
-for Minecraft 1.6.1, and will include various commands, and economy, permissions,
+for Minecraft 1.6.1, and will include various commands, an economy, permissions,
 and much more. Its purpose is as a plugin for [Tadukooverse] (http://tadukooverse.wikia.com).
 
 Tadukoo Plugin is in very early stages of development, so there's not much in it yet, so there may be some 
 features or commands that are just for testing at the moment. Also, Tadukoo Plugin is the working name.
 It may be changed in the future.
 
-For the current version number, please check the plugin.yml file.
+Current Version: Alpha 0.0.9.4
 
-Features
+Current Features
 ----------
 * Mainly just commands right now.
 * Typing "heal" will heal you.
@@ -19,6 +19,10 @@ Features
 * Typing "sendme" will send the message "Send You" to you.
 * TNT and Bedrock disappear after being placed and you say "I just placed < TNT/BEDROCK >".
 * Upon joining the player is sent the message "Hello playerName. Welcome to worldName. It is timeInWorld."
+
+Planned Features
+----------
+There are so many that I'm not going to list them yet since this plugin is in such an early stage.
 
 Commands
 ----------
@@ -62,14 +66,13 @@ Known Issues
 ----------
 None at the moment.
 
-Planned Features
+Recent Updates
 ----------
-There are so many that I'm not going to list them yet since this plugin is in such an early stage.
+In the future, the newest updates will be listed here.
 
 Wiki
 ----------
-There will be a wiki link here in the future. I'm not a big fan of Github's wiki system. I'll probably
-end up putting this on the wiki for my server, since this plugin is designed for it anyway.
+Information about Tadukoo Plugin can be found on tadukooverse.wikia.com, the main page for it is [here] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin).
 
 Copyright
 ----------
