@@ -207,15 +207,15 @@ public class MainCommandExecutor implements CommandExecutor {
 							Player targetPlayer = sender.getServer().getPlayer(args [0]);
 							if(args[1].equalsIgnoreCase("creative") || args[1].equalsIgnoreCase("1") || args[1].equalsIgnoreCase("c")){
 								targetPlayer.setGameMode(GameMode.CREATIVE);
-								sender.sendMessage(ChatColor.GREEN + "" + targetPlayer + "'s gamemode has been changed!");
+								sender.sendMessage(ChatColor.GREEN + "" + targetPlayer.getDisplayName() + "'s gamemode has been changed!");
 								return true;
 							}else if(args[1].equalsIgnoreCase("survival") || args[1].equalsIgnoreCase("0") || args[1].equalsIgnoreCase("s")){
 								targetPlayer.setGameMode(GameMode.SURVIVAL);
-								sender.sendMessage(ChatColor.GREEN + "" + targetPlayer + "'s gamemode has been changed!");
+								sender.sendMessage(ChatColor.GREEN + "" + targetPlayer.getDisplayName() + "'s gamemode has been changed!");
 								return true;
 							}else if(args[1].equalsIgnoreCase("adventure") || args[1].equalsIgnoreCase("2") || args[1].equalsIgnoreCase("a")){
 								targetPlayer.setGameMode(GameMode.ADVENTURE);
-								sender.sendMessage(ChatColor.GREEN + "" + targetPlayer + "'s gamemode has been changed!");
+								sender.sendMessage(ChatColor.GREEN + "" + targetPlayer.getDisplayName() + "'s gamemode has been changed!");
 								return true;
 							}else{
 								sender.sendMessage(ChatColor.RED + "That is not a gamemode!");
@@ -242,7 +242,7 @@ public class MainCommandExecutor implements CommandExecutor {
 					if(sender.getServer().getPlayer(args[0]) != null){
 						Player targetPlayer = sender.getServer().getPlayer(args [0]);
 						targetPlayer.setGameMode(GameMode.ADVENTURE);
-						sender.sendMessage(ChatColor.GREEN + "You changed " + targetPlayer + "'s gamemode to adventure.");
+						sender.sendMessage(ChatColor.GREEN + "You changed " + targetPlayer.getDisplayName() + "'s gamemode to adventure.");
 						return true;
 					}else{
 						sender.sendMessage(ChatColor.RED + "Player not online!");
@@ -265,7 +265,7 @@ public class MainCommandExecutor implements CommandExecutor {
 					if(sender.getServer().getPlayer(args[0]) != null){
 						Player targetPlayer = sender.getServer().getPlayer(args [0]);
 						targetPlayer.setGameMode(GameMode.CREATIVE);
-						sender.sendMessage(ChatColor.GREEN + "You changed " + targetPlayer + "'s gamemode to creative.");
+						sender.sendMessage(ChatColor.GREEN + "You changed " + targetPlayer.getDisplayName() + "'s gamemode to creative.");
 						return true;
 					}else{
 						sender.sendMessage(ChatColor.RED + "Player not online!");
@@ -288,7 +288,7 @@ public class MainCommandExecutor implements CommandExecutor {
 					if(sender.getServer().getPlayer(args[0]) != null){
 						Player targetPlayer = sender.getServer().getPlayer(args [0]);
 						targetPlayer.setGameMode(GameMode.SURVIVAL);
-						sender.sendMessage(ChatColor.GREEN + "You changed " + targetPlayer + "'s gamemode to survival.");
+						sender.sendMessage(ChatColor.GREEN + "You changed " + targetPlayer.getDisplayName() + "'s gamemode to survival.");
 						return true;
 					}else{
 						sender.sendMessage(ChatColor.RED + "Player not online!");
@@ -319,11 +319,11 @@ public class MainCommandExecutor implements CommandExecutor {
 							Player targetPlayer = sender.getServer().getPlayer(args [0]);
 							if (targetPlayer.getAllowFlight() == true){
 								targetPlayer.setAllowFlight(false);
-								sender.sendMessage(ChatColor.GREEN + "" + targetPlayer + " can no longer fly.");
+								sender.sendMessage(ChatColor.GREEN + "" + targetPlayer.getDisplayName() + " can no longer fly.");
 								return true;
 							}else if (targetPlayer.getAllowFlight() == false){
 								targetPlayer.setAllowFlight(true);
-								sender.sendMessage(ChatColor.GREEN + "" + targetPlayer + " can now fly.");
+								sender.sendMessage(ChatColor.GREEN + "" + targetPlayer.getDisplayName() + " can now fly.");
 								return true;
 						}else{
 							sender.sendMessage(ChatColor.RED + "Player not online!");
