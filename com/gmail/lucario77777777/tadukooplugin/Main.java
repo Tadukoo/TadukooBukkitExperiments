@@ -34,8 +34,12 @@ public class Main extends JavaPlugin {
 		getCommand("survival").setExecutor(new MainCommandExecutor(this));
 		getCommand("gms").setExecutor(new MainCommandExecutor(this));
 		getCommand("fly").setExecutor(new MainCommandExecutor(this));
+		getCommand("killall").setExecutor(new MainCommandExecutor(this));
+		getCommand("motd").setExecutor(new MainCommandExecutor(this));
 		getCommand("thelp").setExecutor(new MainCommandExecutor(this));
 		this.getServer().getPluginManager().registerEvents(new BlockListener(null), this);
 		this.getServer().getPluginManager().registerEvents(new PlayerListener(null), this);
+		getConfig().options().copyDefaults(true);
+		saveConfig();
 	}
 }

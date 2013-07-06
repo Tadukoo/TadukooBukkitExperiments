@@ -1,6 +1,6 @@
 name: Tadukooplugin
 main: com.gmail.lucario77777777.tadukooplugin.Main
-version: Alpha 0.0.9.4
+version: Alpha 0.0.9.5
 description: Tadukoo Plugin
 commands:
    ping:
@@ -88,6 +88,16 @@ commands:
       usage: /<command> [player]
       permission: Tadukooplugin.fly
       permission-message: You don't have <permission>
+   killall:
+      description: Kills all online players.
+      usage: /<command>
+      permission: Tadukooplugin.killall
+      permission-message: You don't have <permission>
+   motd:
+      description: Shows the motd (Message of the Day).
+      usage: /<command>
+      permission: Tadukooplugin.motd
+      permission-message: You don't have <permission>
    thelp:
       description: Shows the Tadukoo Plugin help.
       usage: /<command>
@@ -106,6 +116,8 @@ permissions:
          Tadukooplugin.suicide: true
          Tadukooplugin.gamemode: true
          Tadukooplugin.fly: true
+         Tadukooplugin.killall: true
+         Tadukooplugin.motd: true
          Tadukooplugin.thelp: true
    Tadukooplugin.ping:
       description: Gives access to /ping
@@ -134,6 +146,12 @@ permissions:
    Tadukooplugin.fly:
       description: Gives access to /fly
       default: op
+   Tadukooplugin.killall:
+      description: Gives access to /killall
+      default: op
+   Tadukooplugin.motd:
+      description: Gives access to /motd
+      default: true
    Tadukooplugin.thelp:
       description: Gives access to /thelp
       default: true

@@ -19,6 +19,7 @@ Current Features
 * Typing "sendme" will send the message "Send You" to you.
 * TNT and Bedrock disappear after being placed and you say "I just placed < TNT/BEDROCK >".
 * Upon joining the player is sent the message "Hello playerName. Welcome to worldName. It is timeInWorld."
+* You can customize the motd in the config.yml.
 
 Planned Features
 ----------
@@ -55,6 +56,10 @@ Key:
     * Sets a player to gamemode 0.
 * /fly [ player ]
     * Sets flight mode to true or false for a player.
+* /killall
+    * Kills all players on the server.
+* /motd
+    * Shows the motd (message of the day).
 * /thelp
     * Shows the Tadukoo Plugin help.
 

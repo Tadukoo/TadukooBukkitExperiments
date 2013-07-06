@@ -1,5 +1,10 @@
 package com.gmail.lucario77777777.tadukooplugin;
 
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
@@ -331,6 +336,17 @@ public class MainCommandExecutor implements CommandExecutor {
 						}
 					}
 					}
+			}else if(cmd.getName().equalsIgnoreCase("killall")){
+				List<Player> onlinePlayers = Arrays.asList(Bukkit.getServer().getOnlinePlayers());
+				Iterator<Player> iterator = onlinePlayers.iterator();
+				while(iterator.hasNext()){
+					Player onlinePlayer = iterator.next();
+					onlinePlayer.setHealth(0);
+				}
+				return true;
+			}else if(cmd.getName().equalsIgnoreCase("motd")){
+				sender.sendMessage(plugin.getConfig().getString("MOTD"));
+				return true;
 			}else if(cmd.getName().equalsIgnoreCase("thelp")){
 				if(args.length == 0){
 					sender.sendMessage("----" + ChatColor.GREEN + "Tadukoo Plugin Help" + ChatColor.WHITE + "----");
