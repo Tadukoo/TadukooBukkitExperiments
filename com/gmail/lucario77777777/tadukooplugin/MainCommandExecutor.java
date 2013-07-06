@@ -1,6 +1,7 @@
 package com.gmail.lucario77777777.tadukooplugin;
 
 import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
@@ -168,6 +169,70 @@ public class MainCommandExecutor implements CommandExecutor {
 					sender.sendMessage("Sorry, you can't make others commit suicide.");
 					return true;
 				}
+			}else if(cmd.getName().equalsIgnoreCase("gamemode") || cmd.getName().equalsIgnoreCase("gm")){
+				if(playerType != "player"){
+					sender.sendMessage(ChatColor.RED + "Silly, you don't need a gamemode!");
+					return true;
+				}else{
+					if(args.length == 1){
+						if(args[0] == "creative" || args[0] == "1"){
+							((Player) sender).setGameMode(GameMode.CREATIVE);
+							sender.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
+							return true;
+						}else if(args[0] == "survival" || args[0] == "0"){
+							((Player) sender).setGameMode(GameMode.SURVIVAL);
+							sender.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
+							return true;
+						}else if(args[0] == "adventure" || args[0] == "2"){
+							((Player) sender).setGameMode(GameMode.ADVENTURE);
+							sender.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
+							return true;
+						}else{
+							sender.sendMessage(ChatColor.RED + "That's not a gamemode!");
+							return true;
+						}
+					}else if(args.length == 0){
+						if(((Player) sender).getGameMode() == GameMode.CREATIVE){
+							((Player) sender).setGameMode(GameMode.SURVIVAL);
+							sender.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
+							return true;
+						}else if(((Player) sender).getGameMode() == GameMode.SURVIVAL){
+							((Player) sender).setGameMode(GameMode.CREATIVE);
+							sender.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
+							return true;
+						}else if(((Player) sender).getGameMode() == GameMode.ADVENTURE){
+							((Player) sender).setGameMode(GameMode.SURVIVAL);
+							sender.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
+							return true;
+						}
+					}else if(args.length == 2){
+						if(sender.getServer().getPlayer(args[0]) != null){
+							Player targetPlayer = sender.getServer().getPlayer(args [0]);
+							if(args[1] == "creative" || args[1] == "1"){
+								targetPlayer.setGameMode(GameMode.CREATIVE);
+								targetPlayer.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
+								return true;
+							}else if(args[1] == "survival" || args[1] == "0"){
+								targetPlayer.setGameMode(GameMode.SURVIVAL);
+								targetPlayer.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
+								return true;
+							}else if(args[1] == "adventure" || args[1] == "2"){
+								targetPlayer.setGameMode(GameMode.ADVENTURE);
+								targetPlayer.sendMessage(ChatColor.GREEN + "Your gamemode has been changed.");
+								return true;
+							}else{
+								sender.sendMessage(ChatColor.RED + "That is not a gamemode!");
+								return true;
+							}
+						}else{
+							sender.sendMessage(ChatColor.RED + "Player not online!");
+							return true;
+						}
+					}else{
+						sender.sendMessage(ChatColor.RED + "Too many arguments!");
+						return true;
+					}
+				}
 			}else if(cmd.getName().equalsIgnoreCase("thelp")){
 				if(args.length == 0){
 					sender.sendMessage("----" + ChatColor.GREEN + "Tadukoo Plugin Help" + ChatColor.WHITE + "----");
@@ -178,6 +243,7 @@ public class MainCommandExecutor implements CommandExecutor {
 					sender.sendMessage(ChatColor.AQUA + "/feed" + ChatColor.WHITE + " | " + ChatColor.GREEN + "Feeds a player.");
 					sender.sendMessage(ChatColor.AQUA + "/starve" + ChatColor.WHITE + " | " + ChatColor.GREEN + "Starves a player.");
 					sender.sendMessage(ChatColor.AQUA + "/suicide" + ChatColor.WHITE + " | " + ChatColor.GREEN + "Commit suicide.");
+					sender.sendMessage(ChatColor.AQUA + "/gamemode, /gm, or /gmt" + ChatColor.WHITE + " | " + ChatColor.GREEN + "Change a player's gamemode.");
 					sender.sendMessage(ChatColor.AQUA + "/thelp" + ChatColor.WHITE + " | " + ChatColor.GREEN + "Shows this help.");
 					return true;
 				}else{

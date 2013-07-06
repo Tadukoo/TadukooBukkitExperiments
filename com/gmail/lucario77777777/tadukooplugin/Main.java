@@ -24,6 +24,9 @@ public class Main extends JavaPlugin {
 		getCommand("feed").setExecutor(new MainCommandExecutor(this));
 		getCommand("starve").setExecutor(new MainCommandExecutor(this));
 		getCommand("suicide").setExecutor(new MainCommandExecutor(this));
+		getCommand("gamemode").setExecutor(new MainCommandExecutor(this));
+		getCommand("gm").setExecutor(new MainCommandExecutor(this));
+		getCommand("gmt").setExecutor(new MainCommandExecutor(this));
 		getCommand("thelp").setExecutor(new MainCommandExecutor(this));
 		this.getServer().getPluginManager().registerEvents(new BlockListener(null), this);
 		this.getServer().getPluginManager().registerEvents(new PlayerListener(null), this);

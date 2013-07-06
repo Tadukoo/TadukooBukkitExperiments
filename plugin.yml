@@ -1,6 +1,6 @@
 name: Tadukooplugin
 main: com.gmail.lucario77777777.tadukooplugin.Main
-version: 0.0.8.9
+version: 0.0.9.0
 description: Tadukoo Plugin
 commands:
    ping:
@@ -38,6 +38,21 @@ commands:
       usage: /<command>
       permission: Tadukooplugin.suicide
       permission-message: Sorry, you're not allowed to kill yourself.
+   gamemode:
+      description: Changes a player's gamemode.
+      usage: /<command> [player] [gamemode]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
+   gm:
+      description: Changes a player's gamemode.
+      usage: /<command> [player] [gamemode]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
+   gmt:
+      description: Changes a player's gamemode.
+      usage: /<command> [player] [gamemode]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
    thelp:
       description: Shows the Tadukoo Plugin help.
       usage: /<command>
@@ -54,6 +69,7 @@ permissions:
          Tadukooplugin.feed: true
          Tadukooplugin.starve: true
          Tadukooplugin.suicide: true
+         Tadukooplugin.gamemode: true
          Tadukooplugin.thelp: true
    Tadukooplugin.ping:
       description: Gives access to /ping
@@ -76,6 +92,9 @@ permissions:
    Tadukooplugin.suicide:
       description: Gives access to /suicide
       default: true
+   Tadukooplugin.gamemode:
+      description: Gives access to /gamemode, /gm, and /gmt
+      default: op
    Tadukooplugin.thelp:
       description: gives access to /thelp
       default: true

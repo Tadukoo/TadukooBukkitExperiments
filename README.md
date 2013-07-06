@@ -5,7 +5,7 @@ Tadukoo Plugin is a plugin currently in progress for Bukkit, it is being made
 for Minecraft 1.6.1, and will include various commands, and economy, permissions,
 and much more. Its purpose is as a plugin for [Tadukooverse] (http://tadukooverse.wikia.com).
 
-Tadukoo Plugin is in very early stages of development, so there's not much in it yet, and there are some 
+Tadukoo Plugin is in very early stages of development, so there's not much in it yet, so there may be some 
 features or commands that are just for testing at the moment. Also, Tadukoo Plugin is the working name.
 It may be changed in the future.
 
@@ -40,6 +40,8 @@ Key:
     * Starves a player.
 * /suicide
     * Commit suicide.
+* /gamemode, /gm, and /gmt [ player ] [ gamemode ]
+    * Changes a player's gamemode.
 * /thelp
     * Shows the Tadukoo Plugin help.
 
@@ -54,6 +56,11 @@ None at the moment.
 Planned Features
 ----------
 There are so many that I'm not going to list them yet since this plugin is in such an early stage.
+
+Wiki
+----------
+There will be a wiki link here in the future. I'm not a big fan of Github's wiki system. I'll probably
+end up putting this on the wiki for my server, since this plugin is designed for it anyway.
 
 Copyright
 ----------
