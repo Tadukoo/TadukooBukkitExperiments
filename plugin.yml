@@ -1,6 +1,6 @@
 name: Tadukooplugin
 main: com.gmail.lucario77777777.tadukooplugin.Main
-version: Alpha 0.1
+version: Alpha 0.1.0.1
 description: Tadukoo Plugin
 commands:
    ping:

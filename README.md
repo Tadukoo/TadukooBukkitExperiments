@@ -9,7 +9,7 @@ Tadukoo Plugin is in very early stages of development, so there's not much in it
 features or commands that are just for testing at the moment. Also, Tadukoo Plugin is the working name.
 It may be changed in the future.
 
-Current Version: Alpha 0.1
+Current Version: Alpha 0.1.0.1
 
 Current Features
 ----------
@@ -20,6 +20,7 @@ Current Features
 * TNT and Bedrock disappear after being placed and you say "I just placed < TNT/BEDROCK >".
 * Upon joining the player is sent the message "Hello playerName. Welcome to worldName. It is timeInWorld."
 * You can customize the motd in the config.yml.
+* You can turn /ping on and off in the config.yml.
 
 Planned Features/Updates
 ----------
@@ -89,7 +90,7 @@ Will be listed later, they can be viewed in the plugin.yml file.
 
 Known Issues
 ----------
-None at the moment.
+You don't get the Motd upon joining.
 
 Recent Updates
 ----------

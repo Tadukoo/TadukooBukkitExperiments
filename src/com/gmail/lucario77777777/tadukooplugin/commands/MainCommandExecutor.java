@@ -27,10 +27,12 @@ public class MainCommandExecutor implements CommandExecutor {
 		}else{
 			playerType = "unknown";
 		}
-		if(plugin.getConfig().getString("Ping") == "true"){
-			if(cmd.getName().equalsIgnoreCase("ping")){
+		if(cmd.getName().equalsIgnoreCase("ping")){
+			if(plugin.getConfig().getString("Ping") == "true"){
 				Ping.PingRun(sender, playerType);
 				return true;
+			}else{
+				return false;
 			}
 		}else if(cmd.getName().equalsIgnoreCase("tport")){
 			Tport.TportRun(sender, args, playerType);
