@@ -9,7 +9,7 @@ Tadukoo Plugin is in very early stages of development, so there's not much in it
 features or commands that are just for testing at the moment. Also, Tadukoo Plugin is the working name.
 It may be changed in the future.
 
-Current Version: Alpha 0.0.9.6
+Current Version: Alpha 0.1
 
 Current Features
 ----------
@@ -24,10 +24,26 @@ Current Features
 Planned Features/Updates
 ----------
 There are so many that I'm not going to list them all yet since this plugin is in such an early stage, but below are a few:
-* Alpha 0.1.0.0
-    * Commands are in separate class files.
-* Alpha ?
+
+(NOTE: All version numbers listed below are tentative and could change.)
+* Alpha 0.1.X
+    * Add /time
+	* Add /day
+	* Add /night
+	* Add /sun
+	* Add /rain
+	* Add /storm
+* Alpha 0.2
     * Commands are configurable in the config.yml or a new commands.yml file.
+* Alpha 0.2.1
+    * /thelp search functionality.
+    * /thelp updated to have all commands.
+* Alpha 0.3
+    * Set-up an economy system.
+* Alpha 0.4
+    * Set-up more teleportation stuff (Like warps).
+* Alpha ?
+    * Add permissions for certain command groups (ex. economy commands permission is Tadukooplugin.economy).
 
 Commands
 ----------

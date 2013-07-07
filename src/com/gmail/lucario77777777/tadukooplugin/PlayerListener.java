@@ -22,7 +22,7 @@ public class PlayerListener implements Listener {
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event){
 		Player player = event.getPlayer();
-		event.setJoinMessage(ChatColor.GOLD + "Hello" + player.getName() + ". Welcome To:" + player.getWorld().getName() + ". It is " + player.getWorld().getTime());
+		player.sendMessage(plugin.getConfig().getString("MOTD"));
 	}
 	public void onPlayerChat(PlayerChatEvent event){
 		Player player = event.getPlayer();

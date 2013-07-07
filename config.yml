@@ -1,2 +1,8 @@
 # Default Configuration File for Tadukoo Plugin! -Tadukoo
 MOTD: Welcome to our server!
+/****************************************
+*                                       *
+*               Commands                *
+****************************************/
+//Here you can enable and disable any commands (in the future, right now we're just testing with /ping)
+Ping: true
