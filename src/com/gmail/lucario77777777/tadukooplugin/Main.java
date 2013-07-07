@@ -42,6 +42,7 @@ public class Main extends JavaPlugin {
 		getCommand("fly").setExecutor(new MainCommandExecutor(this));
 		getCommand("killall").setExecutor(new MainCommandExecutor(this));
 		getCommand("motd").setExecutor(new MainCommandExecutor(this));
+		//getCommand("setwarp").setExecutor(new MainCommandExecutor(this)); Removed until a later version.
 		getCommand("thelp").setExecutor(new MainCommandExecutor(this));
 		this.getServer().getPluginManager().registerEvents(new BlockListener(null), this);
 		this.getServer().getPluginManager().registerEvents(new PlayerListener(null), this);

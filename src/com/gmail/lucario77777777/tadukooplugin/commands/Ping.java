@@ -12,7 +12,7 @@ public class Ping extends MainCommandExecutor {
 		super(plugin);
 	}
 	
-	public static boolean PingRun(CommandSender sender, String playerType)
+	public static boolean Run(CommandSender sender, String playerType)
 	{
 	if(playerType == "player"){
 		sender.sendMessage(ChatColor.GOLD + "Pong!");
@@ -22,4 +22,8 @@ public class Ping extends MainCommandExecutor {
 		return true;
 	}
 }
+	public static void Disabled(CommandSender sender)
+	{
+		sender.sendMessage(ChatColor.RED + "/ping is disabled.");
+	}
 }

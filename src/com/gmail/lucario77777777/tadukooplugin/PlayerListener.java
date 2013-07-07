@@ -10,7 +10,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChatEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
+//import org.bukkit.event.player.PlayerJoinEvent;
 
 @SuppressWarnings("deprecation")
 public class PlayerListener implements Listener {
@@ -20,10 +20,12 @@ public class PlayerListener implements Listener {
 	}
 	
 	@EventHandler
+	/* Feature not working right. Temporarily disabled.
 	public void onPlayerJoin(PlayerJoinEvent event){
 		Player player = event.getPlayer();
 		player.sendMessage(plugin.getConfig().getString("MOTD"));
 	}
+	*/
 	public void onPlayerChat(PlayerChatEvent event){
 		Player player = event.getPlayer();
 		

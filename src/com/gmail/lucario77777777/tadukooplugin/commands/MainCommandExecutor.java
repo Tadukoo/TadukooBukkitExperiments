@@ -29,10 +29,11 @@ public class MainCommandExecutor implements CommandExecutor {
 		}
 		if(cmd.getName().equalsIgnoreCase("ping")){
 			if(plugin.getConfig().getString("Ping") == "true"){
-				Ping.PingRun(sender, playerType);
+				Ping.Run(sender, playerType);
 				return true;
 			}else{
-				return false;
+				Ping.Disabled(sender);
+				return true;
 			}
 		}else if(cmd.getName().equalsIgnoreCase("tport")){
 			Tport.TportRun(sender, args, playerType);
@@ -44,11 +45,11 @@ public class MainCommandExecutor implements CommandExecutor {
 			Kill.KillRun(sender, args);
 			return true;
 		}else if(cmd.getName().equalsIgnoreCase("feed")){
-				Feed.FeedRun(sender, args, playerType);
-				return true;
+			Feed.FeedRun(sender, args, playerType);
+			return true;
 		}else if(cmd.getName().equalsIgnoreCase("starve")){
-				Starve.StarveRun(sender, args);
-				return true;
+			Starve.StarveRun(sender, args);
+			return true;
 		}else if(cmd.getName().equalsIgnoreCase("suicide")){
 			Suicide.SuicideRun(sender, args, playerType);
 			return true;
@@ -73,7 +74,11 @@ public class MainCommandExecutor implements CommandExecutor {
 		}else if(cmd.getName().equalsIgnoreCase("motd")){
 			MOTD.MOTDRun(sender, plugin);
 			return true;
-		}else if(cmd.getName().equalsIgnoreCase("thelp")){
+		}/*else if(cmd.getName().equalsIgnoreCase("setwarp")){
+			Setwarp.SetwarpRun(sender, args, playerType, plugin);
+			return true;
+		*** Removed until a later version. ***
+		}*/else if(cmd.getName().equalsIgnoreCase("thelp")){
 			THelp.THelpRun(sender, args);
 			return true;
 		}
