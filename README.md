@@ -9,7 +9,7 @@ Tadukoo Plugin is in very early stages of development, so there's not much in it
 features or commands that are just for testing at the moment. Also, Tadukoo Plugin is the working name.
 It may be changed in the future.
 
-Current Version: Alpha 0.0.9.4
+Current Version: Alpha 0.0.9.6
 
 Current Features
 ----------
@@ -21,9 +21,13 @@ Current Features
 * Upon joining the player is sent the message "Hello playerName. Welcome to worldName. It is timeInWorld."
 * You can customize the motd in the config.yml.
 
-Planned Features
+Planned Features/Updates
 ----------
-There are so many that I'm not going to list them yet since this plugin is in such an early stage.
+There are so many that I'm not going to list them all yet since this plugin is in such an early stage, but below are a few:
+* Alpha 0.1.0.0
+    * Commands are in separate class files.
+* Alpha ?
+    * Commands are configurable in the config.yml or a new commands.yml file.
 
 Commands
 ----------
