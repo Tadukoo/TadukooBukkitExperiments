@@ -14,21 +14,27 @@ import org.bukkit.event.player.PlayerInteractEvent;
 
 @SuppressWarnings("deprecation")
 public class PlayerListener implements Listener {
-	public static Main plugin;
-	public PlayerListener(Main instance){
-		plugin = instance;
+	public Main plugin;
+	public PlayerListener(Main plugin){
+		this.plugin = plugin;
 	}
 	
 	@EventHandler
 	/* Feature not working right. Temporarily disabled.
 	public void onPlayerJoin(PlayerJoinEvent event){
-		Player player = event.getPlayer();
-		player.sendMessage(plugin.getConfig().getString("MOTD"));
+	    if(plugin.getConfig().getString("MOTD").isEmpty()){
+		}else{
+			(event.getPlayer()).sendMessage(plugin.getConfig().getString("MOTD"));
+		}
 	}
 	*/
 	public void onPlayerChat(PlayerChatEvent event){
 		Player player = event.getPlayer();
-		
+		/*
+		if(event.getMessage().contains("&")){
+			event.getMessage().replace("&", "\u00A7");
+		}
+		*/
 		if(event.getMessage().toLowerCase().contains("heal")){
 			player.setHealth(20);
 			player.setFoodLevel(20);

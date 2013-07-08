@@ -1,12 +1,13 @@
-/* Removed until a later version.
 package com.gmail.lucario77777777.tadukooplugin.commands;
 
 import com.gmail.lucario77777777.tadukooplugin.commands.MainCommandExecutor;
 
+/*
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+*/
 
 import com.gmail.lucario77777777.tadukooplugin.Main;
 
@@ -15,7 +16,7 @@ public class Setwarp extends MainCommandExecutor {
 		super(plugin);
 	}
 	
-	public static boolean SetwarpRun(CommandSender sender, String[] args, String playerType, Main plugin)
+	/*public static boolean SetwarpRun(CommandSender sender, String[] args, String playerType, Main plugin)
 	{
 
 		if(playerType == "player"){
@@ -42,6 +43,5 @@ public class Setwarp extends MainCommandExecutor {
 			return true;
 		}
 		return false;
+}*/
 }
-}
-*/

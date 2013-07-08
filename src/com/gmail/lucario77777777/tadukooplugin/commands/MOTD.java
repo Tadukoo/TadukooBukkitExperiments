@@ -3,6 +3,7 @@ package com.gmail.lucario77777777.tadukooplugin.commands;
 import com.gmail.lucario77777777.tadukooplugin.commands.MainCommandExecutor;
 
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 import com.gmail.lucario77777777.tadukooplugin.Main;
 
@@ -13,7 +14,7 @@ public class MOTD extends MainCommandExecutor {
 	
 	public static boolean MOTDRun(CommandSender sender, Main plugin)
 	{
-		sender.sendMessage(plugin.getConfig().getString("MOTD"));
+		sender.sendMessage(plugin.getConfig().getString("MOTD").replace("%w", ((Player) sender).getWorld().getName()));
 		return true;
-}
+	}
 }

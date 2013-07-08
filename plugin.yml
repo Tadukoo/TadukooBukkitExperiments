@@ -1,6 +1,6 @@
 name: Tadukooplugin
 main: com.gmail.lucario77777777.tadukooplugin.Main
-version: Alpha 0.1.0.3
+version: Alpha 0.1.0.9
 description: Tadukoo Plugin
 commands:
    ping:
@@ -98,6 +98,31 @@ commands:
       usage: /<command>
       permission: Tadukooplugin.motd
       permission-message: You don't have <permission>
+   time:
+      description: Sets the time.
+      usage: /<command> <day/night>
+      permission: Tadukooplugin.time
+      permission-message: You don't have <permission>
+   timer:
+      description: Counts down from 3.
+      usage: /<command>
+      permission: Tadukooplugin.timer
+      permission-message: You don't have <permission>
+   day:
+      description: Sets the time to day.
+      usage: /<command>
+      permission: Tadukooplugin.time
+      permission-message: You don't have <permission>
+   night:
+      description: Sets the time to night.
+      usage: /<command>
+      permission: Tadukooplugin.time
+      permission-message: You don't have <permission>
+#   setwarp:
+#      description: Sets a warp.
+#      usage: /<command> <name>
+#      permission: Tadukooplugin.setwarp
+#      permission-message: You don't have <permission>
    thelp:
       description: Shows the Tadukoo Plugin help.
       usage: /<command>
@@ -118,6 +143,9 @@ permissions:
          Tadukooplugin.fly: true
          Tadukooplugin.killall: true
          Tadukooplugin.motd: true
+         Tadukooplugin.time: true
+         Tadukooplugin.timer: true
+#         Tadukooplugin.setwarp: true
          Tadukooplugin.thelp: true
    Tadukooplugin.ping:
       description: Gives access to /ping
@@ -152,6 +180,15 @@ permissions:
    Tadukooplugin.motd:
       description: Gives access to /motd
       default: true
+   Tadukooplugin.time:
+      description: Gives access to /time, /day, and /night
+      default: op
+   Tadukooplugin.timer:
+      description: Gives access to /timer
+      default: op
+#   Tadukooplugin.setwarp:
+#      description: Gives access to /setwarp
+#      default: op
    Tadukooplugin.thelp:
       description: Gives access to /thelp
       default: true

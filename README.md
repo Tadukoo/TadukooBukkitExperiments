@@ -9,7 +9,7 @@ Tadukoo Plugin is in very early stages of development, so there's not much in it
 features or commands that are just for testing at the moment. Also, Tadukoo Plugin is the working name.
 It may be changed in the future.
 
-Current Version: Alpha 0.1.0.3
+Current Version: Alpha 0.1.0.7
 
 Current Features
 ----------
@@ -22,6 +22,7 @@ Current Features
     * This is temporarily disabled
 * You can customize the motd in the config.yml.
 * You can turn /ping on and off in the config.yml.
+* In chat, color codes are now available.
 
 Planned Features/Updates
 ----------
@@ -29,9 +30,6 @@ There are so many that I'm not going to list them all yet since this plugin is i
 
 (NOTE: All version numbers listed below are tentative and could change.)
 * Alpha 0.1.X
-    * Add /time
-	* Add /day
-	* Add /night
 	* Add /sun
 	* Add /rain
 	* Add /storm
@@ -82,6 +80,14 @@ Key:
     * Kills all players on the server.
 * /motd
     * Shows the motd (message of the day).
+* /time < day/night >
+    * Sets the time to day or night.
+* /timer
+    * Counts down from 3 and says "GO!".
+* /day
+    * Sets the time to day.
+* /night
+    * Sets the time to night.
 * /thelp
     * Shows the Tadukoo Plugin help.
 
@@ -95,9 +101,30 @@ None at the moment.
 
 Recent Updates
 ----------
-In the future, the newest updates will be listed here.
+This is only the newest 5 updates, for a full listing of updates, check the wiki, specifically
+ [this page] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin History).
 
-For a full listing of updates, check the wiki, specifically [this page] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin History).
+Alpha 0.1.0.9
+* Added /day
+    * Sets the time to day.
+* Added /night
+    * Sets the time to night.
+* /time day improved
+    * Now sets the time to 0 instead of 12000.
+
+Alpha 0.1.0.8
+* Changed enabled and disabled messages a bit.
+
+Alpha 0.1.0.7
+* Re-disabled Player join motd.
+* Added Color Codes.
+
+Alpha 0.1.0.6
+* Re-enabled Player join motd.
+
+Alpha 0.1.0.5
+* Added /timer
+    * Counts down from 3, then says "GO!".
 
 Wiki
 ----------

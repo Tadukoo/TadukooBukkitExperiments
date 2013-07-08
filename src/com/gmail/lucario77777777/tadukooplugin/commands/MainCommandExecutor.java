@@ -31,7 +31,7 @@ public class MainCommandExecutor implements CommandExecutor {
 			if(plugin.getConfig().getString("Ping") == "true"){
 				Ping.Run(sender, playerType);
 				return true;
-			}else{
+			}else if(plugin.getConfig().getString("Ping") == "bukkit" || plugin.getConfig().getString("Ping") == "false"){
 				Ping.Disabled(sender);
 				return true;
 			}
@@ -73,6 +73,18 @@ public class MainCommandExecutor implements CommandExecutor {
 			return true;
 		}else if(cmd.getName().equalsIgnoreCase("motd")){
 			MOTD.MOTDRun(sender, plugin);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("time")){
+			Time.TimeRun(sender, args, playerType);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("timer")){
+			Timer.TimerRun(plugin);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("day")){
+			Day.Run(sender, args, playerType);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("night")){
+			Night.Run(sender, args, playerType);
 			return true;
 		}/*else if(cmd.getName().equalsIgnoreCase("setwarp")){
 			Setwarp.SetwarpRun(sender, args, playerType, plugin);
