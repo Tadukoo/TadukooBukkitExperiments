@@ -1,6 +1,6 @@
 name: Tadukooplugin
 main: com.gmail.lucario77777777.tadukooplugin.Main
-version: Alpha 0.1.0.9
+version: Alpha 0.1.1.2
 description: Tadukoo Plugin
 commands:
    ping:
@@ -118,11 +118,21 @@ commands:
       usage: /<command>
       permission: Tadukooplugin.time
       permission-message: You don't have <permission>
-#   setwarp:
-#      description: Sets a warp.
-#      usage: /<command> <name>
-#      permission: Tadukooplugin.setwarp
-#      permission-message: You don't have <permission>
+   setwarp:
+      description: Sets a warp.
+      usage: /<command> <warpName>
+      permission: Tadukooplugin.setwarp
+      permission-message: You don't have <permission>
+   warp:
+      description: Takes you to a warp.
+      usage: /<command> <warpName>
+      permission: Tadukooplugin.warp
+      permission-message: You don't have <permission>
+   delwarp:
+      description: Deletes a warp.
+      usage: /<command> <warpName>
+      permission: Tadukooplugin.delwarp
+      permission-message: You don't have <permission>
    thelp:
       description: Shows the Tadukoo Plugin help.
       usage: /<command>
@@ -145,7 +155,9 @@ permissions:
          Tadukooplugin.motd: true
          Tadukooplugin.time: true
          Tadukooplugin.timer: true
-#         Tadukooplugin.setwarp: true
+         Tadukooplugin.setwarp: true
+         Tadukooplugin.warp: true
+         Tadukooplugin.delwarp: true
          Tadukooplugin.thelp: true
    Tadukooplugin.ping:
       description: Gives access to /ping
@@ -186,9 +198,15 @@ permissions:
    Tadukooplugin.timer:
       description: Gives access to /timer
       default: op
-#   Tadukooplugin.setwarp:
-#      description: Gives access to /setwarp
-#      default: op
+   Tadukooplugin.setwarp:
+      description: Gives access to /setwarp
+      default: op
+   Tadukooplugin.warp:
+      description: Gives access to /warp
+      default: op
+   Tadukooplugin.delwarp:
+      description: Gives access to /delwarp
+      default: op
    Tadukooplugin.thelp:
       description: Gives access to /thelp
       default: true

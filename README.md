@@ -9,10 +9,10 @@ Tadukoo Plugin is in very early stages of development, so there's not much in it
 features or commands that are just for testing at the moment. Also, Tadukoo Plugin is the working name.
 It may be changed in the future.
 
-Current Version: Alpha 0.1.0.7
+Current Version: Alpha 0.1.1.2
 
 Current Features
-----------
+----------------
 * Mainly just commands right now.
 * Typing "heal" will heal you.
 * Typing "kill" will kill you.
@@ -25,14 +25,14 @@ Current Features
 * In chat, color codes are now available.
 
 Planned Features/Updates
-----------
+------------------------
 There are so many that I'm not going to list them all yet since this plugin is in such an early stage, but below are a few:
 
 (NOTE: All version numbers listed below are tentative and could change.)
 * Alpha 0.1.X
-	* Add /sun
-	* Add /rain
-	* Add /storm
+    * Add /sun
+    * Add /rain
+    * Add /storm
 * Alpha 0.2
     * Commands are configurable in the config.yml or a new commands.yml file.
 * Alpha 0.2.1
@@ -41,12 +41,13 @@ There are so many that I'm not going to list them all yet since this plugin is i
 * Alpha 0.3
     * Set-up an economy system.
 * Alpha 0.4
-    * Set-up more teleportation stuff (Like warps).
+    * Set-up more teleportation stuff.
+	* Improve current teleportation stuff.
 * Alpha ?
     * Add permissions for certain command groups (ex. economy commands permission is Tadukooplugin.economy).
 
 Commands
-----------
+--------
 Note: the commands on this page may not be up to date, for the current listing, please view the plugin.yml file.
 
 Key:
@@ -88,21 +89,42 @@ Key:
     * Sets the time to day.
 * /night
     * Sets the time to night.
+* /setwarp < warpName >
+    * Sets a warp.
+* /warp < warpName >
+    * Teleports you to a warp.
+* /delwarp < warpName >
+    * Deletes a warp.
 * /thelp
     * Shows the Tadukoo Plugin help.
 
 Permissions
-----------
+-----------
 Will be listed later, they can be viewed in the plugin.yml file.
 
 Known Issues
-----------
-None at the moment.
+------------
+Player join motd gives an error and doesn't work.
 
 Recent Updates
-----------
-This is only the newest 5 updates, for a full listing of updates, check the wiki, specifically
+--------------
+This is only the newest 10 updates, for a full listing of updates, check the wiki, specifically
  [this page] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin History).
+
+Alpha 0.1.1.2
+* /delwarp added.
+ 
+Alpha 0.1.1.1
+* /setwarp and /warp added.
+* BUG FIX:
+   * Player join motd gives an error and doesn't work.
+       * Temporarily disabled.
+ 
+Alpha 0.1.1.0
+* Re-added plugin enable and disable messages.
+* Re-added player join motd.
+* KNOWN BUG:
+   * Player join motd gives an error and doesn't work.
 
 Alpha 0.1.0.9
 * Added /day
@@ -127,11 +149,11 @@ Alpha 0.1.0.5
     * Counts down from 3, then says "GO!".
 
 Wiki
-----------
+----
 Information about Tadukoo Plugin can be found on tadukooverse.wikia.com, the main page for it is [here] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin).
 
 Copyright
-----------
+---------
 
 Tadukoo Plugin is released under GNU's general public license (GPLv3), 
 more information can be found [here](http://www.gnu.org/licenses/gpl.html).

@@ -7,34 +7,32 @@ import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerChatEvent;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
-//import org.bukkit.event.player.PlayerJoinEvent;
+//import org.bukkit.event.player.PlayerLoginEvent;
 
-@SuppressWarnings("deprecation")
 public class PlayerListener implements Listener {
 	public Main plugin;
-	public PlayerListener(Main plugin){
-		this.plugin = plugin;
+	public PlayerListener(Main parent){
+		this.plugin = parent;
 	}
 	
-	@EventHandler
-	/* Feature not working right. Temporarily disabled.
-	public void onPlayerJoin(PlayerJoinEvent event){
-	    if(plugin.getConfig().getString("MOTD").isEmpty()){
-		}else{
-			(event.getPlayer()).sendMessage(plugin.getConfig().getString("MOTD"));
+	/*@EventHandler(priority = EventPriority.HIGH)
+	Still doesn't work.
+	public void onPlayerLogin(final PlayerLoginEvent event){
+	    if(!this.plugin.getConfig().getString("motd").isEmpty()){
+	    	String motd = this.plugin.getConfig().getString("motd");
+			(event.getPlayer()).sendMessage(motd);
 		}
-	}
-	*/
-	public void onPlayerChat(PlayerChatEvent event){
+	}*/
+	@EventHandler(priority = EventPriority.LOWEST)
+	public void onPlayerChat(final AsyncPlayerChatEvent event){
 		Player player = event.getPlayer();
-		/*
-		if(event.getMessage().contains("&")){
+/*		if(event.getMessage().contains("&")){
 			event.getMessage().replace("&", "\u00A7");
-		}
-		*/
+		}*/
 		if(event.getMessage().toLowerCase().contains("heal")){
 			player.setHealth(20);
 			player.setFoodLevel(20);
@@ -46,6 +44,7 @@ public class PlayerListener implements Listener {
 			player.sendMessage("Send You!");
 		}
 	}
+	@EventHandler(priority = EventPriority.LOW)
 	public void onPlayerInteract(PlayerInteractEvent event){
 		Player player = event.getPlayer();
 		int blockId = player.getItemInHand().getType().getId();

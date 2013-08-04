@@ -5,7 +5,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.command.CommandExecutor;
 
 import com.gmail.lucario77777777.tadukooplugin.Main;
-import com.gmail.lucario77777777.tadukooplugin.commands.Ping;
 
 public class MainCommandExecutor implements CommandExecutor {
 
@@ -86,11 +85,16 @@ public class MainCommandExecutor implements CommandExecutor {
 		}else if(cmd.getName().equalsIgnoreCase("night")){
 			Night.Run(sender, args, playerType);
 			return true;
-		}/*else if(cmd.getName().equalsIgnoreCase("setwarp")){
+		}else if(cmd.getName().equalsIgnoreCase("setwarp")){
 			Setwarp.SetwarpRun(sender, args, playerType, plugin);
 			return true;
-		*** Removed until a later version. ***
-		}*/else if(cmd.getName().equalsIgnoreCase("thelp")){
+		}else if(cmd.getName().equalsIgnoreCase("warp")){
+			Warp.Run(sender, args, playerType, plugin);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("delwarp")){
+			Delwarp.Run(sender, args, playerType, plugin);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("thelp")){
 			THelp.THelpRun(sender, args);
 			return true;
 		}

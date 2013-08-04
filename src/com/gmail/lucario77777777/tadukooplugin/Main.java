@@ -10,15 +10,16 @@ public class Main extends JavaPlugin {
     public final Logger logger = Logger.getLogger("Minecraft");
 	public static Main plugin;
 	public final BukkitLogger blo = new BukkitLogger(this);
+	public static boolean enabled = true;
 	
 	@Override
 	public void onDisable () {
-		blo.enabled(false);
+		blo.enabled(!enabled);
 		saveConfig();
 	}
 	@Override
 	public void onEnable () {
-		blo.enabled(true);
+		blo.enabled(enabled);
 		getConfig().options().copyDefaults(true);
 		saveConfig();
 //		getConfig().getString("MOTD").replaceAll("&", "\u00A7");
@@ -45,7 +46,9 @@ public class Main extends JavaPlugin {
 		getCommand("timer").setExecutor(new MainCommandExecutor(this));
 		getCommand("day").setExecutor(new MainCommandExecutor(this));
 		getCommand("night").setExecutor(new MainCommandExecutor(this));
-		//getCommand("setwarp").setExecutor(new MainCommandExecutor(this)); Removed until a later version.
+		getCommand("setwarp").setExecutor(new MainCommandExecutor(this));
+		getCommand("warp").setExecutor(new MainCommandExecutor(this));
+		getCommand("delwarp").setExecutor(new MainCommandExecutor(this));
 		getCommand("thelp").setExecutor(new MainCommandExecutor(this));
 		this.getServer().getPluginManager().registerEvents(new BlockListener(null), this);
 		this.getServer().getPluginManager().registerEvents(new PlayerListener(null), this);
