@@ -2,7 +2,7 @@ Tadukoo Plugin
 ==============
 
 Tadukoo Plugin is a plugin currently in progress for Bukkit, it is being made
-for Minecraft 1.6.1, and will include various commands, an economy, permissions,
+for Minecraft 1.6.2, and will include various commands, an economy, permissions,
 and much more. Its purpose is as a plugin for [Tadukooverse] (http://tadukooverse.wikia.com).
 
 Tadukoo Plugin is in very early stages of development, so there's not much in it yet, so there may be some 
@@ -11,27 +11,21 @@ It may be changed in the future.
 
 Current Features
 ----------------
-* Mainly just commands right now.
-* Typing "heal" will heal you.
-* Typing "kill" will kill you.
-* Typing "sendme" will send the message "Send You" to you.
-* TNT and Bedrock disappear after being placed and you say "I just placed < TNT/BEDROCK >".
-* Upon joining the player is sent the message "Hello playerName. Welcome to worldName. It is timeInWorld."
-    * This is temporarily disabled
-* You can customize the motd in the config.yml.
-* You can turn /ping on and off in the config.yml.
-* In chat, color codes are now available.
+Please check the wiki [here] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin Features).
 
 Planned Features/Updates
 ------------------------
 There are so many that I'm not going to list them all yet since this plugin is in such an early stage, but below are a few:
 
-(NOTE: All version numbers listed below are tentative and could change.)
+(NOTE: All version numbers and/or features listed below are tentative and could change.)
 * Alpha 0.1.X
     * Add /rain
     * Add /storm
 * Alpha 0.2
     * Commands are configurable in the commands.yml file.
+	    * True = normal functionality for the plugin.
+		* False = gives a message saying "/command is disabled!"
+		* Maybe some commands will have special options?
 * Alpha 0.2.1
     * /thelp search functionality.
     * /thelp updated to have all commands.
@@ -40,6 +34,8 @@ There are so many that I'm not going to list them all yet since this plugin is i
 	* Improve current teleportation stuff.
 * Alpha 0.4
     * Set-up an economy system.
+* Alpha ?
+    * Make configurable aliases for commands.
 
 Commands
 --------
@@ -97,17 +93,20 @@ Key:
 
 Permissions
 -----------
-Will be listed later, they can be viewed in the plugin.yml file.
+View them on the wiki, specifically [this page] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin Permissions).
 
 Known Issues
 ------------
-Player join motd gives an error and doesn't work.
+Color codes don't work.
 
 Recent Updates
 --------------
-This is only the newest 10 updates, for a full listing of updates, check the wiki, specifically
+This is only the newest 3 updates, for a full listing of updates, check the wiki, specifically
  [this page] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin History).
 
+Alpha 0.1.1.6
+* Warps are now stored in warps.yml
+ 
 Alpha 0.1.1.5
 * Renamed /timer to /countdown
 * Renamed /tport to /tp
@@ -118,46 +117,6 @@ Alpha 0.1.1.4
 * Reorganized commands and permissions.
 * Created the commands.yml file.
 * Minor code cleanup.
- 
-Alpha 0.1.1.3
-* Added /sun
- 
-Alpha 0.1.1.2
-* /delwarp added.
- 
-Alpha 0.1.1.1
-* /setwarp and /warp added.
-* BUG FIX:
-   * Player join motd gives an error and doesn't work.
-       * Temporarily disabled.
- 
-Alpha 0.1.1.0
-* Re-added plugin enable and disable messages.
-* Re-added player join motd.
-* KNOWN BUG:
-   * Player join motd gives an error and doesn't work.
-
-Alpha 0.1.0.9
-* Added /day
-    * Sets the time to day.
-* Added /night
-    * Sets the time to night.
-* /time day improved
-    * Now sets the time to 0 instead of 12000.
-
-Alpha 0.1.0.8
-* Changed enabled and disabled messages a bit.
-
-Alpha 0.1.0.7
-* Re-disabled Player join motd.
-* Added Color Codes.
-
-Alpha 0.1.0.6
-* Re-enabled Player join motd.
-
-Alpha 0.1.0.5
-* Added /timer
-    * Counts down from 3, then says "GO!".
 
 Wiki
 ----
