@@ -26,76 +26,79 @@ public class MainCommandExecutor implements CommandExecutor {
 		}else{
 			playerType = "unknown";
 		}
-		if(cmd.getName().equalsIgnoreCase("ping")){
-			if(plugin.getConfig().getString("Ping") == "true"){
-				Ping.Run(sender, playerType);
-				return true;
-			}else if(plugin.getConfig().getString("Ping") == "bukkit" || plugin.getConfig().getString("Ping") == "false"){
-				Ping.Disabled(sender);
-				return true;
-			}
-		}else if(cmd.getName().equalsIgnoreCase("tport")){
-			Tport.TportRun(sender, args, playerType);
+		if(cmd.getName().equalsIgnoreCase("adventure") || cmd.getName().equalsIgnoreCase("gma")){
+			Adventure.Run(sender, args, playerType);
 			return true;
-		}else if(cmd.getName().equalsIgnoreCase("heal")){
-			Heal.HealRun(sender, args, playerType);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("kill")){
-			Kill.KillRun(sender, args);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("feed")){
-			Feed.FeedRun(sender, args, playerType);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("starve")){
-			Starve.StarveRun(sender, args);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("suicide")){
-			Suicide.SuicideRun(sender, args, playerType);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("gamemode") || cmd.getName().equalsIgnoreCase("gm") || cmd.getName().equalsIgnoreCase("gmt")){
-			Gamemode.GamemodeRun(sender, args, playerType);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("adventure") || cmd.getName().equalsIgnoreCase("gma")){
-			Adventure.AdventureRun(sender, args, playerType);
+		}else if(cmd.getName().equalsIgnoreCase("countdown")){
+			Countdown.Run(plugin);
 			return true;
 		}else if(cmd.getName().equalsIgnoreCase("creative") || cmd.getName().equalsIgnoreCase("gmc")){
-			Creative.CreativeRun(sender, args, playerType);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("survival") || cmd.getName().equalsIgnoreCase("gms")){
-			Survival.SurvivalRun(sender, args, playerType);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("fly")){
-			Fly.FlyRun(sender, args, playerType);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("killall")){
-			Killall.KillallRun(sender);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("motd")){
-			MOTD.MOTDRun(sender, plugin);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("time")){
-			Time.TimeRun(sender, args, playerType);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("timer")){
-			Timer.TimerRun(plugin);
+			Creative.Run(sender, args, playerType);
 			return true;
 		}else if(cmd.getName().equalsIgnoreCase("day")){
 			Day.Run(sender, args, playerType);
 			return true;
-		}else if(cmd.getName().equalsIgnoreCase("night")){
-			Night.Run(sender, args, playerType);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("setwarp")){
-			Setwarp.SetwarpRun(sender, args, playerType, plugin);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("warp")){
-			Warp.Run(sender, args, playerType, plugin);
-			return true;
 		}else if(cmd.getName().equalsIgnoreCase("delwarp")){
 			Delwarp.Run(sender, args, playerType, plugin);
 			return true;
+		}else if(cmd.getName().equalsIgnoreCase("feed")){
+			Feed.Run(sender, args, playerType);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("fly")){
+			Fly.Run(sender, args, playerType);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("gamemode") || cmd.getName().equalsIgnoreCase("gm") || cmd.getName().equalsIgnoreCase("gmt")){
+			Gamemode.Run(sender, args, playerType);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("heal")){
+			Heal.Run(sender, args, playerType);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("kill")){
+			Kill.Run(sender, args);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("killall")){
+			Killall.Run(sender);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("motd")){
+			MOTD.Run(sender, plugin);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("night")){
+			Night.Run(sender, args, playerType);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("ping")){
+			if(plugin.getCommandsConfig().getString("Ping") == "true"){
+				Ping.Run(sender, playerType);
+				return true;
+			}else if(plugin.getCommandsConfig().getString("Ping") == "bukkit" || plugin.getConfig().getString("Ping") == "false"){
+				Ping.Disabled(sender);
+				return true;
+			}
+		}else if(cmd.getName().equalsIgnoreCase("setwarp")){
+			Setwarp.Run(sender, args, playerType, plugin);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("starve")){
+			Starve.Run(sender, args);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("suicide")){
+			Suicide.Run(sender, args, playerType);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("sun")){
+			Sun.Run(sender, args, playerType);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("survival") || cmd.getName().equalsIgnoreCase("gms")){
+			Survival.Run(sender, args, playerType);
+			return true;
 		}else if(cmd.getName().equalsIgnoreCase("thelp")){
-			THelp.THelpRun(sender, args);
+			THelp.Run(sender, args);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("time")){
+			Time.Run(sender, args, playerType);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("tp")){
+			Tp.Run(sender, args, playerType);
+			return true;
+		}else if(cmd.getName().equalsIgnoreCase("warp")){
+			Warp.Run(sender, args, playerType, plugin);
 			return true;
 		}
 		return false;

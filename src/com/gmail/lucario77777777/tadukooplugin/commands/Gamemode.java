@@ -14,7 +14,7 @@ public class Gamemode extends MainCommandExecutor {
 		super(plugin);
 	}
 	
-	public static boolean GamemodeRun(CommandSender sender, String[] args, String playerType)
+	public static boolean Run(CommandSender sender, String[] args, String playerType)
 	{
 		if(args.length <= 1){
 			if(playerType != "player"){

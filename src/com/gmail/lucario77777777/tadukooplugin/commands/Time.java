@@ -15,7 +15,7 @@ public class Time extends MainCommandExecutor {
 		super(plugin);
 	}
 	
-	public static boolean TimeRun(CommandSender sender, String[] args, String playerType)
+	public static boolean Run(CommandSender sender, String[] args, String playerType)
 	{
 		if(playerType == "player"){
 			if(args.length == 0){

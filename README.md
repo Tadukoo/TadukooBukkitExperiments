@@ -9,8 +9,6 @@ Tadukoo Plugin is in very early stages of development, so there's not much in it
 features or commands that are just for testing at the moment. Also, Tadukoo Plugin is the working name.
 It may be changed in the future.
 
-Current Version: Alpha 0.1.1.2
-
 Current Features
 ----------------
 * Mainly just commands right now.
@@ -30,21 +28,18 @@ There are so many that I'm not going to list them all yet since this plugin is i
 
 (NOTE: All version numbers listed below are tentative and could change.)
 * Alpha 0.1.X
-    * Add /sun
     * Add /rain
     * Add /storm
 * Alpha 0.2
-    * Commands are configurable in the config.yml or a new commands.yml file.
+    * Commands are configurable in the commands.yml file.
 * Alpha 0.2.1
     * /thelp search functionality.
     * /thelp updated to have all commands.
 * Alpha 0.3
-    * Set-up an economy system.
-* Alpha 0.4
     * Set-up more teleportation stuff.
 	* Improve current teleportation stuff.
-* Alpha ?
-    * Add permissions for certain command groups (ex. economy commands permission is Tadukooplugin.economy).
+* Alpha 0.4
+    * Set-up an economy system.
 
 Commands
 --------
@@ -55,7 +50,7 @@ Key:
 
 * /ping
     * Sends "Pong!" back to the sender.
-* /tport [ player ] < player >
+* /tp [ player ] < player >
     * Teleports a player to another player.
 * /heal [ player ]
     * Heals a player.
@@ -83,7 +78,7 @@ Key:
     * Shows the motd (message of the day).
 * /time < day/night >
     * Sets the time to day or night.
-* /timer
+* /countdown
     * Counts down from 3 and says "GO!".
 * /day
     * Sets the time to day.
@@ -95,6 +90,8 @@ Key:
     * Teleports you to a warp.
 * /delwarp < warpName >
     * Deletes a warp.
+* /sun
+    * Sets the weather to sun.
 * /thelp
     * Shows the Tadukoo Plugin help.
 
@@ -111,6 +108,20 @@ Recent Updates
 This is only the newest 10 updates, for a full listing of updates, check the wiki, specifically
  [this page] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin History).
 
+Alpha 0.1.1.5
+* Renamed /timer to /countdown
+* Renamed /tport to /tp
+* Permissions groups added.
+    * Ex. Tadukooplugin.general.*
+ 
+Alpha 0.1.1.4
+* Reorganized commands and permissions.
+* Created the commands.yml file.
+* Minor code cleanup.
+ 
+Alpha 0.1.1.3
+* Added /sun
+ 
 Alpha 0.1.1.2
 * /delwarp added.
  

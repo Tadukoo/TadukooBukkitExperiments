@@ -14,7 +14,7 @@ public class Setwarp extends MainCommandExecutor {
 		super(plugin);
 	}
 	
-	public static boolean SetwarpRun(CommandSender sender, String[] args, String playerType, Main plugin)
+	public static boolean Run(CommandSender sender, String[] args, String playerType, Main plugin)
 	{
 
 		if(playerType == "player"){

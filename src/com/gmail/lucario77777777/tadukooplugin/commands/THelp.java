@@ -12,7 +12,7 @@ public class THelp extends MainCommandExecutor {
 		super(plugin);
 	}
 	
-	public static boolean THelpRun(CommandSender sender, String[] args)
+	public static boolean Run(CommandSender sender, String[] args)
 	{
 		if(args.length == 0){
 			sender.sendMessage("----" + ChatColor.GREEN + "Tadukoo Plugin Help" + ChatColor.WHITE + "----");

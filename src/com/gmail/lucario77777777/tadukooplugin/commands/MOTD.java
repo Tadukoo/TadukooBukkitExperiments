@@ -12,7 +12,7 @@ public class MOTD extends MainCommandExecutor {
 		super(plugin);
 	}
 	
-	public static boolean MOTDRun(CommandSender sender, Main plugin)
+	public static boolean Run(CommandSender sender, Main plugin)
 	{
 		sender.sendMessage(plugin.getConfig().getString("MOTD").replace("%w", ((Player) sender).getWorld().getName()));
 		return true;

@@ -1,17 +1,72 @@
 name: Tadukooplugin
 main: com.gmail.lucario77777777.tadukooplugin.Main
-version: Alpha 0.1.1.2
+version: Alpha 0.1.1.5
 description: Tadukoo Plugin
 commands:
-   ping:
-      description: Sends "Pong!" back to the sender.
+   adventure:
+      description: Sets a player's gamemode to adventure.
       usage: /<command> [player]
-      permission: Tadukooplugin.ping
+      permission: Tadukooplugin.adventure
       permission-message: You don't have <permission>
-   tport:
-      description: Teleports a player to another player.
-      usage: /<command> [player] <player>
-      permission: Tadukooplugin.tport
+   countdown:
+      description: Counts down from 3.
+      usage: /<command>
+      permission: Tadukooplugin.countdown
+      permission-message: You don't have <permission>
+   creative:
+      description: Sets a player's gamemode to creative.
+      usage: /<command> [player]
+      permission: Tadukooplugin.creative
+      permission-message: You don't have <permission>
+   day:
+      description: Sets the time to day.
+      usage: /<command>
+      permission: Tadukooplugin.day
+      permission-message: You don't have <permission>
+   delwarp:
+      description: Deletes a warp.
+      usage: /<command> <warpName>
+      permission: Tadukooplugin.delwarp
+      permission-message: You don't have <permission>
+   feed:
+      description: Restores a player's hunger.
+      usage: /<command> [player]
+      permission: Tadukooplugin.feed
+      permission-message: You don't have <permission>
+   fly:
+      description: Sets flight to true or false for a player.
+      usage: /<command> [player]
+      permission: Tadukooplugin.fly
+      permission-message: You don't have <permission>
+   gamemode:
+      description: Changes a player's gamemode.
+      usage: /<command> [player] [gamemode]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
+   gm:
+      description: Changes a player's gamemode.
+      usage: /<command> [player] [gamemode]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
+   gma:
+      description: Sets a player's gamemode to adventure.
+      usage: /<command> [player]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
+   gmc:
+      description: Sets a player's gamemode to creative.
+      usage: /<command> [player]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
+   gms:
+      description: Sets a player's gamemode to survival.
+      usage: /<command> [player]
+      permission: Tadukooplugin.gamemode
+      permission-message: You don't have <permission>
+   gmt:
+      description: Changes a player's gamemode.
+      usage: /<command> [player] [gamemode]
+      permission: Tadukooplugin.gamemode
       permission-message: You don't have <permission>
    heal:
       description: Heals a player.
@@ -23,10 +78,30 @@ commands:
       usage: /<command> <player>
       permission: Tadukooplugin.kill
       permission-message: You don't have <permission>
-   feed:
-      description: Restores a player's hunger.
+   killall:
+      description: Kills all online players.
+      usage: /<command>
+      permission: Tadukooplugin.killall
+      permission-message: You don't have <permission>
+   motd:
+      description: Shows the motd (Message of the Day).
+      usage: /<command>
+      permission: Tadukooplugin.motd
+      permission-message: You don't have <permission>
+   night:
+      description: Sets the time to night.
+      usage: /<command>
+      permission: Tadukooplugin.night
+      permission-message: You don't have <permission>
+   ping:
+      description: Sends "Pong!" back to the sender.
       usage: /<command> [player]
-      permission: Tadukooplugin.feed
+      permission: Tadukooplugin.ping
+      permission-message: You don't have <permission>
+   setwarp:
+      description: Sets a warp.
+      usage: /<command> <warpName>
+      permission: Tadukooplugin.setwarp
       permission-message: You don't have <permission>
    starve:
       description: Starves a player.
@@ -38,132 +113,108 @@ commands:
       usage: /<command>
       permission: Tadukooplugin.suicide
       permission-message: Sorry, you're not allowed to kill yourself.
-   gamemode:
-      description: Changes a player's gamemode.
-      usage: /<command> [player] [gamemode]
-      permission: Tadukooplugin.gamemode
-      permission-message: You don't have <permission>
-   gm:
-      description: Changes a player's gamemode.
-      usage: /<command> [player] [gamemode]
-      permission: Tadukooplugin.gamemode
-      permission-message: You don't have <permission>
-   gmt:
-      description: Changes a player's gamemode.
-      usage: /<command> [player] [gamemode]
-      permission: Tadukooplugin.gamemode
-      permission-message: You don't have <permission>
-   adventure:
-      description: Sets a player's gamemode to adventure.
-      usage: /<command> [player]
-      permission: Tadukooplugin.gamemode
-      permission-message: You don't have <permission>
-   gma:
-      description: Sets a player's gamemode to adventure.
-      usage: /<command> [player]
-      permission: Tadukooplugin.gamemode
-      permission-message: You don't have <permission>
-   creative:
-      description: Sets a player's gamemode to creative.
-      usage: /<command> [player]
-      permission: Tadukooplugin.gamemode
-      permission-message: You don't have <permission>
-   gmc:
-      description: Sets a player's gamemode to creative.
-      usage: /<command> [player]
-      permission: Tadukooplugin.gamemode
+   sun:
+      description: Sets the weather to clear/sun.
+      usage: /<command>
+      permission: Tadukooplugin.sun
       permission-message: You don't have <permission>
    survival:
       description: Sets a player's gamemode to survival.
       usage: /<command> [player]
       permission: Tadukooplugin.gamemode
       permission-message: You don't have <permission>
-   gms:
-      description: Sets a player's gamemode to survival.
-      usage: /<command> [player]
-      permission: Tadukooplugin.gamemode
-      permission-message: You don't have <permission>
-   fly:
-      description: Sets flight to true or false for a player.
-      usage: /<command> [player]
-      permission: Tadukooplugin.fly
-      permission-message: You don't have <permission>
-   killall:
-      description: Kills all online players.
+   thelp:
+      description: Shows the Tadukoo Plugin help.
       usage: /<command>
-      permission: Tadukooplugin.killall
-      permission-message: You don't have <permission>
-   motd:
-      description: Shows the motd (Message of the Day).
-      usage: /<command>
-      permission: Tadukooplugin.motd
+      permission: Tadukooplugin.thelp
       permission-message: You don't have <permission>
    time:
       description: Sets the time.
       usage: /<command> <day/night>
       permission: Tadukooplugin.time
       permission-message: You don't have <permission>
-   timer:
-      description: Counts down from 3.
-      usage: /<command>
-      permission: Tadukooplugin.timer
-      permission-message: You don't have <permission>
-   day:
-      description: Sets the time to day.
-      usage: /<command>
-      permission: Tadukooplugin.time
-      permission-message: You don't have <permission>
-   night:
-      description: Sets the time to night.
-      usage: /<command>
-      permission: Tadukooplugin.time
-      permission-message: You don't have <permission>
-   setwarp:
-      description: Sets a warp.
-      usage: /<command> <warpName>
-      permission: Tadukooplugin.setwarp
+   tp:
+      description: Teleports a player to another player.
+      usage: /<command> [player] <player>
+      permission: Tadukooplugin.tp
       permission-message: You don't have <permission>
    warp:
       description: Takes you to a warp.
       usage: /<command> <warpName>
       permission: Tadukooplugin.warp
       permission-message: You don't have <permission>
-   delwarp:
-      description: Deletes a warp.
-      usage: /<command> <warpName>
-      permission: Tadukooplugin.delwarp
-      permission-message: You don't have <permission>
-   thelp:
-      description: Shows the Tadukoo Plugin help.
-      usage: /<command>
-      permission: Tadukooplugin.thelp
-      permission-message: You don't have <permission>
 permissions:
    Tadukooplugin.*:
       description: Gives access to all commands
       children:
-         Tadukooplugin.ping: true
-         Tadukooplugin.tport: true
-         Tadukooplugin.heal: true
-         Tadukooplugin.kill: true
+         Tadukooplugin.cheat.*: true
+         Tadukooplugin.general.*: true
+         Tadukooplugin.moderator.*: true
+         Tadukooplugin.teleport.*: true
+   Tadukooplugin.cheat.*:
+      description: Gives access to all cheating commands.
+      children:
          Tadukooplugin.feed: true
-         Tadukooplugin.starve: true
-         Tadukooplugin.suicide: true
          Tadukooplugin.gamemode: true
          Tadukooplugin.fly: true
-         Tadukooplugin.killall: true
-         Tadukooplugin.motd: true
+         Tadukooplugin.heal: true
+         Tadukooplugin.starve: true
          Tadukooplugin.time: true
-         Tadukooplugin.timer: true
+   Tadukooplugin.general.*:
+      description: Gives access to all general commands.
+      children:
+         Tadukooplugin.motd: true
+         Tadukooplugin.suicide: true
+         Tadukooplugin.thelp: true
+   Tadukooplugin.moderator.*:
+      description: Gives access to all moderator commands.
+      children:
+         Tadukooplugin.countdown: true
+         Tadukooplugin.kill: true
+         Tadukooplugin.killall: true
+         Tadukooplugin.ping: true
+   Tadukooplugin.teleport.*:
+      description: Gives access to all teleportation commands.
+      children:
+         Tadukooplugin.tp: true
+         Tadukooplugin.warp.*: true
+   Tadukooplugin.gamemode:
+      description: Gives access to all gamemode commands.
+      children:
+         Tadukooplugin.adventure: true
+         Tadukooplugin.creative: true
+         Tadukooplugin.survival: true
+   Tadukooplugin.time:
+      description: Gives access to /time, /day, and /night
+      children:
+         Tadukooplugin.day: true
+         Tadukooplugin.night: true
+   Tadukooplugin.warp.*:
+      description: Gives access to all warp commands.
+      children:
+         Tadukooplugin.delwarp: true
          Tadukooplugin.setwarp: true
          Tadukooplugin.warp: true
-         Tadukooplugin.delwarp: true
-         Tadukooplugin.thelp: true
-   Tadukooplugin.ping:
-      description: Gives access to /ping
-      default: true
-   Tadukooplugin.tport:
-      description: Gives access to /tport
+   Tadukooplugin.adventure:
+      description: Gives access to /adventure and /gma
+      default: op
+   Tadukooplugin.countdown:
+      description: Gives access to /countdown
+      default: op
+   Tadukooplugin.creative:
+      description: Gives access to /creative and /gmc
+      default: op
+   Tadukooplugin.day:
+      description: Gives access to /day
+      default: op
+   Tadukooplugin.delwarp:
+      description: Gives access to /delwarp
+      default: op
+   Tadukooplugin.feed:
+      description: Gives access to /feed
+      default: op
+   Tadukooplugin.fly:
+      description: Gives access to /fly
       default: op
    Tadukooplugin.heal:
       description: Gives access to /heal
@@ -171,8 +222,20 @@ permissions:
    Tadukooplugin.kill:
       description: Gives access to /kill
       default: op
-   Tadukooplugin.feed:
-      description: Gives access to /feed
+   Tadukooplugin.killall:
+      description: Gives access to /killall
+      default: op
+   Tadukooplugin.motd:
+      description: Gives access to /motd
+      default: true
+   Tadukooplugin.night:
+      description: Gives access to /night
+      default: op
+   Tadukooplugin.ping:
+      description: Gives access to /ping
+      default: true
+   Tadukooplugin.setwarp:
+      description: Gives access to /setwarp
       default: op
    Tadukooplugin.starve:
       description: Gives access to /starve
@@ -180,33 +243,18 @@ permissions:
    Tadukooplugin.suicide:
       description: Gives access to /suicide
       default: true
-   Tadukooplugin.gamemode:
-      description: Gives access to /gamemode, /gm, and /gmt
+   Tadukooplugin.sun:
+      description: Gives access to /sun
       default: op
-   Tadukooplugin.fly:
-      description: Gives access to /fly
-      default: op
-   Tadukooplugin.killall:
-      description: Gives access to /killall
-      default: op
-   Tadukooplugin.motd:
-      description: Gives access to /motd
-      default: true
-   Tadukooplugin.time:
-      description: Gives access to /time, /day, and /night
-      default: op
-   Tadukooplugin.timer:
-      description: Gives access to /timer
-      default: op
-   Tadukooplugin.setwarp:
-      description: Gives access to /setwarp
-      default: op
-   Tadukooplugin.warp:
-      description: Gives access to /warp
-      default: op
-   Tadukooplugin.delwarp:
-      description: Gives access to /delwarp
+   Tadukooplugin.survival:
+      description: Gives access to /survival and /gms
       default: op
    Tadukooplugin.thelp:
       description: Gives access to /thelp
+      default: true
+   Tadukooplugin.tp:
+      description: Gives access to /tp
+      default: op
+   Tadukooplugin.warp:
+      description: Gives access to /warp
       default: true

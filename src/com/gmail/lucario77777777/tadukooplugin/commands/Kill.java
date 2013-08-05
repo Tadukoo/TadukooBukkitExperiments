@@ -13,7 +13,7 @@ public class Kill extends MainCommandExecutor {
 		super(plugin);
 	}
 	
-	public static boolean KillRun(CommandSender sender, String[] args)
+	public static boolean Run(CommandSender sender, String[] args)
 	{
 		if(args.length == 0){
 			sender.sendMessage(ChatColor.DARK_RED + "NOT ENOUGH ARGUMENTS!");

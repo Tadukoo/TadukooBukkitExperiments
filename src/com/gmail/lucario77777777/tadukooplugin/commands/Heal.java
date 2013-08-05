@@ -13,7 +13,7 @@ public class Heal extends MainCommandExecutor {
 		super(plugin);
 	}
 	
-	public static boolean HealRun(CommandSender sender, String[] args, String playerType)
+	public static boolean Run(CommandSender sender, String[] args, String playerType)
 	{
 		if(args.length == 0){
 			if(playerType == "player"){

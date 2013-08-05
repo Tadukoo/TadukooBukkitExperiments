@@ -4,5 +4,3 @@ motd: Welcome to our server! You are in the world %w!
 #                                         #
 #                 Commands                #
 ###########################################
-# Here you can enable and disable any commands (in the future, right now we're just testing with /ping)
-Ping: true

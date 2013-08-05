@@ -17,7 +17,7 @@ public class Killall extends MainCommandExecutor {
 		super(plugin);
 	}
 	
-	public static boolean KillallRun(CommandSender sender)
+	public static boolean Run(CommandSender sender)
 	{
 		List<Player> onlinePlayerList = Arrays.asList(Bukkit.getServer().getOnlinePlayers());
 		Iterator<Player> itr = onlinePlayerList.iterator();
