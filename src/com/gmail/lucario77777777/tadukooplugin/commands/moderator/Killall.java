@@ -1,4 +1,4 @@
-package com.gmail.lucario77777777.tadukooplugin.commands;
+package com.gmail.lucario77777777.tadukooplugin.commands.moderator;
 
 import java.util.Arrays;
 import java.util.Iterator;

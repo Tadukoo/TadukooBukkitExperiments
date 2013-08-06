@@ -1,4 +1,4 @@
-package com.gmail.lucario77777777.tadukooplugin.commands;
+package com.gmail.lucario77777777.tadukooplugin.commands.general;
 
 import com.gmail.lucario77777777.tadukooplugin.commands.MainCommandExecutor;
 

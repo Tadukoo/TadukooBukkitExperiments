@@ -1,4 +1,4 @@
-package com.gmail.lucario77777777.tadukooplugin.commands;
+package com.gmail.lucario77777777.tadukooplugin.commands.teleportation;
 
 import com.gmail.lucario77777777.tadukooplugin.commands.MainCommandExecutor;
 
@@ -24,10 +24,10 @@ public class Warp extends MainCommandExecutor {
 			}else if(args.length == 1){
 				String warpName = args[0];
 				Location warpLocation = ((Player) sender).getLocation();
-				if(plugin.getConfig().contains(warpName + ".x") && plugin.getConfig().contains(warpName + ".y") && plugin.getConfig().contains(warpName + ".z")){
-					warpLocation.setX(plugin.getConfig().getDouble(warpName + ".x"));
-					warpLocation.setY(plugin.getConfig().getDouble(warpName + ".y"));
-					warpLocation.setZ(plugin.getConfig().getDouble(warpName + ".z"));
+				if(plugin.warps.contains(warpName)){
+					warpLocation.setX(plugin.warps.getDouble(warpName + ".x"));
+					warpLocation.setY(plugin.warps.getDouble(warpName + ".y"));
+					warpLocation.setZ(plugin.warps.getDouble(warpName + ".z"));
 					((Player) sender).teleport(warpLocation);
 					sender.sendMessage(ChatColor.GREEN + "You are now at warp " + warpName + "!");
 					return true;

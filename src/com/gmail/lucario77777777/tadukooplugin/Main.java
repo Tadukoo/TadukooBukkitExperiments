@@ -19,6 +19,8 @@ public class Main extends JavaPlugin {
 	public static boolean enabled = true;
 	public FileConfiguration commands = null;
 	public File commandsFile = null;
+	public FileConfiguration warps = null;
+	public File warpsFile = null;
 	
 	@Override
 	public void onDisable () {
@@ -95,6 +97,37 @@ public class Main extends JavaPlugin {
 	        getCommandsConfig().save(commandsFile);
 	    } catch (IOException ex) {
 	        this.getLogger().log(Level.SEVERE, "Could not save config to " + commandsFile, ex);
+	    }
+	}
+	public void reloadWarpsConfig() {
+	    if (warpsFile == null) {
+	    warpsFile = new File(getDataFolder(), "warps.yml");
+	    }
+	    warps = YamlConfiguration.loadConfiguration(warpsFile);
+	 
+	    // Look for defaults in the jar
+	    InputStream defConfigStream = this.getResource("warps.yml");
+	    if (defConfigStream != null) {
+	        YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+	        warps.setDefaults(defConfig);
+	    }
+	}
+	
+	public FileConfiguration getWarpsConfig() {
+	    if (warps == null) {
+	        this.reloadWarpsConfig();
+	    }
+	    return warps;
+	}
+	
+	public void saveWarpsConfig() {
+	    if (warps == null || warpsFile == null) {
+	    return;
+	    }
+	    try {
+	        getWarpsConfig().save(warpsFile);
+	    } catch (IOException ex) {
+	        this.getLogger().log(Level.SEVERE, "Could not save config to " + warpsFile, ex);
 	    }
 	}
 }

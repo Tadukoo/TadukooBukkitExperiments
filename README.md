@@ -18,17 +18,12 @@ Planned Features/Updates
 There are so many that I'm not going to list them all yet since this plugin is in such an early stage, but below are a few:
 
 (NOTE: All version numbers and/or features listed below are tentative and could change.)
-* Alpha 0.1.X
+* Alpha 0.2.X
     * Add /rain
     * Add /storm
-* Alpha 0.2
-    * Commands are configurable in the commands.yml file.
-	    * True = normal functionality for the plugin.
-		* False = gives a message saying "/command is disabled!"
-		* Maybe some commands will have special options?
-* Alpha 0.2.1
     * /thelp search functionality.
     * /thelp updated to have all commands.
+	* Maybe some commands will have special options? (Instead of just true and false)
 * Alpha 0.3
     * Set-up more teleportation stuff.
 	* Improve current teleportation stuff.
@@ -103,6 +98,9 @@ Recent Updates
 --------------
 This is only the newest 3 updates, for a full listing of updates, check the wiki, specifically
  [this page] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin History).
+ 
+Alpha 0.2
+* All commands can now be set to true or false in the commands.yml file.
 
 Alpha 0.1.1.6
 * Warps are now stored in warps.yml
@@ -112,11 +110,6 @@ Alpha 0.1.1.5
 * Renamed /tport to /tp
 * Permissions groups added.
     * Ex. Tadukooplugin.general.*
- 
-Alpha 0.1.1.4
-* Reorganized commands and permissions.
-* Created the commands.yml file.
-* Minor code cleanup.
 
 Wiki
 ----

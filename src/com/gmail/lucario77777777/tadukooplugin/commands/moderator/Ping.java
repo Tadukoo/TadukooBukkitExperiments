@@ -1,4 +1,4 @@
-package com.gmail.lucario77777777.tadukooplugin.commands;
+package com.gmail.lucario77777777.tadukooplugin.commands.moderator;
 
 import com.gmail.lucario77777777.tadukooplugin.commands.MainCommandExecutor;
 
@@ -22,8 +22,4 @@ public class Ping extends MainCommandExecutor {
 		return true;
 	}
 }
-	public static void Disabled(CommandSender sender)
-	{
-		sender.sendMessage(ChatColor.RED + "/ping is disabled.");
-	}
 }

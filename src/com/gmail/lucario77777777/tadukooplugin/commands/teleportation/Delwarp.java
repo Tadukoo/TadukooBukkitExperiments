@@ -1,4 +1,4 @@
-package com.gmail.lucario77777777.tadukooplugin.commands;
+package com.gmail.lucario77777777.tadukooplugin.commands.teleportation;
 
 import com.gmail.lucario77777777.tadukooplugin.commands.MainCommandExecutor;
 
@@ -19,11 +19,11 @@ public class Delwarp extends MainCommandExecutor {
 			return true;
 		}else if(args.length == 1){
 			String warpName = args[0];
-			if (plugin.getConfig().contains(warpName)){
-				plugin.getConfig().set(warpName + ".x", null);
-				plugin.getConfig().set(warpName + ".y", null);
-				plugin.getConfig().set(warpName + ".z", null);
-				plugin.getConfig().set(warpName, null);
+			if (plugin.warps.contains(warpName)){
+				plugin.warps.set(warpName + ".x", null);
+				plugin.warps.set(warpName + ".y", null);
+				plugin.warps.set(warpName + ".z", null);
+				plugin.warps.set(warpName, null);
 				sender.sendMessage(ChatColor.GREEN + "Warp " + warpName + " has been deleted.");
 				return true;
 			}else{

@@ -1,4 +1,4 @@
-package com.gmail.lucario77777777.tadukooplugin.commands;
+package com.gmail.lucario77777777.tadukooplugin.commands.cheat;
 
 import com.gmail.lucario77777777.tadukooplugin.commands.MainCommandExecutor;
 
@@ -10,8 +10,8 @@ import org.bukkit.entity.Player;
 
 import com.gmail.lucario77777777.tadukooplugin.Main;
 
-public class Day extends MainCommandExecutor {
-	public Day(Main plugin) {
+public class Night extends MainCommandExecutor {
+	public Night(Main plugin) {
 		super(plugin);
 	}
 	
@@ -24,8 +24,8 @@ public class Day extends MainCommandExecutor {
 			}
 			if(args.length == 0){
 				World world = ((Player) sender).getWorld();
-				world.setTime(0);
-				Bukkit.broadcastMessage("Time Set to Day!");
+				world.setTime(13000);
+				Bukkit.broadcastMessage("Time Set to Night!");
 				return true;
 			}
 		}else{

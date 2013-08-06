@@ -1,6 +1,6 @@
 name: Tadukooplugin
 main: com.gmail.lucario77777777.tadukooplugin.Main
-version: Alpha 0.1.1.5
+version: Alpha 0.2
 description: Tadukoo Plugin
 commands:
    adventure:
@@ -155,8 +155,8 @@ permissions:
       description: Gives access to all cheating commands.
       children:
          Tadukooplugin.feed: true
-         Tadukooplugin.gamemode: true
          Tadukooplugin.fly: true
+         Tadukooplugin.gamemode: true
          Tadukooplugin.heal: true
          Tadukooplugin.starve: true
          Tadukooplugin.time: true

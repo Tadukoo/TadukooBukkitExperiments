@@ -1,4 +1,4 @@
-package com.gmail.lucario77777777.tadukooplugin.commands;
+package com.gmail.lucario77777777.tadukooplugin.commands.cheat;
 
 import com.gmail.lucario77777777.tadukooplugin.commands.MainCommandExecutor;
 
@@ -9,8 +9,8 @@ import org.bukkit.entity.Player;
 
 import com.gmail.lucario77777777.tadukooplugin.Main;
 
-public class Survival extends MainCommandExecutor {
-	public Survival(Main plugin) {
+public class Creative extends MainCommandExecutor {
+	public Creative(Main plugin) {
 		super(plugin);
 	}
 	
@@ -21,14 +21,14 @@ public class Survival extends MainCommandExecutor {
 				sender.sendMessage(ChatColor.RED + "Silly, you don't need a gamemode!");
 				return true;
 			}else{
-				((Player) sender).setGameMode(GameMode.SURVIVAL);
+				((Player) sender).setGameMode(GameMode.CREATIVE);
 				return true;
 			}
 		}else if(args.length == 1){
 			if(sender.getServer().getPlayer(args[0]) != null){
 				Player targetPlayer = sender.getServer().getPlayer(args [0]);
-				targetPlayer.setGameMode(GameMode.SURVIVAL);
-				sender.sendMessage(ChatColor.GREEN + "You changed " + targetPlayer.getDisplayName() + "'s gamemode to survival.");
+				targetPlayer.setGameMode(GameMode.CREATIVE);
+				sender.sendMessage(ChatColor.GREEN + "You changed " + targetPlayer.getDisplayName() + "'s gamemode to creative.");
 				return true;
 			}else{
 				sender.sendMessage(ChatColor.RED + "Player not online!");

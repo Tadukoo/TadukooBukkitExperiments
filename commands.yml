@@ -1,2 +1,43 @@
 # Toggle commands in here. -Tadukoo
-Ping: true
+########################################
+#                                      #
+#        Cheat Commands                #
+########################################
+cheat: true # Toggles all commmands in this section.
+  feed: true # Toggles /feed
+  fly: true # Toggles /fly
+  gamemode: true # Toggles all gamemode commands.
+    adventure: true # Toggles /gma and /adventure
+    creative: true # Toggles /gmc and /creative
+    survival: true # Toggles /gms and /survival
+  heal: true # Toggles /heal
+  starve: true # Toggles /starve
+  time: true # Toggles all time commands.
+    day: true # Toggles /day
+    night: true # Toggles /night
+########################################
+#                                      #
+#        General Commands              #
+########################################
+general: true # Toggles all commands in this section.
+  motd: true # Toggles /motd
+  suicide: true # Toggles /suicide
+  thelp: true # Toggles /thelp
+########################################
+#                                      #
+#        Moderator Commands            #
+########################################
+moderator: true # Toggles all commands in this section.
+  countdown: true # Toggles /countdown
+  kill: true # Toggles /kill
+  killall: true # Toggles /killall
+  ping: true # Toggles /ping
+########################################
+#                                      #
+#        Teleportation Commands        #
+########################################
+teleportation: true # Toggles all commands in this section.
+  tp: true # Toggles /tp
+  warp: true # Toggles all warp commands.
+    delwarp: true # Toggles /delwarp
+    setwarp: true # Toggles /setwarp
