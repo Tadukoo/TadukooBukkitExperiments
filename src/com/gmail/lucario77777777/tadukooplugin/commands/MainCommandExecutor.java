@@ -33,7 +33,8 @@ public class MainCommandExecutor implements CommandExecutor {
 		}else{
 			playerType = "unknown";
 		}
-		if(cmd.getName().equalsIgnoreCase("feed") || cmd.getName().equalsIgnoreCase("fly") ||
+		if(cmd.getName().equalsIgnoreCase(plugin.getCommandsConfig().getString("feed-name")) ||
+				cmd.getName().equalsIgnoreCase("fly") ||
 				cmd.getName().equalsIgnoreCase("adventure") || cmd.getName().equalsIgnoreCase("gma") || 
 				cmd.getName().equalsIgnoreCase("creative") || cmd.getName().equalsIgnoreCase("gmc") || 
 				cmd.getName().equalsIgnoreCase("survival") || cmd.getName().equalsIgnoreCase("gms") || 
@@ -48,15 +49,14 @@ public class MainCommandExecutor implements CommandExecutor {
 			GeneralCommandExecutor.Run(sender, cmd, args, playerType, plugin);
 			return true;
 		}else if(cmd.getName().equalsIgnoreCase("countdown") || cmd.getName().equalsIgnoreCase("kill") ||
-				cmd.getName().equalsIgnoreCase("killall") || cmd.getName().equalsIgnoreCase("ping")){
+				cmd.getName().equalsIgnoreCase("killall") || cmd.getName().equalsIgnoreCase("ping") ||
+				cmd.getName().equalsIgnoreCase("rain") || cmd.getName().equalsIgnoreCase("storm") || 
+				cmd.getName().equalsIgnoreCase("sun")){
 			ModeratorCommandExecutor.Run(sender, cmd, args, playerType, plugin);
 			return true;
 		}else if(cmd.getName().equalsIgnoreCase("delwarp") || cmd.getName().equalsIgnoreCase("setwarp") ||
 				cmd.getName().equalsIgnoreCase("warp") || cmd.getName().equalsIgnoreCase("tp")){
 			TeleportationCommandExecutor.Run(sender, cmd, args, playerType, plugin);
-			return true;
-		}else if(cmd.getName().equalsIgnoreCase("sun")){
-			Sun.Run(sender, args, playerType);
 			return true;
 		}
 		return false;

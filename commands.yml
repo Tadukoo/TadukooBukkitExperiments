@@ -1,43 +1,89 @@
-# Toggle commands in here. -Tadukoo
+# Toggle commands and set their names in here. -Tadukoo
+# NOTE: Options above the Name section must be true or false.
+# Options in the Name section can be anything, but must still be there.
 ########################################
 #                                      #
 #        Cheat Commands                #
 ########################################
-cheat: true # Toggles all commmands in this section.
-  feed: true # Toggles /feed
-  fly: true # Toggles /fly
-  gamemode: true # Toggles all gamemode commands.
-    adventure: true # Toggles /gma and /adventure
-    creative: true # Toggles /gmc and /creative
-    survival: true # Toggles /gms and /survival
-  heal: true # Toggles /heal
-  starve: true # Toggles /starve
-  time: true # Toggles all time commands.
-    day: true # Toggles /day
-    night: true # Toggles /night
+cheat: true
+# Toggles all commands in this section.
+feed: true
+# Toggles /feed
+fly: true
+# Toggles /fly
+gamemode: true
+# Toggles all gamemode commands
+# (That includes adventure, creative, and survival below)
+adventure: true
+# Toggles /adventure and /gma
+creative: true
+# Toggles /creative and /gmc
+survival: true
+# Toggles /survival and /gms
+heal: true
+# Toggles /heal
+starve: true
+# Toggles /starve
+time: true
+# Toggles all time commands
+# (That includes day and night below)
+day: true
+# Toggles /day
+night: true
+# Toggles /night
 ########################################
 #                                      #
 #        General Commands              #
 ########################################
-general: true # Toggles all commands in this section.
-  motd: true # Toggles /motd
-  suicide: true # Toggles /suicide
-  thelp: true # Toggles /thelp
+general: true
+# Toggles all commands in this section.
+motd: true
+# Toggles /motd
+suicide: true
+# Toggles /suicide
+thelp: true
+# Toggles /thelp
 ########################################
 #                                      #
 #        Moderator Commands            #
 ########################################
-moderator: true # Toggles all commands in this section.
-  countdown: true # Toggles /countdown
-  kill: true # Toggles /kill
-  killall: true # Toggles /killall
-  ping: true # Toggles /ping
+moderator: true
+# Toggles all commands in this section.
+countdown: true
+# Toggles /countdown
+kill: true
+# Toggles /kill
+killall: true
+# Toggles /killall
+ping: true
+# Toggles /ping
+rain: true
+# Toggles /rain
+storm: true
+# Toggles /storm
+sun: true
+# Toggles /sun
 ########################################
 #                                      #
 #        Teleportation Commands        #
 ########################################
-teleportation: true # Toggles all commands in this section.
-  tp: true # Toggles /tp
-  warp: true # Toggles all warp commands.
-    delwarp: true # Toggles /delwarp
-    setwarp: true # Toggles /setwarp
+teleportation: true
+# Toggles all commands in this section.
+tp: true
+# Toggles /tp
+warp: true
+# Toggles all warp commands
+# (That includes /delwarp and /setwarp below)
+delwarp: true
+# Toggles /delwarp
+setwarp: true
+# Toggles /setwarp
+########################################
+########################################
+##                                    ##
+##            Name Section            ##
+########################################
+########################################
+# NOTE: If you change anything in this section, you can no longer use the
+# normal name of the command (ex. if you change feed to eat, you can no
+# longer type /feed, you must type /eat.

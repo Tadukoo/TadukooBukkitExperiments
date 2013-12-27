@@ -17,10 +17,10 @@ public class TeleportationCommandExecutor{
 	public static boolean Run(CommandSender sender, Command cmd, String[] args, String playerType, Main plugin){
 		if(plugin.getCommandsConfig().getString("teleportation") == "true"){
 			if(cmd.getName().equalsIgnoreCase("tp")){
-				if(plugin.getCommandsConfig().getString("teleportation.tp") == "true"){
+				if(plugin.getCommandsConfig().getString("tp") == "true"){
 					Tp.Run(sender, args, playerType);
 					return true;
-				}else if(plugin.getCommandsConfig().getString("teleportation.tp") == "false"){
+				}else if(plugin.getCommandsConfig().getString("tp") == "false"){
 					MainCommandExecutor.Disabled("tp", sender);
 					return true;
 				}else{
@@ -29,12 +29,12 @@ public class TeleportationCommandExecutor{
 				}
 			}else if(cmd.getName().equalsIgnoreCase("setwarp") || cmd.getName().equalsIgnoreCase("delwarp") ||
 					cmd.getName().equalsIgnoreCase("warp")){
-				if(plugin.getCommandsConfig().getString("teleportation.warp") == "true"){
+				if(plugin.getCommandsConfig().getString("warp") == "true"){
 					if(cmd.getName().equalsIgnoreCase("delwarp")){
-						if(plugin.getCommandsConfig().getString("teleportation.warp.delwarp") == "true"){
+						if(plugin.getCommandsConfig().getString("delwarp") == "true"){
 							Delwarp.Run(sender, args, playerType, plugin);
 							return true;
-						}else if(plugin.getCommandsConfig().getString("teleportation.warp.delwarp") == "false"){
+						}else if(plugin.getCommandsConfig().getString("delwarp") == "false"){
 							MainCommandExecutor.Disabled("delwarp", sender);
 							return true;
 						}else{
@@ -42,10 +42,10 @@ public class TeleportationCommandExecutor{
 							return true;
 						}
 					}else if(cmd.getName().equalsIgnoreCase("setwarp")){
-						if(plugin.getCommandsConfig().getString("teleportation.setwarp") == "true"){
+						if(plugin.getCommandsConfig().getString("setwarp") == "true"){
 							Setwarp.Run(sender, args, playerType, plugin);
 							return true;
-						}else if(plugin.getCommandsConfig().getString("teleportation.setwarp") == "false"){
+						}else if(plugin.getCommandsConfig().getString("setwarp") == "false"){
 							MainCommandExecutor.Disabled("setwarp", sender);
 							return true;
 						}else{
@@ -56,7 +56,7 @@ public class TeleportationCommandExecutor{
 						Warp.Run(sender, args, playerType, plugin);
 						return true;
 					}
-				}else if(plugin.getCommandsConfig().getString("teleportation.warp") == "false"){
+				}else if(plugin.getCommandsConfig().getString("warp") == "false"){
 					Disabled("warp", sender);
 					return true;
 				}else{

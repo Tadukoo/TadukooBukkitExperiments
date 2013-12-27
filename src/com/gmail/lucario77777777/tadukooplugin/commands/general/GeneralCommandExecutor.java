@@ -17,10 +17,10 @@ public class GeneralCommandExecutor{
 	public static boolean Run(CommandSender sender, Command cmd, String[] args, String playerType, Main plugin){
 		if(plugin.getCommandsConfig().getString("general") == "true"){
 			if(cmd.getName().equalsIgnoreCase("motd")){
-				if(plugin.getCommandsConfig().getString("general.motd") == "true"){
+				if(plugin.getCommandsConfig().getString("motd") == "true"){
 					MOTD.Run(sender, plugin);
 					return true;
-				}else if(plugin.getCommandsConfig().getString("general.motd") == "false"){
+				}else if(plugin.getCommandsConfig().getString("motd") == "false"){
 					MainCommandExecutor.Disabled("motd", sender);
 					return true;
 				}else{
@@ -28,10 +28,10 @@ public class GeneralCommandExecutor{
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("suicide")){
-				if(plugin.getCommandsConfig().getString("general.suicide") == "true"){
+				if(plugin.getCommandsConfig().getString("suicide") == "true"){
 					Suicide.Run(sender, args, playerType);
 					return true;
-				}else if(plugin.getCommandsConfig().getString("general.suicide") == "false"){
+				}else if(plugin.getCommandsConfig().getString("suicide") == "false"){
 					MainCommandExecutor.Disabled("suicide", sender);
 					return true;
 				}else{
@@ -39,10 +39,10 @@ public class GeneralCommandExecutor{
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("thelp")){
-				if(plugin.getCommandsConfig().getString("general.thelp") == "true"){
+				if(plugin.getCommandsConfig().getString("thelp") == "true"){
 					THelp.Run(sender, args);
 					return true;
-				}else if(plugin.getCommandsConfig().getString("general.thelp") == "false"){
+				}else if(plugin.getCommandsConfig().getString("thelp") == "false"){
 					MainCommandExecutor.Disabled("thelp", sender);
 					return true;
 				}else{

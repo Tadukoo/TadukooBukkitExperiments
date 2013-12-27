@@ -16,22 +16,22 @@ public class CheatCommandExecutor{
 	}
 	public static boolean Run(CommandSender sender, Command cmd, String[] args, String playerType, Main plugin){
 		if(plugin.getCommandsConfig().getString("cheat") == "true"){
-			if(cmd.getName().equalsIgnoreCase("feed")){
-				if(plugin.getCommandsConfig().getString("cheat.feed") == "true"){
+			if(cmd.getName().equalsIgnoreCase(plugin.getCommandsConfig().getString("feed-name"))){
+				if(plugin.getCommandsConfig().getString("feed") == "true"){
 					Feed.Run(sender, args, playerType);
 					return true;
-				}else if(plugin.getCommandsConfig().getString("cheat.feed") == "false"){
-					MainCommandExecutor.Disabled("feed", sender);
+				}else if(plugin.getCommandsConfig().getString("feed") == "false"){
+					MainCommandExecutor.Disabled(plugin.getCommandsConfig().getString("feed-name"), sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("feed", sender, plugin);
+					MainCommandExecutor.Error(plugin.getCommandsConfig().getString("feed-name"), sender, plugin);
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("fly")){
-				if(plugin.getCommandsConfig().getString("cheat.fly") == "true"){
+				if(plugin.getCommandsConfig().getString("fly") == "true"){
 					Fly.Run(sender, args, playerType);
 					return true;
-				}else if(plugin.getCommandsConfig().getString("cheat.fly") == "false"){
+				}else if(plugin.getCommandsConfig().getString("fly") == "false"){
 					MainCommandExecutor.Disabled("fly", sender);
 					return true;
 				}else{
@@ -43,12 +43,12 @@ public class CheatCommandExecutor{
 					cmd.getName().equalsIgnoreCase("survival") || cmd.getName().equalsIgnoreCase("gms") ||
 					cmd.getName().equalsIgnoreCase("gamemode") || cmd.getName().equalsIgnoreCase("gm") ||
 					cmd.getName().equalsIgnoreCase("gmt")){
-				if(plugin.getCommandsConfig().getString("cheat.gamemode") == "true"){
+				if(plugin.getCommandsConfig().getString("gamemode") == "true"){
 					if(cmd.getName().equalsIgnoreCase("adventure") || cmd.getName().equalsIgnoreCase("gma")){
-						if(plugin.getCommandsConfig().getString("cheat.gamemode.adventure") == "true"){
+						if(plugin.getCommandsConfig().getString("adventure") == "true"){
 							Adventure.Run(sender, args, playerType);
 							return true;
-						}else if(plugin.getCommandsConfig().getString("cheat.gamemode.adventure") == "false"){
+						}else if(plugin.getCommandsConfig().getString("adventure") == "false"){
 							MainCommandExecutor.Disabled("adventure", sender);
 							return true;
 						}else{
@@ -57,10 +57,10 @@ public class CheatCommandExecutor{
 						}
 					}else if(cmd.getName().equalsIgnoreCase("creative") || 
 							cmd.getName().equalsIgnoreCase("gmc")){
-						if(plugin.getCommandsConfig().getString("cheat.gamemode.creative") == "true"){
+						if(plugin.getCommandsConfig().getString("creative") == "true"){
 							Creative.Run(sender, args, playerType);
 							return true;
-						}else if(plugin.getCommandsConfig().getString("cheat.gamemode.creative") == "false"){
+						}else if(plugin.getCommandsConfig().getString("creative") == "false"){
 							MainCommandExecutor.Disabled("creative", sender);
 							return true;
 						}else{
@@ -69,10 +69,10 @@ public class CheatCommandExecutor{
 						}
 					}else if(cmd.getName().equalsIgnoreCase("survival") || 
 							cmd.getName().equalsIgnoreCase("gms")){
-						if(plugin.getCommandsConfig().getString("cheat.gamemode.survival") == "true"){
+						if(plugin.getCommandsConfig().getString("survival") == "true"){
 							Survival.Run(sender, args, playerType);
 							return true;
-						}else if(plugin.getCommandsConfig().getString("cheat.gamemode.survival") == "false"){
+						}else if(plugin.getCommandsConfig().getString("survival") == "false"){
 							MainCommandExecutor.Disabled("survival", sender);
 							return true;
 						}else{
@@ -84,7 +84,7 @@ public class CheatCommandExecutor{
 						Gamemode.Run(sender, args, playerType);
 						return true;
 					}
-				}else if(plugin.getCommandsConfig().getString("cheat.gamemode") == "false"){
+				}else if(plugin.getCommandsConfig().getString("gamemode") == "false"){
 					Disabled("gamemode", sender);
 					return true;
 				}else{
@@ -92,10 +92,10 @@ public class CheatCommandExecutor{
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("heal")){
-				if(plugin.getCommandsConfig().getString("cheat.heal") == "true"){
+				if(plugin.getCommandsConfig().getString("heal") == "true"){
 					Heal.Run(sender, args, playerType);
 					return true;
-				}else if(plugin.getCommandsConfig().getString("cheat.heal") == "false"){
+				}else if(plugin.getCommandsConfig().getString("heal") == "false"){
 					MainCommandExecutor.Disabled("heal", sender);
 					return true;
 				}else{
@@ -103,10 +103,10 @@ public class CheatCommandExecutor{
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("starve")){
-				if(plugin.getCommandsConfig().getString("cheat.starve") == "true"){
+				if(plugin.getCommandsConfig().getString("starve") == "true"){
 					Starve.Run(sender, args);
 					return true;
-				}else if(plugin.getCommandsConfig().getString("cheat.starve") == "false"){
+				}else if(plugin.getCommandsConfig().getString("starve") == "false"){
 					MainCommandExecutor.Disabled("starve", sender);
 					return true;
 				}else{
@@ -115,15 +115,15 @@ public class CheatCommandExecutor{
 				}
 			}else if(cmd.getName().equalsIgnoreCase("time") || cmd.getName().equalsIgnoreCase("day") ||
 					cmd.getName().equalsIgnoreCase("night")){
-				if(plugin.getCommandsConfig().getString("cheat.time") == "true"){
+				if(plugin.getCommandsConfig().getString("time") == "true"){
 					if(cmd.getName().equalsIgnoreCase("time")){
 						Time.Run(sender, args, playerType);
 						return true;
 					}else if(cmd.getName().equalsIgnoreCase("day")){
-						if(plugin.getCommandsConfig().getString("cheat.time.day") == "true"){
+						if(plugin.getCommandsConfig().getString("day") == "true"){
 							Day.Run(sender, args, playerType);
 							return true;
-						}else if(plugin.getCommandsConfig().getString("cheat.time.day") == "false"){
+						}else if(plugin.getCommandsConfig().getString("day") == "false"){
 							MainCommandExecutor.Disabled("day", sender);
 							return true;
 						}else{
@@ -131,10 +131,10 @@ public class CheatCommandExecutor{
 							return true;
 						}
 					}else if(cmd.getName().equalsIgnoreCase("night")){
-						if(plugin.getCommandsConfig().getString("cheat.time.night") == "true"){
+						if(plugin.getCommandsConfig().getString("night") == "true"){
 							Night.Run(sender, args, playerType);
 							return true;
-						}else if(plugin.getCommandsConfig().getString("cheat.time.night") == "false"){
+						}else if(plugin.getCommandsConfig().getString("night") == "false"){
 							MainCommandExecutor.Disabled("night", sender);
 							return true;
 						}else{
@@ -142,7 +142,7 @@ public class CheatCommandExecutor{
 							return true;
 						}
 					}
-				}else if(plugin.getCommandsConfig().getString("cheat.time") == "false"){
+				}else if(plugin.getCommandsConfig().getString("time") == "false"){
 					Disabled("time", sender);
 					return true;
 				}else{

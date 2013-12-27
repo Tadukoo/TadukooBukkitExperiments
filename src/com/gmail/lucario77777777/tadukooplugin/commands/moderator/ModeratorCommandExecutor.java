@@ -17,10 +17,10 @@ public class ModeratorCommandExecutor{
 	public static boolean Run(CommandSender sender, Command cmd, String[] args, String playerType, Main plugin){
 		if(plugin.getCommandsConfig().getString("moderator") == "true"){
 			if(cmd.getName().equalsIgnoreCase("countdown")){
-				if(plugin.getCommandsConfig().getString("moderator.countdown") == "true"){
+				if(plugin.getCommandsConfig().getString("countdown") == "true"){
 					Countdown.Run(plugin);
 					return true;
-				}else if(plugin.getCommandsConfig().getString("moderator.countdown") == "false"){
+				}else if(plugin.getCommandsConfig().getString("countdown") == "false"){
 					MainCommandExecutor.Disabled("countdown", sender);
 					return true;
 				}else{
@@ -28,10 +28,10 @@ public class ModeratorCommandExecutor{
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("kill")){
-				if(plugin.getCommandsConfig().getString("moderator.kill") == "true"){
+				if(plugin.getCommandsConfig().getString("kill") == "true"){
 					Kill.Run(sender, args);
 					return true;
-				}else if(plugin.getCommandsConfig().getString("moderator.kill") == "false"){
+				}else if(plugin.getCommandsConfig().getString("kill") == "false"){
 					MainCommandExecutor.Disabled("kill", sender);
 					return true;
 				}else{
@@ -39,10 +39,10 @@ public class ModeratorCommandExecutor{
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("killall")){
-				if(plugin.getCommandsConfig().getString("moderator.killall") == "true"){
+				if(plugin.getCommandsConfig().getString("killall") == "true"){
 					Killall.Run(sender);
 					return true;
-				}else if(plugin.getCommandsConfig().getString("moderator.killall") == "false"){
+				}else if(plugin.getCommandsConfig().getString("killall") == "false"){
 					MainCommandExecutor.Disabled("killall", sender);
 					return true;
 				}else{
@@ -50,14 +50,45 @@ public class ModeratorCommandExecutor{
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("ping")){
-				if(plugin.getCommandsConfig().getString("moderator.ping") == "true"){
+				if(plugin.getCommandsConfig().getString("ping") == "true"){
 					Ping.Run(sender, playerType);
 					return true;
-				}else if(plugin.getCommandsConfig().getString("moderator.ping") == "false"){
+				}else if(plugin.getCommandsConfig().getString("ping") == "false"){
 					MainCommandExecutor.Disabled("ping", sender);
 					return true;
 				}else{
 					MainCommandExecutor.Error("ping", sender, plugin);
+					return true;
+				}
+			}else if(cmd.getName().equalsIgnoreCase("rain")){
+				if(plugin.getCommandsConfig().getString("rain") == "true"){
+					Rain.Run(sender, args, playerType, plugin);
+					return true;
+				}else if(plugin.getCommandsConfig().getString("rain") == "false"){
+					MainCommandExecutor.Disabled("rain", sender);
+					return true;
+				}else{
+					MainCommandExecutor.Error("rain", sender, plugin);
+				}
+			}else if(cmd.getName().equalsIgnoreCase("storm")){
+				if(plugin.getCommandsConfig().getString("storm") == "true"){
+					Storm.Run(sender, args, playerType, plugin);
+					return true;
+				}else if(plugin.getCommandsConfig().getString("storm") == "false"){
+					MainCommandExecutor.Disabled("storm", sender);
+					return true;
+				}else{
+					MainCommandExecutor.Error("storm", sender, plugin);
+				}
+			}else if(cmd.getName().equalsIgnoreCase("sun")){
+				if(plugin.getCommandsConfig().getString("sun") == "true"){
+					Sun.Run(sender, args, playerType, plugin);
+					return true;
+				}else if(plugin.getCommandsConfig().getString("sun") == "false"){
+					MainCommandExecutor.Disabled("sun", sender);
+					return true;
+				}else{
+					MainCommandExecutor.Error("sun", sender, plugin);
 					return true;
 				}
 			}

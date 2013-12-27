@@ -1,6 +1,6 @@
 name: Tadukooplugin
 main: com.gmail.lucario77777777.tadukooplugin.Main
-version: Alpha 0.2
+version: Alpha 0.2.3
 description: Tadukoo Plugin
 commands:
    adventure:
@@ -98,6 +98,11 @@ commands:
       usage: /<command> [player]
       permission: Tadukooplugin.ping
       permission-message: You don't have <permission>
+   rain:
+      description: Sets the weather to rain.
+      usage: /<command> [world]
+      permission: Tadukooplugin.rain
+      permission-message: You don't have <permission>
    setwarp:
       description: Sets a warp.
       usage: /<command> <warpName>
@@ -108,14 +113,19 @@ commands:
       usage: /<command> <player>
       permission: Tadukooplugin.starve
       permission-message: You don't have <permission>
+   storm:
+      description: Sets the weather to storm.
+      usage: /<command> [world]
+      permission: Tadukooplugin.storm
+      permission-message: You don't have <permission>
    suicide:
       description: Commit suicide.
       usage: /<command>
       permission: Tadukooplugin.suicide
       permission-message: Sorry, you're not allowed to kill yourself.
    sun:
-      description: Sets the weather to clear/sun.
-      usage: /<command>
+      description: Sets the weather to sun.
+      usage: /<command> [world]
       permission: Tadukooplugin.sun
       permission-message: You don't have <permission>
    survival:
@@ -173,6 +183,9 @@ permissions:
          Tadukooplugin.kill: true
          Tadukooplugin.killall: true
          Tadukooplugin.ping: true
+         Tadukooplugin.rain: true
+         Tadukooplugin.storm: true
+         Tadukooplugin.sun: true
    Tadukooplugin.teleport.*:
       description: Gives access to all teleportation commands.
       children:
@@ -234,11 +247,17 @@ permissions:
    Tadukooplugin.ping:
       description: Gives access to /ping
       default: true
+   Tadukooplugin.rain:
+      description: Gives access to /rain
+      default: op
    Tadukooplugin.setwarp:
       description: Gives access to /setwarp
       default: op
    Tadukooplugin.starve:
       description: Gives access to /starve
+      default: op
+   Tadukooplugin.storm:
+      description: Gives access to /storm
       default: op
    Tadukooplugin.suicide:
       description: Gives access to /suicide

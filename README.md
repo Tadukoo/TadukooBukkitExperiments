@@ -19,8 +19,7 @@ There are so many that I'm not going to list them all yet since this plugin is i
 
 (NOTE: All version numbers and/or features listed below are tentative and could change.)
 * Alpha 0.2.X
-    * Add /rain
-    * Add /storm
+    * Add /weather [ type ]
     * /thelp search functionality.
     * /thelp updated to have all commands.
 	* Maybe some commands will have special options? (Instead of just true and false)
@@ -81,8 +80,15 @@ Key:
     * Teleports you to a warp.
 * /delwarp < warpName >
     * Deletes a warp.
-* /sun
+* /rain [ world ]
+    * Sets the weather to rain.
+	* Default is in the world you're in.
+* /storm [ world ]
+    * Sets the weather to storm.
+	* Default is in the world you're in.
+* /sun [ world ]
     * Sets the weather to sun.
+	* Default is in the world you're in.
 * /thelp
     * Shows the Tadukoo Plugin help.
 
@@ -96,9 +102,18 @@ Color codes don't work.
 
 Recent Updates
 --------------
-This is only the newest 3 updates, for a full listing of updates, check the wiki, specifically
+This is only the several newest updates, for older updates, check the wiki, specifically
  [this page] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin History).
- 
+
+Alpha 0.2.3
+* Added /storm [ world ]
+
+Alpha 0.2.2
+* Added /rain [ world ]
+
+Alpha 0.2.1
+* Added /sun [ world ]
+
 Alpha 0.2
 * All commands can now be set to true or false in the commands.yml file.
 

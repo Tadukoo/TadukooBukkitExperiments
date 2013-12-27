@@ -30,17 +30,27 @@ public class Main extends JavaPlugin {
 	}
 	@Override
 	public void onEnable () {
+		/*
+		 * Bukkit Logger
+		 */
 		blo.enabled(enabled);
+		
+		/*
+		 * Config Files
+		 */
 		getConfig().options().copyDefaults(true);
 		saveConfig();
 		reloadCommandsConfig();
+		getCommandsConfig().options().copyDefaults(true);
 		saveCommandsConfig();
 //		getConfig().getString("MOTD").replaceAll("&", "\u00A7");
+		
+		/*
+		 * Cheat Commands
+		 */
 		getCommand("adventure").setExecutor(new MainCommandExecutor(this));
-		getCommand("countdown").setExecutor(new MainCommandExecutor(this));
 		getCommand("creative").setExecutor(new MainCommandExecutor(this));
 		getCommand("day").setExecutor(new MainCommandExecutor(this));
-		getCommand("delwarp").setExecutor(new MainCommandExecutor(this));
 		getCommand("feed").setExecutor(new MainCommandExecutor(this));
 		getCommand("fly").setExecutor(new MainCommandExecutor(this));
 		getCommand("gamemode").setExecutor(new MainCommandExecutor(this));
@@ -50,20 +60,40 @@ public class Main extends JavaPlugin {
 		getCommand("gms").setExecutor(new MainCommandExecutor(this));
 		getCommand("gmt").setExecutor(new MainCommandExecutor(this));
 		getCommand("heal").setExecutor(new MainCommandExecutor(this));
+		getCommand("night").setExecutor(new MainCommandExecutor(this));
+		getCommand("starve").setExecutor(new MainCommandExecutor(this));
+		getCommand("survival").setExecutor(new MainCommandExecutor(this));
+		getCommand("time").setExecutor(new MainCommandExecutor(this));
+		
+		/*
+		 * General Commands
+		 */
+		getCommand("motd").setExecutor(new MainCommandExecutor(this));
+		getCommand("suicide").setExecutor(new MainCommandExecutor(this));
+		getCommand("thelp").setExecutor(new MainCommandExecutor(this));
+		
+		/*
+		 * Moderator Commands
+		 */
+		getCommand("countdown").setExecutor(new MainCommandExecutor(this));
 		getCommand("kill").setExecutor(new MainCommandExecutor(this));
 		getCommand("killall").setExecutor(new MainCommandExecutor(this));
-		getCommand("motd").setExecutor(new MainCommandExecutor(this));
-		getCommand("night").setExecutor(new MainCommandExecutor(this));
 		getCommand("ping").setExecutor(new MainCommandExecutor(this));
-		getCommand("setwarp").setExecutor(new MainCommandExecutor(this));
-		getCommand("starve").setExecutor(new MainCommandExecutor(this));
-		getCommand("suicide").setExecutor(new MainCommandExecutor(this));
+		getCommand("rain").setExecutor(new MainCommandExecutor(this));
+		getCommand("storm").setExecutor(new MainCommandExecutor(this));
 		getCommand("sun").setExecutor(new MainCommandExecutor(this));
-		getCommand("survival").setExecutor(new MainCommandExecutor(this));
-		getCommand("thelp").setExecutor(new MainCommandExecutor(this));
-		getCommand("time").setExecutor(new MainCommandExecutor(this));
+		
+		/*
+		 * Teleportation Commands
+		 */
+		getCommand("delwarp").setExecutor(new MainCommandExecutor(this));
+		getCommand("setwarp").setExecutor(new MainCommandExecutor(this));
 		getCommand("tp").setExecutor(new MainCommandExecutor(this));
 		getCommand("warp").setExecutor(new MainCommandExecutor(this));
+		
+		/*
+		 * Listeners
+		 */
 		this.getServer().getPluginManager().registerEvents(new BlockListener(null), this);
 		this.getServer().getPluginManager().registerEvents(new PlayerListener(null), this);
 	}
@@ -96,7 +126,7 @@ public class Main extends JavaPlugin {
 	    try {
 	        getCommandsConfig().save(commandsFile);
 	    } catch (IOException ex) {
-	        this.getLogger().log(Level.SEVERE, "Could not save config to " + commandsFile, ex);
+	        this.getLogger().log(Level.SEVERE, "Could not save config to " + commandsFile + ex);
 	    }
 	}
 	public void reloadWarpsConfig() {
@@ -127,7 +157,7 @@ public class Main extends JavaPlugin {
 	    try {
 	        getWarpsConfig().save(warpsFile);
 	    } catch (IOException ex) {
-	        this.getLogger().log(Level.SEVERE, "Could not save config to " + warpsFile, ex);
+	        this.getLogger().log(Level.SEVERE, "Could not save config to " + warpsFile + ex);
 	    }
 	}
 }

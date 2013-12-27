@@ -3,6 +3,7 @@ package com.gmail.lucario77777777.tadukooplugin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -12,6 +13,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 //import org.bukkit.event.player.PlayerLoginEvent;
+import org.bukkit.event.player.PlayerLoginEvent;
 
 public class PlayerListener implements Listener {
 	public Main plugin;
@@ -19,14 +21,14 @@ public class PlayerListener implements Listener {
 		this.plugin = parent;
 	}
 	
-	/*@EventHandler(priority = EventPriority.HIGH)
-	Still doesn't work.
+	@EventHandler(priority = EventPriority.HIGH)
+	//Still doesn't work.
 	public void onPlayerLogin(final PlayerLoginEvent event){
 	    if(!this.plugin.getConfig().getString("motd").isEmpty()){
 	    	String motd = this.plugin.getConfig().getString("motd");
 			(event.getPlayer()).sendMessage(motd);
 		}
-	}*/
+	}
 	@EventHandler(priority = EventPriority.LOWEST)
 	public void onPlayerChat(final AsyncPlayerChatEvent event){
 		Player player = event.getPlayer();
@@ -47,13 +49,13 @@ public class PlayerListener implements Listener {
 	@EventHandler(priority = EventPriority.LOW)
 	public void onPlayerInteract(PlayerInteractEvent event){
 		Player player = event.getPlayer();
-		int blockId = player.getItemInHand().getType().getId();
-		if(blockId == 280){
+		Material blockId = player.getItemInHand().getType();
+		if(blockId == Material.STICK){
 			Block block = player.getTargetBlock(null, 50);
 			Location location = block.getLocation();
 			World world = player.getWorld();
 			world.createExplosion(location, 5);
-		}else if(blockId == 352){
+		}else if(blockId == Material.BONE){
 			Block block = player.getTargetBlock(null, 50);
 			Location location = block.getLocation();
 			World world = player.getWorld();
