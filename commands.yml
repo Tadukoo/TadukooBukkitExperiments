@@ -63,6 +63,8 @@ storm: true
 # Toggles /storm
 sun: true
 # Toggles /sun
+weather: true
+# Toggles /weather
 ########################################
 #                                      #
 #        Teleportation Commands        #

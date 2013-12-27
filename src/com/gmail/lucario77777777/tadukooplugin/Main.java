@@ -82,6 +82,7 @@ public class Main extends JavaPlugin {
 		getCommand("rain").setExecutor(new MainCommandExecutor(this));
 		getCommand("storm").setExecutor(new MainCommandExecutor(this));
 		getCommand("sun").setExecutor(new MainCommandExecutor(this));
+		getCommand("weather").setExecutor(new MainCommandExecutor(this));
 		
 		/*
 		 * Teleportation Commands

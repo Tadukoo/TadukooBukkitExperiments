@@ -51,7 +51,7 @@ public class MainCommandExecutor implements CommandExecutor {
 		}else if(cmd.getName().equalsIgnoreCase("countdown") || cmd.getName().equalsIgnoreCase("kill") ||
 				cmd.getName().equalsIgnoreCase("killall") || cmd.getName().equalsIgnoreCase("ping") ||
 				cmd.getName().equalsIgnoreCase("rain") || cmd.getName().equalsIgnoreCase("storm") || 
-				cmd.getName().equalsIgnoreCase("sun")){
+				cmd.getName().equalsIgnoreCase("sun") || cmd.getName().equalsIgnoreCase("weather")){
 			ModeratorCommandExecutor.Run(sender, cmd, args, playerType, plugin);
 			return true;
 		}else if(cmd.getName().equalsIgnoreCase("delwarp") || cmd.getName().equalsIgnoreCase("setwarp") ||

@@ -153,6 +153,11 @@ commands:
       usage: /<command> <warpName>
       permission: Tadukooplugin.warp
       permission-message: You don't have <permission>
+   weather:
+      description: Changes the weather.
+      usage: /<command> <weather type> [world]
+      permissions: Tadukooplugin.weather
+      permission-message: You don't have <permission>
 permissions:
    Tadukooplugin.*:
       description: Gives access to all commands
@@ -208,6 +213,12 @@ permissions:
          Tadukooplugin.delwarp: true
          Tadukooplugin.setwarp: true
          Tadukooplugin.warp: true
+   Tadukooplugin.weather:
+      description: Gives access to /weather, /sun, /rain, and /storm
+      children:
+         Tadukooplugin.sun: true
+         Tadukooplugin.rain: true
+         Tadukooplugin.storm: true
    Tadukooplugin.adventure:
       description: Gives access to /adventure and /gma
       default: op

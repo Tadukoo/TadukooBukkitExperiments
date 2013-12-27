@@ -91,6 +91,17 @@ public class ModeratorCommandExecutor{
 					MainCommandExecutor.Error("sun", sender, plugin);
 					return true;
 				}
+			}else if(cmd.getName().equalsIgnoreCase("weather")){
+				if(plugin.getCommandsConfig().getString("weather") == "true"){
+					Weather.Run(sender, args, playerType, plugin);
+					return true;
+				}else if(plugin.getCommandsConfig().getString("weather") == "false"){
+					MainCommandExecutor.Disabled("weather", sender);
+					return true;
+				}else{
+					MainCommandExecutor.Error("weather", sender, plugin);
+					return true;
+				}
 			}
 			return true;
 		}else if(plugin.getCommandsConfig().getString("moderator") == "false"){

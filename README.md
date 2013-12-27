@@ -19,10 +19,7 @@ There are so many that I'm not going to list them all yet since this plugin is i
 
 (NOTE: All version numbers and/or features listed below are tentative and could change.)
 * Alpha 0.2.X
-    * Add /weather [ type ]
-    * /thelp search functionality.
-    * /thelp updated to have all commands.
-	* Maybe some commands will have special options? (Instead of just true and false)
+    
 * Alpha 0.3
     * Set-up more teleportation stuff.
 	* Improve current teleportation stuff.
@@ -30,6 +27,8 @@ There are so many that I'm not going to list them all yet since this plugin is i
     * Set-up an economy system.
 * Alpha ?
     * Make configurable aliases for commands.
+	* /thelp updated to have all commands.
+	* Maybe some commands will have special options? (Instead of just true and false)
 
 Commands
 --------
@@ -89,6 +88,8 @@ Key:
 * /sun [ world ]
     * Sets the weather to sun.
 	* Default is in the world you're in.
+* /weather < type > [ world ]
+    * Changes the weather.
 * /thelp
     * Shows the Tadukoo Plugin help.
 
@@ -104,6 +105,9 @@ Recent Updates
 --------------
 This is only the several newest updates, for older updates, check the wiki, specifically
  [this page] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin History).
+
+Alpha 0.2.4
+* Added /weather < type > [ world ]
 
 Alpha 0.2.3
 * Added /storm [ world ]
