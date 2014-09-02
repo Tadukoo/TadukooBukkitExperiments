@@ -1,13 +1,14 @@
-Tadukoo Plugin
-==============
+Tadukoo Essentials
+==================
 
-Tadukoo Plugin is a plugin currently in progress for Bukkit, it is being made
-for Minecraft 1.6.2, and will include various commands, an economy, permissions,
-and much more. Its purpose is as a plugin for [Tadukooverse] (http://tadukooverse.wikia.com).
+Tadukoo Essentials is a plugin currently in progress for Bukkit, it is being made for Minecraft 1.6.2, and will include various commands, an economy, 
+permissions, and much more. Its purpose is as a plugin for [Tadukooverse] (http://tadukooverse.wikia.com).
 
-Tadukoo Plugin is in very early stages of development, so there's not much in it yet, so there may be some 
-features or commands that are just for testing at the moment. Also, Tadukoo Plugin is the working name.
-It may be changed in the future.
+Tadukoo Essentials is in very early stages of development, so there's not much in it yet, so there may be some features or commands that are just for testing 
+at the moment. Also Tadukoo Essentials is a working name.
+
+Tadukoo Essentials was previously called Tadukoo Plugin, so not all references call it Tadukoo Essentials yet. Also, Tadukoo Essentials will be updated to 
+Minecraft 1.7.9 (or later) soon.
 
 Current Features
 ----------------
@@ -18,15 +19,17 @@ Planned Features/Updates
 There are so many that I'm not going to list them all yet since this plugin is in such an early stage, but below are a few:
 
 (NOTE: All version numbers and/or features listed below are tentative and could change.)
-* Alpha 0.2.X
-    
 * Alpha 0.3
     * Set-up more teleportation stuff.
 	* Improve current teleportation stuff.
+	* Improve everything.
+	* Fix config.yml setting commands to true or false.
 * Alpha 0.4
-    * Set-up an economy system.
+    * Set-up an (optional) economy system.
+* Alpha 0.5
+    * Set-up /msg and such.
 * Alpha ?
-    * Make configurable aliases for commands.
+    * Make configurable aliases for commands. (Possibly using an Enum)
 	* /thelp updated to have all commands.
 	* Maybe some commands will have special options? (Instead of just true and false)
 
@@ -103,8 +106,8 @@ Color codes don't work.
 
 Recent Updates
 --------------
-This is only the several newest updates, for older updates, check the wiki, specifically
- [this page] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin History).
+This is only the several newest updates, for older updates, check the wiki, specifically  [this page] 
+(http://tadukooverse.wikia.com/wiki/Tadukoo Plugin History).
 
 Alpha 0.2.4
 * Added /weather < type > [ world ]
@@ -132,10 +135,9 @@ Alpha 0.1.1.5
 
 Wiki
 ----
-Information about Tadukoo Plugin can be found on tadukooverse.wikia.com, the main page for it is [here] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin).
+Information about Tadukoo Essentials can be found on tadukooverse.wikia.com, the main page for it is [here] (http://tadukooverse.wikia.com/wiki/Tadukoo Plugin).
 
 Copyright
 ---------
 
-Tadukoo Plugin is released under GNU's general public license (GPLv3), 
-more information can be found [here](http://www.gnu.org/licenses/gpl.html).
+Tadukoo Essentials is released under GNU's general public license (GPLv3), more information can be found [here](http://www.gnu.org/licenses/gpl.html).
