@@ -1,14 +1,13 @@
 Tadukoo Essentials
 ==================
 
-Tadukoo Essentials is a plugin currently in progress for Bukkit, it is being made for Minecraft 1.6.2, and will include various commands, an economy, 
+Tadukoo Essentials is a plugin currently in progress for Bukkit, it is being made for Minecraft 1.7.9, and will include various commands, an economy, 
 permissions, and much more. Its purpose is as a plugin for [Tadukooverse] (http://tadukooverse.wikia.com).
 
 Tadukoo Essentials is in very early stages of development, so there's not much in it yet, so there may be some features or commands that are just for testing 
 at the moment. Also Tadukoo Essentials is a working name.
 
-Tadukoo Essentials was previously called Tadukoo Plugin, so not all references call it Tadukoo Essentials yet. Also, Tadukoo Essentials will be updated to 
-Minecraft 1.7.9 (or later) soon.
+Tadukoo Essentials was previously called Tadukoo Plugin, so not all references call it Tadukoo Essentials yet.
 
 Current Features
 ----------------
