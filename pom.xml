@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.github.tadukoo.maven</groupId>
 		<artifactId>TadukooMavenLibraryPOM</artifactId>
-		<version>0.4.2-Alpha</version>
+		<version>0.4.3-Alpha</version>
 	</parent>
 	<groupId>com.github.tadukoo.bukkit</groupId>
 	<artifactId>TadukooBukkitExperiments</artifactId>
