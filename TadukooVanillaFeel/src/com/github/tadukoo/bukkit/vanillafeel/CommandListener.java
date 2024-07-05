@@ -6,7 +6,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 
 public class CommandListener implements Listener{
-	private TVF plugin;
+	private final TVF plugin;
 	
 	public CommandListener(TVF plugin){
 		this.plugin = plugin;
@@ -26,16 +26,14 @@ public class CommandListener implements Listener{
 				args[0].equalsIgnoreCase("/bukkit:plugins") || args[0].equalsIgnoreCase("/bukkit:pl")) && 
 				!player.hasPermission("TadukooVanillaFeel.normal")){
 			event.setCancelled(true);
-			Commands.plugins(player, message);
+			Commands.plugins(player);
 		}else if((args[0].equalsIgnoreCase("/version") || args[0].equalsIgnoreCase("/ver") || 
 				args[0].equalsIgnoreCase("/about") || args[0].equalsIgnoreCase("/bukkit:version") ||
 				args[0].equalsIgnoreCase("/bukkit:ver") || args[0].equalsIgnoreCase("/bukkit:about"))
 				&& !player.hasPermission("TadukooVanillaFeel.normal")){
 			if(args.length > 1){
 				event.setCancelled(true);
-				Commands.version(player, message);
-			}else{
-				return;
+				Commands.version(player);
 			}
 		}else if((args[0].equalsIgnoreCase("/msg") || args[0].equalsIgnoreCase("/w") ||
 				args[0].equalsIgnoreCase("/tell") || args[0].equalsIgnoreCase("/bukkit:msg") ||

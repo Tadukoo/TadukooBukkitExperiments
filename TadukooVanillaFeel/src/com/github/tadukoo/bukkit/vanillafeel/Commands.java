@@ -3,8 +3,9 @@ package com.github.tadukoo.bukkit.vanillafeel;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
-public class Commands {
-	public static void plugins(Player player, String message) {
+public class Commands{
+	
+	public static void plugins(Player player){
 		player.sendMessage(ChatColor.WHITE + "Plugins (0): ");
 	}
 	
@@ -17,7 +18,7 @@ public class Commands {
 				"command. Please contact the server administrators if you believe that this in in error.");
 	}
 	
-	public static void version(Player player, String message){
+	public static void version(Player player){
 		player.sendMessage(ChatColor.WHITE + "This server is not running any plugin by that name.");
 		player.sendMessage(ChatColor.WHITE + "Use /plugins to get a list of plugins.");
 	}
@@ -27,29 +28,20 @@ public class Commands {
 		plugin.getServer().broadcastMessage("Ouch. That look like it hurt.");
 	}
 	
-	@SuppressWarnings("deprecation")
 	public static void tell(TVF plugin, Player player, String message){
 		String[] args = message.split(" ");
-		int argsL = args.length;
-		if(argsL < 3){
+		if(args.length < 3){
 			player.sendMessage(ChatColor.RED + "Usage: /tell <player> <message>");
 		}else{
-			if(plugin.getServer().getPlayer(args[1]) == null){
+			Player receiver = plugin.getServer().getPlayer(args[1]);
+			if(receiver == null){
 				player.sendMessage(ChatColor.WHITE + "There's no player by that name online.");
 			}else{
-				Player receiver = plugin.getServer().getPlayer(args[1]);
 				String pName = player.getName();
 				String rName = receiver.getName();
-				boolean cont = true;
-				String msg = "";
-				int i = 2;
-				while(cont){
-					if(i == argsL){
-						cont = false;
-						break;
-					}
-					msg = msg + args[i] + " ";
-					i++;
+				StringBuilder msg = new StringBuilder();
+				for(int i = 2; i < args.length; i++){
+					msg.append(args[i]).append(" ");
 				}
 				player.sendMessage(ChatColor.WHITE + "[" + pName + "->" + rName + "] " + msg);
 				receiver.sendMessage(ChatColor.GRAY + pName + " whispers " + msg);
@@ -59,20 +51,12 @@ public class Commands {
 	
 	public static void me(TVF plugin, Player player, String message){
 		String[] args = message.split(" ");
-		int argsL = args.length;
-		if(argsL < 2){
+		if(args.length < 2){
 			player.sendMessage(ChatColor.RED + "Usage: /me <action>");
 		}else{
-			boolean cont = true;
-			String msg = "";
-			int i = 1;
-			while(cont){
-				if(i == argsL){
-					cont = false;
-					break;
-				}
-				msg = msg + args[i] + " ";
-				i++;
+			StringBuilder msg = new StringBuilder();
+			for(int i = 1; i < args.length; i++){
+				msg.append(args[i]).append(" ");
 			}
 			plugin.getServer().broadcastMessage("* " + player.getName() + " " + msg);
 		}
@@ -237,17 +221,11 @@ public class Commands {
 				player.sendMessage(ChatColor.GOLD + "/version: " + ChatColor.WHITE + "Gets the version of " +
 						"this server includ...");
 			}catch(NumberFormatException e){
-				String msg = "No help for ";
-				boolean cont = true;
-				int i = 1;
-				while(cont){
-					msg = msg + args[i] + " ";
-					i++;
-					if(i == (argsL)){
-						cont = false;
-					}
+				StringBuilder msg = new StringBuilder("No help for ");
+				for(int i = 1; i < args.length; i++){
+					msg.append(args[i]).append(" ");
 				}
-				player.sendMessage(ChatColor.RED + msg);
+				player.sendMessage(ChatColor.RED + msg.toString());
 			}
 		}
 	}
