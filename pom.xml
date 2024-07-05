@@ -15,6 +15,7 @@
 	<description>A collection of Bukkit plugin experiments</description>
 	<modules>
 		<module>TadukooEssentials</module>
+		<module>TadukooCore</module>
 	</modules>
 	<properties>
 		<!-- Info -->
