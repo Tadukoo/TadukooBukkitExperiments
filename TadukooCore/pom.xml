@@ -30,6 +30,11 @@
 			<groupId>${project.groupId}</groupId>
 			<artifactId>${tadukoo.bukkit.mobspawning.artifactID}</artifactId>
 		</dependency>
+		<!-- Tadukoo Vanilla Feel -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>${tadukoo.bukkit.vanillafeel.artifactID}</artifactId>
+		</dependency>
 		<!-- Tadukoo Chat -->
 		<dependency>
 			<groupId>${project.groupId}</groupId>

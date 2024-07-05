@@ -1,0 +1,10 @@
+name: Tadukoo_Vanilla_Feel
+main: com.gmail.lucario77777777.TVF.TVF
+version: Beta 0.9.5
+description: Make your server feel like vanilla to your users.
+author: Tadukoo
+prefix: TVF
+permissions:
+   TadukooVanillaFeel.normal:
+      description: Allows you to use commands normally.
+      default: op

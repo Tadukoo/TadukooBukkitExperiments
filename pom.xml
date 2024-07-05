@@ -17,6 +17,7 @@
 		<module>TadukooEssentials</module>
 		<module>TadukooFakeOp</module>
 		<module>TadukooMobSpawning</module>
+		<module>TadukooVanillaFeel</module>
 		<module>TadukooChat</module>
 		<module>TadukooCore</module>
 	</modules>
@@ -36,6 +37,7 @@
 		<tadukoo.bukkit.essentials.artifactID>TadukooEssentials</tadukoo.bukkit.essentials.artifactID>
 		<tadukoo.bukkit.fakeop.artifactID>TadukooFakeOp</tadukoo.bukkit.fakeop.artifactID>
 		<tadukoo.bukkit.mobspawning.artifactID>TadukooMobSpawning</tadukoo.bukkit.mobspawning.artifactID>
+		<tadukoo.bukkit.vanillafeel.artifactID>TadukooVanillaFeel</tadukoo.bukkit.vanillafeel.artifactID>
 		<tadukoo.bukkit.chat.artifactID>TadukooChat</tadukoo.bukkit.chat.artifactID>
 	</properties>
 	<repositories>
@@ -70,6 +72,12 @@
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>${tadukoo.bukkit.mobspawning.artifactID}</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- Tadukoo Vanilla Feel -->
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>${tadukoo.bukkit.vanillafeel.artifactID}</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<!-- Tadukoo Chat -->
