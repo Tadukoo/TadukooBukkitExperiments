@@ -1,0 +1,13 @@
+name: Tadukoo_Fake_Op
+main: com.gmail.lucario77777777.TFO.TFO
+version: Pre-Alpha 0.0.0
+description: Fake Op players who annoy you. >:)
+author: Tadukoo
+prefix: TFO
+permissions:
+   TadukooFakeOp.fake:
+      description: Makes you a fake op. You may either use this permission or the /fakeop command.
+      default: false
+   TadukooFakeOp.immune:
+      description: Prevents you from being fake opped.
+      default: op

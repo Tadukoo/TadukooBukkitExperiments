@@ -8,27 +8,12 @@
 		<artifactId>TadukooBukkitExperiments</artifactId>
 		<version>0.1-Alpha-SNAPSHOT</version>
 	</parent>
-	<artifactId>TadukooCore</artifactId>
+	<artifactId>TadukooFakeOp</artifactId>
 	<dependencies>
 		<!-- Spigot API -->
 		<dependency>
 			<groupId>${spigot.api.groupID}</groupId>
 			<artifactId>${spigot.api.artifactID}</artifactId>
-		</dependency>
-		<!-- Tadukoo Essentials -->
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>${tadukoo.bukkit.essentials.artifactID}</artifactId>
-		</dependency>
-		<!-- Tadukoo Fake Op -->
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>${tadukoo.bukkit.fakeop.artifactID}</artifactId>
-		</dependency>
-		<!-- Tadukoo Chat -->
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>${tadukoo.bukkit.chat.artifactID}</artifactId>
 		</dependency>
 	</dependencies>
 </project>
