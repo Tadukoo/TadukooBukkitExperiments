@@ -1,11 +1,10 @@
 package com.github.tadukoo.bukkit.chat;
 
 import com.github.tadukoo.bukkit.chat.listeners.ChatPlayerListener;
+import com.github.tadukoo.perms.TP;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import com.gmail.realtadukoo.TP.TP;
 
 public class TCh extends JavaPlugin {
 	public static TCh plugin;

@@ -35,6 +35,11 @@
 			<groupId>${project.groupId}</groupId>
 			<artifactId>${tadukoo.bukkit.vanillafeel.artifactID}</artifactId>
 		</dependency>
+		<!-- Tadukoo Perms -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>${tadukoo.bukkit.perms.artifactID}</artifactId>
+		</dependency>
 		<!-- Tadukoo Chat -->
 		<dependency>
 			<groupId>${project.groupId}</groupId>

@@ -1,5 +1,6 @@
 package com.github.tadukoo.bukkit.chat.listeners;
 
+import com.github.tadukoo.perms.TP;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,7 +11,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 import com.github.tadukoo.bukkit.chat.TCh;
 import com.github.tadukoo.bukkit.chat.commands.ChatComExec;
-import com.gmail.realtadukoo.TP.TP;
 
 public class ChatPlayerListener implements Listener{
 	public TCh plugin;

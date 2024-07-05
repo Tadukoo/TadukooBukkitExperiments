@@ -18,6 +18,7 @@
 		<module>TadukooFakeOp</module>
 		<module>TadukooMobSpawning</module>
 		<module>TadukooVanillaFeel</module>
+		<module>TadukooPerms</module>
 		<module>TadukooChat</module>
 		<module>TadukooCore</module>
 	</modules>
@@ -38,6 +39,7 @@
 		<tadukoo.bukkit.fakeop.artifactID>TadukooFakeOp</tadukoo.bukkit.fakeop.artifactID>
 		<tadukoo.bukkit.mobspawning.artifactID>TadukooMobSpawning</tadukoo.bukkit.mobspawning.artifactID>
 		<tadukoo.bukkit.vanillafeel.artifactID>TadukooVanillaFeel</tadukoo.bukkit.vanillafeel.artifactID>
+		<tadukoo.bukkit.perms.artifactID>TadukooPerms</tadukoo.bukkit.perms.artifactID>
 		<tadukoo.bukkit.chat.artifactID>TadukooChat</tadukoo.bukkit.chat.artifactID>
 	</properties>
 	<repositories>
@@ -61,30 +63,42 @@
 				<groupId>${project.groupId}</groupId>
 				<artifactId>${tadukoo.bukkit.essentials.artifactID}</artifactId>
 				<version>${project.version}</version>
+				<scope>provided</scope>
 			</dependency>
 			<!-- Tadukoo Fake Op -->
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>${tadukoo.bukkit.fakeop.artifactID}</artifactId>
 				<version>${project.version}</version>
+				<scope>provided</scope>
 			</dependency>
 			<!-- Tadukoo Mob Spawning -->
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>${tadukoo.bukkit.mobspawning.artifactID}</artifactId>
 				<version>${project.version}</version>
+				<scope>provided</scope>
 			</dependency>
 			<!-- Tadukoo Vanilla Feel -->
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>${tadukoo.bukkit.vanillafeel.artifactID}</artifactId>
 				<version>${project.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<!-- Tadukoo Perms -->
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>${tadukoo.bukkit.perms.artifactID}</artifactId>
+				<version>${project.version}</version>
+				<scope>provided</scope>
 			</dependency>
 			<!-- Tadukoo Chat -->
 			<dependency>
 				<groupId>${project.groupId}</groupId>
 				<artifactId>${tadukoo.bukkit.chat.artifactID}</artifactId>
 				<version>${project.version}</version>
+				<scope>provided</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
