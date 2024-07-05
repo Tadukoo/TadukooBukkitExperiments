@@ -1,0 +1,31 @@
+BAT: true
+BLAZE: true
+CAVE_SPIDER: true
+CHICKEN: true
+COW: true
+CREEPER: true
+ENDER_DRAGON: true
+ENDERMAN: true
+GHAST: true
+GIANT: false #Setting to true won't do anything (yet).
+HORSE: true
+IRON_GOLEM: true
+MAGMA_CUBE: true
+MUSHROOM_COW: true
+OCELOT: true
+PIG: true
+PIG_ZOMBIE: true
+SHEEP: true
+SILVERFISH: true
+SKELETON: true
+SLIME: true
+SNOWMAN: true
+SPIDER: true
+SQUID: true
+VILLAGER: true
+WITCH: true
+WITHER: true
+WOLF: true
+ZOMBIE: true
+
+debug: false #This makes it so that a message appears in the console each time a mob is blocked from spawning.

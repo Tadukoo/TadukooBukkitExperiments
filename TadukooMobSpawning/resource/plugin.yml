@@ -1,0 +1,16 @@
+name: Tadukoo_Mob_Spawning
+main: com.gmail.lucario77777777.TMS.TM
+version: Alpha 0.0.1
+description: A plugin that allows you to make mobs spawn (or prevent them from spawning) anywhere.
+author: Tadukoo
+prefix: TMS
+commands:
+   mobs:
+      description: Future use.
+      usage: /<command>
+      permission: TadukooMobSpawning.use
+      permission-message: You don't have <permission>.
+permissions:
+   TadukooMobSpawning.use:
+      description: Gives access to the plugin.
+      default: true

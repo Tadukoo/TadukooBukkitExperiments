@@ -11,12 +11,12 @@ import com.github.tadukoo.bukkit.core.commands.handling.CComExec;
 import com.github.tadukoo.bukkit.core.listeners.CPlayerListener;
 import com.github.tadukoo.bukkit.essentials.TE;
 import com.github.tadukoo.bukkit.fakeop.TFO;
+import com.github.tadukoo.bukkit.mobspawning.TM;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.gmail.lucario77777777.TMS.TM;
 import com.gmail.lucario77777777.TVF.TVF;
 import com.gmail.realtadukoo.TP.TP;
 

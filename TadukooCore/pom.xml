@@ -25,6 +25,11 @@
 			<groupId>${project.groupId}</groupId>
 			<artifactId>${tadukoo.bukkit.fakeop.artifactID}</artifactId>
 		</dependency>
+		<!-- Tadukoo Mob Spawning -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>${tadukoo.bukkit.mobspawning.artifactID}</artifactId>
+		</dependency>
 		<!-- Tadukoo Chat -->
 		<dependency>
 			<groupId>${project.groupId}</groupId>
