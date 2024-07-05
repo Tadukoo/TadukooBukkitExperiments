@@ -6,15 +6,15 @@ import java.io.Reader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.gmail.lucario77777777.TE.commands.MainCommandExecutor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.gmail.lucario77777777.TE.commands.CommandExec;
+
 public class TE extends JavaPlugin {
     public final Logger logger = Logger.getLogger("Minecraft");
 	public static TE plugin;
-	public final BukkitLogger blo = new BukkitLogger(this);
 	public static boolean enabled = true;
 	public FileConfiguration commands = null;
 	public File commandsFile = null;
@@ -25,17 +25,11 @@ public class TE extends JavaPlugin {
 	
 	@Override
 	public void onDisable () {
-		blo.enabled(!enabled);
 		saveConfig();
 		saveCommandsConfig();
 	}
 	@Override
-	public void onEnable () {
-		/*
-		 * Bukkit Logger
-		 */
-		blo.enabled(enabled);
-		
+	public void onEnable () {		
 		/*
 		 * Config Files
 		 */
@@ -44,60 +38,61 @@ public class TE extends JavaPlugin {
 		reloadCommandsConfig();
 		getCommandsConfig().options().copyDefaults(true);
 		saveCommandsConfig();
-//		getConfig().getString("MOTD").replaceAll("&", "\u00A7");
+		
+		getCommand("t").setExecutor(new CommandExec (this));
 		
 		/*
 		 * Cheat Commands
 		 */
-		getCommand("adventure").setExecutor(new MainCommandExecutor(this));
-		getCommand("creative").setExecutor(new MainCommandExecutor(this));
-		getCommand("day").setExecutor(new MainCommandExecutor(this));
-		getCommand("feed").setExecutor(new MainCommandExecutor(this));
-		getCommand("fly").setExecutor(new MainCommandExecutor(this));
-		getCommand("gamemode").setExecutor(new MainCommandExecutor(this));
-		getCommand("gm").setExecutor(new MainCommandExecutor(this));
-		getCommand("gma").setExecutor(new MainCommandExecutor(this));
-		getCommand("gmc").setExecutor(new MainCommandExecutor(this));
-		getCommand("gms").setExecutor(new MainCommandExecutor(this));
-		getCommand("gmt").setExecutor(new MainCommandExecutor(this));
-		getCommand("heal").setExecutor(new MainCommandExecutor(this));
-		getCommand("night").setExecutor(new MainCommandExecutor(this));
-		getCommand("starve").setExecutor(new MainCommandExecutor(this));
-		getCommand("survival").setExecutor(new MainCommandExecutor(this));
-		getCommand("time").setExecutor(new MainCommandExecutor(this));
+		getCommand("adventure").setExecutor(new CommandExec(this));
+		getCommand("creative").setExecutor(new CommandExec(this));
+		getCommand("day").setExecutor(new CommandExec(this));
+		getCommand("feed").setExecutor(new CommandExec(this));
+		getCommand("fly").setExecutor(new CommandExec(this));
+		getCommand("gamemode").setExecutor(new CommandExec(this));
+		getCommand("gm").setExecutor(new CommandExec(this));
+		getCommand("gma").setExecutor(new CommandExec(this));
+		getCommand("gmc").setExecutor(new CommandExec(this));
+		getCommand("gms").setExecutor(new CommandExec(this));
+		getCommand("gmt").setExecutor(new CommandExec(this));
+		getCommand("heal").setExecutor(new CommandExec(this));
+		getCommand("night").setExecutor(new CommandExec(this));
+		getCommand("starve").setExecutor(new CommandExec(this));
+		getCommand("survival").setExecutor(new CommandExec(this));
+		getCommand("time").setExecutor(new CommandExec(this));
 		
 		/*
 		 * General Commands
 		 */
-		getCommand("motd").setExecutor(new MainCommandExecutor(this));
-		getCommand("suicide").setExecutor(new MainCommandExecutor(this));
-		getCommand("thelp").setExecutor(new MainCommandExecutor(this));
+		getCommand("motd").setExecutor(new CommandExec(this));
+		getCommand("suicide").setExecutor(new CommandExec(this));
+		getCommand("thelp").setExecutor(new CommandExec(this));
 		
 		/*
 		 * Moderator Commands
 		 */
-		getCommand("countdown").setExecutor(new MainCommandExecutor(this));
-		getCommand("kill").setExecutor(new MainCommandExecutor(this));
-		getCommand("killall").setExecutor(new MainCommandExecutor(this));
-		getCommand("ping").setExecutor(new MainCommandExecutor(this));
-		getCommand("rain").setExecutor(new MainCommandExecutor(this));
-		getCommand("storm").setExecutor(new MainCommandExecutor(this));
-		getCommand("sun").setExecutor(new MainCommandExecutor(this));
-		getCommand("weather").setExecutor(new MainCommandExecutor(this));
+		getCommand("countdown").setExecutor(new CommandExec(this));
+		getCommand("kill").setExecutor(new CommandExec(this));
+		getCommand("killall").setExecutor(new CommandExec(this));
+		getCommand("ping").setExecutor(new CommandExec(this));
+		getCommand("rain").setExecutor(new CommandExec(this));
+		getCommand("storm").setExecutor(new CommandExec(this));
+		getCommand("sun").setExecutor(new CommandExec(this));
+		getCommand("weather").setExecutor(new CommandExec(this));
 		
 		/*
 		 * Teleportation Commands
 		 */
-		getCommand("delwarp").setExecutor(new MainCommandExecutor(this));
-		getCommand("setwarp").setExecutor(new MainCommandExecutor(this));
-		getCommand("tp").setExecutor(new MainCommandExecutor(this));
-		getCommand("warp").setExecutor(new MainCommandExecutor(this));
+		getCommand("delwarp").setExecutor(new CommandExec(this));
+		getCommand("setwarp").setExecutor(new CommandExec(this));
+		getCommand("tp").setExecutor(new CommandExec(this));
+		getCommand("warp").setExecutor(new CommandExec(this));
 		
 		/*
 		 * Listeners
 		 */
-		this.getServer().getPluginManager().registerEvents(new BlockListener(null), this);
-		this.getServer().getPluginManager().registerEvents(new PlayerListener(null), this);
+		this.getServer().getPluginManager().registerEvents(new BlockListener(this), this);
+		this.getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 	}
 	
 	public void reloadCommandsConfig() {

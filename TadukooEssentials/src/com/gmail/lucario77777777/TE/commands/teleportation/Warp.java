@@ -1,7 +1,7 @@
 package com.gmail.lucario77777777.TE.commands.teleportation;
 
 import com.gmail.lucario77777777.TE.TE;
-import com.gmail.lucario77777777.TE.commands.MainCommandExecutor;
+import com.gmail.lucario77777777.TE.commands.CommandExec;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 
-public class Warp extends MainCommandExecutor{
+public class Warp extends CommandExec {
 	public Warp(TE plugin) {
 		super(plugin);
 	}

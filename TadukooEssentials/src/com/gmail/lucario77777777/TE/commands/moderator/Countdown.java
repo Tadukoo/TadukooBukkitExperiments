@@ -1,12 +1,12 @@
 package com.gmail.lucario77777777.TE.commands.moderator;
 
 import com.gmail.lucario77777777.TE.TE;
-import com.gmail.lucario77777777.TE.commands.MainCommandExecutor;
+import com.gmail.lucario77777777.TE.commands.CommandExec;
 
 import org.bukkit.Bukkit;
 
 
-public class Countdown extends MainCommandExecutor{
+public class Countdown extends CommandExec {
 	public Countdown(TE plugin) {
 		super(plugin);
 	}

@@ -1,13 +1,13 @@
 package com.gmail.lucario77777777.TE.commands.general;
 
 import com.gmail.lucario77777777.TE.TE;
-import com.gmail.lucario77777777.TE.commands.MainCommandExecutor;
+import com.gmail.lucario77777777.TE.commands.CommandExec;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
 
-public class THelp extends MainCommandExecutor{
+public class THelp extends CommandExec {
 	public THelp(TE plugin) {
 		super(plugin);
 	}

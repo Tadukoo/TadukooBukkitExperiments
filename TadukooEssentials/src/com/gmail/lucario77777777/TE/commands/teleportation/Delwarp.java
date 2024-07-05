@@ -1,13 +1,13 @@
 package com.gmail.lucario77777777.TE.commands.teleportation;
 
 import com.gmail.lucario77777777.TE.TE;
-import com.gmail.lucario77777777.TE.commands.MainCommandExecutor;
+import com.gmail.lucario77777777.TE.commands.CommandExec;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
 
-public class Delwarp extends MainCommandExecutor{
+public class Delwarp extends CommandExec {
 	public Delwarp(TE plugin) {
 		super(plugin);
 	}

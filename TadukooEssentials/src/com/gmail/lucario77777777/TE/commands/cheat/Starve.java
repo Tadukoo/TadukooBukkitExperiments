@@ -1,14 +1,14 @@
 package com.gmail.lucario77777777.TE.commands.cheat;
 
 import com.gmail.lucario77777777.TE.TE;
-import com.gmail.lucario77777777.TE.commands.MainCommandExecutor;
+import com.gmail.lucario77777777.TE.commands.CommandExec;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 
-public class Starve extends MainCommandExecutor{
+public class Starve extends CommandExec {
 	public Starve(TE plugin) {
 		super(plugin);
 	}

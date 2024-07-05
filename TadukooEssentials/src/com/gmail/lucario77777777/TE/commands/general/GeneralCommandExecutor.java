@@ -2,11 +2,12 @@ package com.gmail.lucario77777777.TE.commands.general;
 
 import java.util.logging.Level;
 
-import com.gmail.lucario77777777.TE.TE;
-import com.gmail.lucario77777777.TE.commands.MainCommandExecutor;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+
+import com.gmail.lucario77777777.TE.TE;
+import com.gmail.lucario77777777.TE.commands.CommandExec;
 
 public class GeneralCommandExecutor{
 
@@ -14,16 +15,16 @@ public class GeneralCommandExecutor{
 		super();
 	}
 	public static boolean Run(CommandSender sender, Command cmd, String[] args, String playerType, TE plugin){
-		if(plugin.getCommandsConfig().getString("com/gmail/lucario77777777/TE/commands/general") == "true"){
+		if(plugin.getCommandsConfig().getString("general") == "true"){
 			if(cmd.getName().equalsIgnoreCase("motd")){
 				if(plugin.getCommandsConfig().getString("motd") == "true"){
 					MOTD.Run(sender, plugin);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("motd") == "false"){
-					MainCommandExecutor.Disabled("motd", sender);
+					CommandExec.Disabled("motd", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("motd", sender, plugin);
+					CommandExec.Error("motd", sender, plugin);
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("suicide")){
@@ -31,10 +32,10 @@ public class GeneralCommandExecutor{
 					Suicide.Run(sender, args, playerType);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("suicide") == "false"){
-					MainCommandExecutor.Disabled("suicide", sender);
+					CommandExec.Disabled("suicide", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("suicide", sender, plugin);
+					CommandExec.Error("suicide", sender, plugin);
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("thelp")){
@@ -42,19 +43,19 @@ public class GeneralCommandExecutor{
 					THelp.Run(sender, args);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("thelp") == "false"){
-					MainCommandExecutor.Disabled("thelp", sender);
+					CommandExec.Disabled("thelp", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("thelp", sender, plugin);
+					CommandExec.Error("thelp", sender, plugin);
 					return true;
 				}
 			}
 			return true;
-		}else if(plugin.getCommandsConfig().getString("com/gmail/lucario77777777/TE/commands/general") == "false"){
-			Disabled("com/gmail/lucario77777777/TE/commands/general", sender);
+		}else if(plugin.getCommandsConfig().getString("general") == "false"){
+			Disabled("general", sender);
 			return true;
 		}else{
-			Error("com/gmail/lucario77777777/TE/commands/general", sender, plugin);
+			Error("general", sender, plugin);
 			return true;
 		}
 	}

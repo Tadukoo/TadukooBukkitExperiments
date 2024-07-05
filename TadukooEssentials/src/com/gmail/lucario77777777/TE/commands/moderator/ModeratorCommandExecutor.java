@@ -2,11 +2,12 @@ package com.gmail.lucario77777777.TE.commands.moderator;
 
 import java.util.logging.Level;
 
-import com.gmail.lucario77777777.TE.TE;
-import com.gmail.lucario77777777.TE.commands.MainCommandExecutor;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+
+import com.gmail.lucario77777777.TE.TE;
+import com.gmail.lucario77777777.TE.commands.CommandExec;
 
 public class ModeratorCommandExecutor{
 
@@ -14,16 +15,16 @@ public class ModeratorCommandExecutor{
 		super();
 	}
 	public static boolean Run(CommandSender sender, Command cmd, String[] args, String playerType, TE plugin){
-		if(plugin.getCommandsConfig().getString("com/gmail/lucario77777777/TE/commands/moderator") == "true"){
+		if(plugin.getCommandsConfig().getString("moderator") == "true"){
 			if(cmd.getName().equalsIgnoreCase("countdown")){
 				if(plugin.getCommandsConfig().getString("countdown") == "true"){
 					Countdown.Run(plugin);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("countdown") == "false"){
-					MainCommandExecutor.Disabled("countdown", sender);
+					CommandExec.Disabled("countdown", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("countdown", sender, plugin);
+					CommandExec.Error("countdown", sender, plugin);
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("kill")){
@@ -31,10 +32,10 @@ public class ModeratorCommandExecutor{
 					Kill.Run(sender, args);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("kill") == "false"){
-					MainCommandExecutor.Disabled("kill", sender);
+					CommandExec.Disabled("kill", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("kill", sender, plugin);
+					CommandExec.Error("kill", sender, plugin);
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("killall")){
@@ -42,10 +43,10 @@ public class ModeratorCommandExecutor{
 					Killall.Run(sender);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("killall") == "false"){
-					MainCommandExecutor.Disabled("killall", sender);
+					CommandExec.Disabled("killall", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("killall", sender, plugin);
+					CommandExec.Error("killall", sender, plugin);
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("ping")){
@@ -53,10 +54,10 @@ public class ModeratorCommandExecutor{
 					Ping.Run(sender, playerType);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("ping") == "false"){
-					MainCommandExecutor.Disabled("ping", sender);
+					CommandExec.Disabled("ping", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("ping", sender, plugin);
+					CommandExec.Error("ping", sender, plugin);
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("rain")){
@@ -64,30 +65,30 @@ public class ModeratorCommandExecutor{
 					Rain.Run(sender, args, playerType, plugin);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("rain") == "false"){
-					MainCommandExecutor.Disabled("rain", sender);
+					CommandExec.Disabled("rain", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("rain", sender, plugin);
+					CommandExec.Error("rain", sender, plugin);
 				}
 			}else if(cmd.getName().equalsIgnoreCase("storm")){
 				if(plugin.getCommandsConfig().getString("storm") == "true"){
 					Storm.Run(sender, args, playerType, plugin);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("storm") == "false"){
-					MainCommandExecutor.Disabled("storm", sender);
+					CommandExec.Disabled("storm", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("storm", sender, plugin);
+					CommandExec.Error("storm", sender, plugin);
 				}
 			}else if(cmd.getName().equalsIgnoreCase("sun")){
 				if(plugin.getCommandsConfig().getString("sun") == "true"){
 					Sun.Run(sender, args, playerType, plugin);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("sun") == "false"){
-					MainCommandExecutor.Disabled("sun", sender);
+					CommandExec.Disabled("sun", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("sun", sender, plugin);
+					CommandExec.Error("sun", sender, plugin);
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("weather")){
@@ -95,19 +96,19 @@ public class ModeratorCommandExecutor{
 					Weather.Run(sender, args, playerType, plugin);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("weather") == "false"){
-					MainCommandExecutor.Disabled("weather", sender);
+					CommandExec.Disabled("weather", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("weather", sender, plugin);
+					CommandExec.Error("weather", sender, plugin);
 					return true;
 				}
 			}
 			return true;
-		}else if(plugin.getCommandsConfig().getString("com/gmail/lucario77777777/TE/commands/moderator") == "false"){
-			Disabled("com/gmail/lucario77777777/TE/commands/moderator", sender);
+		}else if(plugin.getCommandsConfig().getString("moderator") == "false"){
+			Disabled("moderator", sender);
 			return true;
 		}else{
-			Error("com/gmail/lucario77777777/TE/commands/moderator", sender, plugin);
+			Error("moderator", sender, plugin);
 			return true;
 		}
 	}

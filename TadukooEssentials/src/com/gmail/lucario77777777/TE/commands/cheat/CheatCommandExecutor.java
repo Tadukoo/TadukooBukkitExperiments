@@ -2,11 +2,12 @@ package com.gmail.lucario77777777.TE.commands.cheat;
 
 import java.util.logging.Level;
 
-import com.gmail.lucario77777777.TE.TE;
-import com.gmail.lucario77777777.TE.commands.MainCommandExecutor;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+
+import com.gmail.lucario77777777.TE.TE;
+import com.gmail.lucario77777777.TE.commands.CommandExec;
 
 public class CheatCommandExecutor{
 
@@ -14,16 +15,16 @@ public class CheatCommandExecutor{
 		super();
 	}
 	public static boolean Run(CommandSender sender, Command cmd, String[] args, String playerType, TE plugin){
-		if(plugin.getCommandsConfig().getString("com/gmail/lucario77777777/TE/commands/cheat") == "true"){
+		if(plugin.getCommandsConfig().getString("cheat") == "true"){
 			if(cmd.getName().equalsIgnoreCase(plugin.getCommandsConfig().getString("feed-name"))){
 				if(plugin.getCommandsConfig().getString("feed") == "true"){
 					Feed.Run(sender, args, playerType);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("feed") == "false"){
-					MainCommandExecutor.Disabled(plugin.getCommandsConfig().getString("feed-name"), sender);
+					CommandExec.Disabled(plugin.getCommandsConfig().getString("feed-name"), sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error(plugin.getCommandsConfig().getString("feed-name"), sender, plugin);
+					CommandExec.Error(plugin.getCommandsConfig().getString("feed-name"), sender, plugin);
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("fly")){
@@ -31,10 +32,10 @@ public class CheatCommandExecutor{
 					Fly.Run(sender, args, playerType);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("fly") == "false"){
-					MainCommandExecutor.Disabled("fly", sender);
+					CommandExec.Disabled("fly", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("fly", sender, plugin);
+					CommandExec.Error("fly", sender, plugin);
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("adventure") || cmd.getName().equalsIgnoreCase("gma") ||
@@ -48,10 +49,10 @@ public class CheatCommandExecutor{
 							Adventure.run(sender, args, playerType);
 							return true;
 						}else if(plugin.getCommandsConfig().getString("adventure") == "false"){
-							MainCommandExecutor.Disabled("adventure", sender);
+							CommandExec.Disabled("adventure", sender);
 							return true;
 						}else{
-							MainCommandExecutor.Error("adventure", sender, plugin);
+							CommandExec.Error("adventure", sender, plugin);
 							return true;
 						}
 					}else if(cmd.getName().equalsIgnoreCase("creative") || 
@@ -60,10 +61,10 @@ public class CheatCommandExecutor{
 							Creative.Run(sender, args, playerType);
 							return true;
 						}else if(plugin.getCommandsConfig().getString("creative") == "false"){
-							MainCommandExecutor.Disabled("creative", sender);
+							CommandExec.Disabled("creative", sender);
 							return true;
 						}else{
-							MainCommandExecutor.Error("creative", sender, plugin);
+							CommandExec.Error("creative", sender, plugin);
 							return true;
 						}
 					}else if(cmd.getName().equalsIgnoreCase("survival") || 
@@ -72,10 +73,10 @@ public class CheatCommandExecutor{
 							Survival.Run(sender, args, playerType);
 							return true;
 						}else if(plugin.getCommandsConfig().getString("survival") == "false"){
-							MainCommandExecutor.Disabled("survival", sender);
+							CommandExec.Disabled("survival", sender);
 							return true;
 						}else{
-							MainCommandExecutor.Error("survival", sender, plugin);
+							CommandExec.Error("survival", sender, plugin);
 							return true;
 						}
 					}else if(cmd.getName().equalsIgnoreCase("gamemode") || cmd.getName().equalsIgnoreCase("gm")||
@@ -95,10 +96,10 @@ public class CheatCommandExecutor{
 					Heal.Run(sender, args, playerType);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("heal") == "false"){
-					MainCommandExecutor.Disabled("heal", sender);
+					CommandExec.Disabled("heal", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("heal", sender, plugin);
+					CommandExec.Error("heal", sender, plugin);
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("starve")){
@@ -106,10 +107,10 @@ public class CheatCommandExecutor{
 					Starve.Run(sender, args);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("starve") == "false"){
-					MainCommandExecutor.Disabled("starve", sender);
+					CommandExec.Disabled("starve", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("starve", sender, plugin);
+					CommandExec.Error("starve", sender, plugin);
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("time") || cmd.getName().equalsIgnoreCase("day") ||
@@ -123,10 +124,10 @@ public class CheatCommandExecutor{
 							Day.Run(sender, args, playerType);
 							return true;
 						}else if(plugin.getCommandsConfig().getString("day") == "false"){
-							MainCommandExecutor.Disabled("day", sender);
+							CommandExec.Disabled("day", sender);
 							return true;
 						}else{
-							MainCommandExecutor.Error("day", sender, plugin);
+							CommandExec.Error("day", sender, plugin);
 							return true;
 						}
 					}else if(cmd.getName().equalsIgnoreCase("night")){
@@ -134,10 +135,10 @@ public class CheatCommandExecutor{
 							Night.Run(sender, args, playerType);
 							return true;
 						}else if(plugin.getCommandsConfig().getString("night") == "false"){
-							MainCommandExecutor.Disabled("night", sender);
+							CommandExec.Disabled("night", sender);
 							return true;
 						}else{
-							MainCommandExecutor.Error("night", sender, plugin);
+							CommandExec.Error("night", sender, plugin);
 							return true;
 						}
 					}
@@ -150,11 +151,11 @@ public class CheatCommandExecutor{
 				}
 			}
 			return true;
-		}else if(plugin.getCommandsConfig().getString("com/gmail/lucario77777777/TE/commands/cheat") == "false"){
-			Disabled("com/gmail/lucario77777777/TE/commands/cheat", sender);
+		}else if(plugin.getCommandsConfig().getString("cheat") == "false"){
+			Disabled("cheat", sender);
 			return true;
 		}else{
-			Error("com/gmail/lucario77777777/TE/commands/cheat", sender, plugin);
+			Error("cheat", sender, plugin);
 			return true;
 		}
 	}

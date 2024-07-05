@@ -1,13 +1,13 @@
 package com.gmail.lucario77777777.TE.commands.moderator;
 
 import com.gmail.lucario77777777.TE.TE;
-import com.gmail.lucario77777777.TE.commands.MainCommandExecutor;
+import com.gmail.lucario77777777.TE.commands.CommandExec;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
 
-public class Ping extends MainCommandExecutor{
+public class Ping extends CommandExec {
 	public Ping(TE plugin) {
 		super(plugin);
 	}

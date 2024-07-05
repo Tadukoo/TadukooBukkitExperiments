@@ -1,14 +1,14 @@
 package com.gmail.lucario77777777.TE.commands.cheat;
 
 import com.gmail.lucario77777777.TE.TE;
-import com.gmail.lucario77777777.TE.commands.MainCommandExecutor;
+import com.gmail.lucario77777777.TE.commands.CommandExec;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 
-public class Fly extends MainCommandExecutor{
+public class Fly extends CommandExec {
 	public Fly(TE plugin) {
 		super(plugin);
 	}

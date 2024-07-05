@@ -1,33 +1,28 @@
 package com.gmail.lucario77777777.TE.commands.moderator;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 
 import com.gmail.lucario77777777.TE.TE;
-import com.gmail.lucario77777777.TE.commands.MainCommandExecutor;
+import com.gmail.lucario77777777.TE.commands.CommandExec;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-
-public class Killall extends MainCommandExecutor{
-	public Killall(TE plugin) {
+public class Killall extends CommandExec{
+	public Killall(TE plugin){
 		super(plugin);
 	}
 	
-	public static boolean Run(CommandSender sender)
-	{
-		List<Player> onlinePlayerList = new ArrayList<>(Bukkit.getServer().getOnlinePlayers());
-		Iterator<Player> itr = onlinePlayerList.iterator();
+	public static boolean Run(CommandSender sender){
+		@SuppressWarnings("unchecked")
+		Iterator<Player> itr = (Iterator<Player>) Bukkit.getOnlinePlayers().iterator();
 		
 		while(itr.hasNext()){
 			Player player = itr.next();
 			player.setHealth(0);
 		return true;
-}
+		}
 		return false;
-}
+	}
 }

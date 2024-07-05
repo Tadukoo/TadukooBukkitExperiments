@@ -2,11 +2,12 @@ package com.gmail.lucario77777777.TE.commands.teleportation;
 
 import java.util.logging.Level;
 
-import com.gmail.lucario77777777.TE.TE;
-import com.gmail.lucario77777777.TE.commands.MainCommandExecutor;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+
+import com.gmail.lucario77777777.TE.TE;
+import com.gmail.lucario77777777.TE.commands.CommandExec;
 
 public class TeleportationCommandExecutor{
 
@@ -14,16 +15,16 @@ public class TeleportationCommandExecutor{
 		super();
 	}
 	public static boolean Run(CommandSender sender, Command cmd, String[] args, String playerType, TE plugin){
-		if(plugin.getCommandsConfig().getString("com/gmail/lucario77777777/TE/commands/teleportation") == "true"){
+		if(plugin.getCommandsConfig().getString("teleportation") == "true"){
 			if(cmd.getName().equalsIgnoreCase("tp")){
 				if(plugin.getCommandsConfig().getString("tp") == "true"){
 					Tp.Run(sender, args, playerType);
 					return true;
 				}else if(plugin.getCommandsConfig().getString("tp") == "false"){
-					MainCommandExecutor.Disabled("tp", sender);
+					CommandExec.Disabled("tp", sender);
 					return true;
 				}else{
-					MainCommandExecutor.Error("tp", sender, plugin);
+					CommandExec.Error("tp", sender, plugin);
 					return true;
 				}
 			}else if(cmd.getName().equalsIgnoreCase("setwarp") || cmd.getName().equalsIgnoreCase("delwarp") ||
@@ -34,10 +35,10 @@ public class TeleportationCommandExecutor{
 							Delwarp.Run(sender, args, playerType, plugin);
 							return true;
 						}else if(plugin.getCommandsConfig().getString("delwarp") == "false"){
-							MainCommandExecutor.Disabled("delwarp", sender);
+							CommandExec.Disabled("delwarp", sender);
 							return true;
 						}else{
-							MainCommandExecutor.Error("delwarp", sender, plugin);
+							CommandExec.Error("delwarp", sender, plugin);
 							return true;
 						}
 					}else if(cmd.getName().equalsIgnoreCase("setwarp")){
@@ -45,10 +46,10 @@ public class TeleportationCommandExecutor{
 							Setwarp.Run(sender, args, playerType, plugin);
 							return true;
 						}else if(plugin.getCommandsConfig().getString("setwarp") == "false"){
-							MainCommandExecutor.Disabled("setwarp", sender);
+							CommandExec.Disabled("setwarp", sender);
 							return true;
 						}else{
-							MainCommandExecutor.Error("setwarp", sender, plugin);
+							CommandExec.Error("setwarp", sender, plugin);
 							return true;
 						}
 					}else if(cmd.getName().equalsIgnoreCase("warp")){
@@ -64,11 +65,11 @@ public class TeleportationCommandExecutor{
 				}
 			}
 			return true;
-		}else if(plugin.getCommandsConfig().getString("com/gmail/lucario77777777/TE/commands/teleportation") == "false"){
-			Disabled("com/gmail/lucario77777777/TE/commands/teleportation", sender);
+		}else if(plugin.getCommandsConfig().getString("teleportation") == "false"){
+			Disabled("teleportation", sender);
 			return true;
 		}else{
-			Error("com/gmail/lucario77777777/TE/commands/teleportation", sender, plugin);
+			Error("teleportation", sender, plugin);
 			return true;
 		}
 	}
