@@ -8,10 +8,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.command.CommandExecutor;
 
 import com.gmail.lucario77777777.TE.TE;
-import com.gmail.lucario77777777.TE.cheat.CheatCommandExecutor;
-import com.gmail.lucario77777777.TE.general.GeneralCommandExecutor;
-import com.gmail.lucario77777777.TE.moderator.ModeratorCommandExecutor;
-import com.gmail.lucario77777777.TE.teleportation.TeleportationCommandExecutor;
+import com.gmail.lucario77777777.TE.commands.cheat.CheatCommandExecutor;
+import com.gmail.lucario77777777.TE.commands.general.GeneralCommandExecutor;
+import com.gmail.lucario77777777.TE.commands.moderator.ModeratorCommandExecutor;
+import com.gmail.lucario77777777.TE.commands.teleportation.TeleportationCommandExecutor;
 
 public class MainCommandExecutor implements CommandExecutor {
 

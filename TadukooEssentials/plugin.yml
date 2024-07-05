@@ -1,7 +1,8 @@
-name: Tadukooplugin
-main: com.gmail.lucario77777777.tadukooplugin.Main
+name: Tadukoo Essentials
+main: com.gmail.lucario77777777.TE.TE
 version: Alpha 0.2.3
-description: Tadukoo Plugin
+author: Tadukoo
+description: Tadukoo Essentials
 commands:
    adventure:
       description: Sets a player's gamemode to adventure.
