@@ -9,4 +9,11 @@
 		<version>0.1-Alpha-SNAPSHOT</version>
 	</parent>
 	<artifactId>TadukooEssentials</artifactId>
+	<dependencies>
+		<!-- Spigot API -->
+		<dependency>
+			<groupId>${spigot.api.groupID}</groupId>
+			<artifactId>${spigot.api.artifactID}</artifactId>
+		</dependency>
+	</dependencies>
 </project>

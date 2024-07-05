@@ -1,5 +1,6 @@
 package com.gmail.lucario77777777.TE.commands.moderator;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
@@ -19,7 +20,7 @@ public class Killall extends MainCommandExecutor{
 	
 	public static boolean Run(CommandSender sender)
 	{
-		List<Player> onlinePlayerList = Arrays.asList(Bukkit.getServer().getOnlinePlayers());
+		List<Player> onlinePlayerList = new ArrayList<>(Bukkit.getServer().getOnlinePlayers());
 		Iterator<Player> itr = onlinePlayerList.iterator();
 		
 		while(itr.hasNext()){
