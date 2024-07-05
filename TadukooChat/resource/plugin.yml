@@ -1,0 +1,119 @@
+name: Tadukoo_Chat
+main: com.gmail.realtadukoo.TCh.TCh
+version: Alpha 0.0.2
+description: A chat plugin for Bukkit.
+author: Tadukoo
+depend: [Tadukoo_Core]
+prefix: TCh
+permissions:
+   TadukooChat.*:
+      description: Gives all permissions.
+      children:
+         TadukooChat.colors.*: true
+         TadukooChat.formats.*: true
+         TadukooChat.magic: true
+   TadukooChat.colors.*:
+      description: Gives all color permissions.
+      children:
+         TadukooChat.colors.default: true
+         TadukooChat.colors.custom: true
+   TadukooChat.formats.*:
+      description: Gives all formatting permissions.
+      children:
+         TadukooChat.bold: true
+         TadukooChat.strike: true
+         TadukooChat.underline: true
+         TadukooChat.italic: true
+   TadukooChat.colors.default:
+      description: Gives all default color permissions.
+      children:
+         TadukooChat.black: true
+         TadukooChat.darkblue: true
+         TadukooChat.darkgreen: true
+         TadukooChat.darkaqua: true
+         TadukooChat.darkred: true
+         TadukooChat.darkpurple: true
+         TadukooChat.gold: true
+         TadukooChat.lightgray: true
+         TadukooChat.darkgray: true
+         TadukooChat.blue: true
+         TadukooChat.green: true
+         TadukooChat.aqua: true
+         TadukooChat.red: true
+         TadukooChat.lightpurple: true
+         TadukooChat.yellow: true
+         TadukooChat.white: true
+   TadukooChat.colors.custom:
+      description: Gives all custom color permissions.
+      children:
+         TadukooChat.rainbowchanging: true
+         TadukooChat.rainbow: true
+   TadukooChat.black:
+      description: Allows using &0 to color chat black.
+      default: true
+   TadukooChat.darkblue:
+      description: Allows using &1 to color chat dark blue.
+      default: true
+   TadukooChat.darkgreen:
+      description: Allows using &2 to color chat dark green.
+      default: true
+   TadukooChat.darkaqua:
+      description: Allows using &3 to color chat dark aqua.
+      default: true
+   TadukooChat.darkred:
+      description: Allows using &4 to color chat dark red.
+      default: true
+   TadukooChat.darkpurple:
+      description: Allows using &5 to color chat dark purple.
+      default: true
+   TadukooChat.gold:
+      description: Allows using &6 to color chat gold.
+      default: true
+   TadukooChat.lightgray:
+      description: Allows using &7 to color chat light gray.
+      default: true
+   TadukooChat.darkgray:
+      description: Allows using &8 to color chat dark gray.
+      default: true
+   TadukooChat.blue:
+      description: Allows using &9 to color chat blue.
+      default: true
+   TadukooChat.green:
+      description: Allows using &a to color chat green.
+      default: true
+   TadukooChat.aqua:
+      description: Allows using &b to color chat aqua.
+      default: true
+   TadukooChat.red:
+      description: Allows using &c to color chat red.
+      default: true
+   TadukooChat.lightpurple:
+      description: Allows using &d to color chat light purple.
+      default: true
+   TadukooChat.yellow:
+      description: Allows using &e to color chat yellow.
+      default: true
+   TadukooChat.white:
+      description: Allows using &f to color chat white.
+      default: true
+   TadukooChat.bold:
+      description: Allows using &l to format chat bold.
+      default: true
+   TadukooChat.strike:
+      description: Allows using &m to format chat striked.
+      default: true
+   TadukooChat.underline:
+      description: Allows using &n to format chat underlined.
+      default: true
+   TadukooChat.italic:
+      description: Allows using &o to format chat italicized.
+      default: true
+   TadukooChat.magic:
+      description: Allows using &k to make chat random.
+      default: op
+   TadukooChat.rainbowchanging:
+      description: Allows using &w to make chat change colors (similar to &k).
+      default: op
+   TadukooChat.rainbow:
+      description: Allows using &x to make your chat a rainbow (not changing colors).
+      default: true

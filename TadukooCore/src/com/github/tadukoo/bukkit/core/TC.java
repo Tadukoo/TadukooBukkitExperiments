@@ -6,18 +6,18 @@ import java.io.Reader;
 import java.util.UUID;
 import java.util.logging.Level;
 
+import com.github.tadukoo.bukkit.chat.TCh;
 import com.github.tadukoo.bukkit.core.commands.handling.CComExec;
 import com.github.tadukoo.bukkit.core.listeners.CPlayerListener;
+import com.github.tadukoo.bukkit.essentials.TE;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.gmail.lucario77777777.TE.TE;
 import com.gmail.lucario77777777.TFO.TFO;
 import com.gmail.lucario77777777.TMS.TM;
 import com.gmail.lucario77777777.TVF.TVF;
-import com.gmail.realtadukoo.TCh.TCh;
 import com.gmail.realtadukoo.TP.TP;
 
 public class TC extends JavaPlugin{

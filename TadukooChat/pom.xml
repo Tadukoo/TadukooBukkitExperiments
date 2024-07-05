@@ -8,22 +8,18 @@
 		<artifactId>TadukooBukkitExperiments</artifactId>
 		<version>0.1-Alpha-SNAPSHOT</version>
 	</parent>
-	<artifactId>TadukooCore</artifactId>
+	<artifactId>TadukooChat</artifactId>
+	
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	<dependencies>
 		<!-- Spigot API -->
 		<dependency>
 			<groupId>${spigot.api.groupID}</groupId>
 			<artifactId>${spigot.api.artifactID}</artifactId>
-		</dependency>
-		<!-- Tadukoo Essentials -->
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>${tadukoo.bukkit.essentials.artifactID}</artifactId>
-		</dependency>
-		<!-- Tadukoo Chat -->
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>${tadukoo.bukkit.chat.artifactID}</artifactId>
 		</dependency>
 	</dependencies>
 </project>
