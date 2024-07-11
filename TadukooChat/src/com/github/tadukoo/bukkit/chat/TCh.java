@@ -1,12 +1,12 @@
 package com.github.tadukoo.bukkit.chat;
 
 import com.github.tadukoo.bukkit.chat.listeners.ChatPlayerListener;
-import com.github.tadukoo.perms.TP;
+import com.github.tadukoo.bukkit.perms.TP;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class TCh extends JavaPlugin {
+public class TCh extends JavaPlugin{
 	public static TCh plugin;
 	PluginDescriptionFile pdfFile = this.getDescription();
 	public static FileConfiguration config;
@@ -14,11 +14,12 @@ public class TCh extends JavaPlugin {
 	public static TP TadukooPerms = null;
 	
 	@Override
-	public void onDisable () {
+	public void onDisable(){
 		config = null;
 	}
+	
 	@Override
-	public void onEnable () {
+	public void onEnable(){
 		config = getConfig();
 		this.getServer().getPluginManager().registerEvents(new ChatPlayerListener(this), this);
 		

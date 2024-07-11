@@ -12,18 +12,18 @@ import org.bukkit.command.*;
 import org.bukkit.entity.Player;
 import org.bukkit.command.CommandExecutor;
 
-public class CommandExec implements CommandExecutor {
+public class CommandExec implements CommandExecutor{
 
-	private TE plugin;
+	private final TE plugin;
 	
-	public CommandExec(TE plugin) {
+	public CommandExec(TE plugin){
 		this.plugin = plugin;
 	}
 	
 	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
+	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 		final String playerType;
-		if (sender instanceof Player){
+		if(sender instanceof Player){
 			playerType = "player";
 		}else if(sender instanceof ConsoleCommandSender){
 			playerType = "console";
@@ -63,13 +63,11 @@ public class CommandExec implements CommandExecutor {
 		return false;
 	}
 
-	public static void Disabled(String cmd, CommandSender sender)
-	{
+	public static void Disabled(String cmd, CommandSender sender){
 		sender.sendMessage(ChatColor.RED + "/" + cmd + " is disabled.");
 	}
 	
-	public static void Error(String cmd, CommandSender sender, TE plugin)
-	{
+	public static void Error(String cmd, CommandSender sender, TE plugin){
 		plugin.logger.log(Level.WARNING, "You don't have " + cmd + " in commands.yml set correctly!");
 		sender.sendMessage(ChatColor.RED + "Please let an admin know that they don't have " + cmd +
 						" set correctly in the commands.yml file.");

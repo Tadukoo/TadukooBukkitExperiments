@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 public class ChatComExec implements CommandExecutor{
 	
 	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String cmdLabel, String[] args) {
+	public boolean onCommand(CommandSender sender, Command cmd, String cmdLabel, String[] args){
 		return false;
 	}
 	

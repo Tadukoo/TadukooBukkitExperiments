@@ -13,7 +13,7 @@ import com.github.tadukoo.bukkit.essentials.TE;
 import com.github.tadukoo.bukkit.fakeop.TFO;
 import com.github.tadukoo.bukkit.mobspawning.TM;
 import com.github.tadukoo.bukkit.vanillafeel.TVF;
-import com.github.tadukoo.perms.TP;
+import com.github.tadukoo.bukkit.perms.TP;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -155,8 +155,9 @@ public class TC extends JavaPlugin{
 	/*
 	 * Used to re-run checkforTadukooPlugins so that none are missed.
 	 */
-	public void updateTadukooPlugins(boolean Bible, boolean BibleBooks, boolean Chat, boolean Core, 
-			boolean Essentials, boolean FakeOp, boolean MobSpawning, boolean Perms, boolean VanillaFeel){
+	public void updateTadukooPlugins(
+			boolean Bible, boolean BibleBooks, boolean Chat, boolean Essentials, boolean FakeOp, boolean MobSpawning,
+			boolean Perms, boolean VanillaFeel){
 		/*if(Bible){
 			TBible = true;
 			TadukooBible = (TB) getServer().getPluginManager().getPlugin("Tadukoo_Bible");

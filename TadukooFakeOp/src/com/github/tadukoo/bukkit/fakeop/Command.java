@@ -1,6 +1,6 @@
 package com.github.tadukoo.bukkit.fakeop;
 
-public class Command {
+public class Command{
 	
 	public static void deop(){
 		

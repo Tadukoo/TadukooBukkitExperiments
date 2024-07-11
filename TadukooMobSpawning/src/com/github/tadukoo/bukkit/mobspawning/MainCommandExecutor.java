@@ -8,12 +8,13 @@ import org.bukkit.command.CommandSender;
 public class MainCommandExecutor implements CommandExecutor{
 	@SuppressWarnings("unused")
 	private TM plugin;
-	public MainCommandExecutor(TM plugin) {
+	
+	public MainCommandExecutor(TM plugin){
 		this.plugin = plugin;
 	}
 	
 	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
+	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 		if(cmd.getName().equalsIgnoreCase("mobs")){
 			sender.sendMessage(ChatColor.GREEN + "You typed /mobs!");
 			return true;

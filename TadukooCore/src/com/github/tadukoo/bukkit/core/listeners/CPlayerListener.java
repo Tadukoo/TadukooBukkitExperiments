@@ -12,6 +12,7 @@ import com.github.tadukoo.bukkit.core.TC;
 
 public class CPlayerListener implements Listener{
 	public TC plugin;
+	
 	public CPlayerListener(TC plugin){
 		this.plugin = plugin;
 	}

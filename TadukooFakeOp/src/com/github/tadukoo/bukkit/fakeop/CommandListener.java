@@ -4,10 +4,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 
-public class CommandListener implements Listener {
+public class CommandListener implements Listener{
 	private TFO plugin;
 	
-	public CommandListener(TFO plugin) {
+	public CommandListener(TFO plugin){
 		this.plugin = plugin;
 	}
 	

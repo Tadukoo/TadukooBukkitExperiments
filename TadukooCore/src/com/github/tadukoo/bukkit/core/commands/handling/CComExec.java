@@ -12,14 +12,13 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
 public class CComExec implements CommandExecutor{
-	public CComExec() {
-		
-	}
+	
+	public CComExec(){ }
 	
 	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
+	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 		final String playerType;
-		if (sender instanceof Player){
+		if(sender instanceof Player){
 			playerType = "player";
 		}else if(sender instanceof ConsoleCommandSender){
 			playerType = "console";

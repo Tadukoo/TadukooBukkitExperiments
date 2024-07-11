@@ -1,4 +1,4 @@
-package com.github.tadukoo.perms;
+package com.github.tadukoo.bukkit.perms;
 
 import java.io.File;
 import java.io.IOException;

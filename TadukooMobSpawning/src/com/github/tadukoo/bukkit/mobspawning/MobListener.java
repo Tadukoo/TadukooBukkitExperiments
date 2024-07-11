@@ -7,10 +7,10 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 
-public class MobListener implements Listener {
+public class MobListener implements Listener{
 	private TM plugin;
 	
-	public MobListener(TM plugin) {
+	public MobListener(TM plugin){
 		this.plugin = plugin;
 	}
 	

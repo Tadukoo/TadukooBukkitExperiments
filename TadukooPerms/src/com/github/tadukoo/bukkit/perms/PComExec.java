@@ -1,4 +1,4 @@
-package com.github.tadukoo.perms;
+package com.github.tadukoo.bukkit.perms;
 
 import java.util.List;
 import java.util.UUID;
